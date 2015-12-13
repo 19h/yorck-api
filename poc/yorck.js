@@ -23,7 +23,18 @@ const jquery = fs.readFileSync('jquery.js');
 
 /* Configuration */
 const baseURL = 'https://beta.yorck.de';
-const moviePath = `${baseURL}/filme`;
+
+const moviePath = {
+	host: 'beta.yorck.de',
+	port: 443,
+	path: '/filme'
+};
+
+const programPath = id => ({
+	host: 'beta.yorck.de',
+	port: 443,
+	path: `/shows/-/cinemas.js?eventid=${id}&partial=movie`
+});
 
 const inspectPage = url =>
 	new Promise((resolve, reject) => {
@@ -54,19 +65,43 @@ const inspectPage = url =>
 
 const getSource = url =>
 	new Promise((resolve, reject) => {
-		// TODO REMOVE
-		return resolve(fs.readFileSync('films').toString());
+		if (url.path.indexOf('/filme') !== -1) {
+			return resolve(fs.readFileSync('films').toString());
+		}
 
-		/*let data = new Buffer(0);
+		let data = new Buffer(0);
 
-		https.request(url, sock => {
+		console.log(`Getting '${url}'...`);
+
+		const config = url;
+
+		config.headers = {
+			'X-Requested-With': 'XMLHttpRequest'
+		};
+
+		https.request(config, sock => {
 			sock.on('data', buf =>
 				data = Buffer.concat([data, buf])
 			);
 
 			sock.on('end',    () => resolve(data.toString()));
 			sock.on('error', err => reject(err));
-		}).end();*/
+		}).end();
+	});
+
+const hijackProgramSource = source =>
+	new Promise((resolve, reject) => {
+		const fail = setTimeout(reject, 2000);
+
+		const $ = () => ({
+			replaceWith (args) {
+				clearTimeout(fail);
+
+				resolve(args);
+			}
+		});
+
+		eval(source);
 	});
 
 const unescape = text =>
@@ -114,17 +149,24 @@ Movie.prototype = {
 		this.getLength(metaMap);
 		this.getWriter(metaMap);
 
-		console.log(this);
+		yield this.getProgram(ctx);
 
 		ctx.close();
 	}),
 
 	getEventId (ctx) {
-		const eventId = ctx.document.body.querySelector('.movie-program > .row');
+		const eventId = ctx.$('.movie-program > .row').first().attr('id');
+		const id      = ctx.$('.shows').attr('id');
 
 		if (eventId) {
-			this.eventId = eventId.id.split('-').pop();
+			this.eventId = eventId.split('-').pop();
 		}
+
+		if (id) {
+			this.id = id;
+		}
+
+		console.log(id, this.eventId);
 	},
 
 	getTitle (ctx) {
@@ -242,6 +284,16 @@ Movie.prototype = {
 
 			this.trailers = trailerMap;
 		}
+	},
+
+	getProgram (ctx) {
+		return getSource(programPath(this.eventId))
+		.then(source => {
+			return hijackProgramSource(source);
+		})
+		.then(actualSource => {
+			console.log(1, ctx.$(actualSource)[0].innerHTML, 2);
+		});
 	},
 
 	// util
