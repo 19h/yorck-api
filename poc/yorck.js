@@ -25,12 +25,12 @@ const jquery = fs.readFileSync('jquery.js');
 const baseURL = 'https://beta.yorck.de';
 const moviePath = `${baseURL}/filme`;
 
-const inspectPage = (url) =>
+const inspectPage = url =>
 	new Promise((resolve, reject) => {
 		return jsdom.env({
 				html: fs.readFileSync('./' + url.split('de/').pop()).toString(),
 				src: [jquery],
-				done: function(err, ctx) {
+				done: (err, ctx) => {
 					if (err) {
 						reject(err);
 					} else {
@@ -52,7 +52,7 @@ const inspectPage = (url) =>
 		});*/
 	});
 
-const getSource = (url) =>
+const getSource = url =>
 	new Promise((resolve, reject) => {
 		// TODO REMOVE
 		return resolve(fs.readFileSync('films').toString());
@@ -69,14 +69,225 @@ const getSource = (url) =>
 		}).end();*/
 	});
 
+const unescape = text =>
+	text.replace(/&(?:amp|lt|gt|quot|#39|#96);/g, chr => ({
+		'&amp;': '&',
+		'&lt;': '<',
+		'&gt;': '>',
+		'&quot;': '"',
+		'&#39;': '\'',
+		'&#96;': '`'
+	})[chr]).trim();
+
 const Movie = function (link) {
-	this.link = link;
+	this.link = `${baseURL}${link}`;
 };
 
 Movie.prototype = {
 	extract: async(function* () {
-		return {};
-	})
+		const ctx = yield inspectPage(this.link);
+
+		this.getEventId(ctx);
+
+		// general
+		this.getTitle(ctx);
+		this.getCountryAndYear(ctx);
+		this.getDescription(ctx);
+
+		this.getYorckerReview(ctx);
+
+		// images
+		this.getCover(ctx);
+		this.getHero(ctx);
+		this.getGallery(ctx);
+
+		// videos
+		this.getTrailers(ctx);
+
+		const metaMap = this.getMetaMap(ctx);
+
+		// meta
+		this.getCamera(metaMap);
+		this.getComposer(metaMap);
+		this.getDirector(metaMap);
+		this.getFSK(metaMap);
+		this.getLength(metaMap);
+		this.getWriter(metaMap);
+
+		console.log(this);
+
+		ctx.close();
+	}),
+
+	getEventId (ctx) {
+		const eventId = ctx.document.body.querySelector('.movie-program > .row');
+
+		if (eventId) {
+			this.eventId = eventId.id.split('-').pop();
+		}
+	},
+
+	getTitle (ctx) {
+		const title = this.getBySelector(ctx.document.body, '#movie > section > div > div > h1');
+
+		if (title) {
+			this.title = unescape(title.innerHTML);
+		}
+	},
+
+	getDescription (ctx) {
+		const description = this.getBySelector(ctx.document.body, '#movie section div p');
+
+		if (description) {
+			this.description = unescape(description.innerHTML);
+		}
+	},
+
+	getYorckerReview (ctx) {
+		let review = this.getBySelector(ctx.document.body, '.yorcker-review');
+
+		if (review) {
+			const text = review.querySelector('.yorcker-review-text').innerText;
+
+			if (!text) {
+				// empty review
+				return;
+			}
+
+			const number = review.querySelector('.yorcker-numero').innerHTML.trim();
+
+			this.reviews = [{
+				title: `Yorcker ${number}`,
+				text: text.trim()
+			}];
+		}
+	},
+
+	getCountryAndYear (ctx) {
+		let cy = this.getBySelector(ctx.document.body, '#movie section h5');
+
+		if (cy) {
+			cy = unescape(cy.innerHTML).split('\n');
+
+			const countries = cy[0]
+							// remove spaces
+							.replace(/ /g, '')
+							// remove bad delimiters
+							.replace(/(\/|,)/g, '-')
+							// split by new delimiters
+							.split('-');
+
+			const year = cy[1];
+
+			this.countries = countries;
+			this.year = year;
+		}
+	},
+
+	getCamera (metaMap) {
+		this.setKeyIfInMetaMap('camera', 'Kamera', metaMap);
+	},
+	getComposer (metaMap) {
+		this.setKeyIfInMetaMap('composer', 'Musik', metaMap);
+	},
+	getDirector (metaMap) {
+		this.setKeyIfInMetaMap('director', 'Regie', metaMap);
+	},
+	getFSK (metaMap) {
+		this.setKeyIfInMetaMap('fsk', 'FSK', metaMap, fsk => fsk.shift());
+	},
+	getLength (metaMap) {
+		this.setKeyIfInMetaMap('length', 'Länge', metaMap, length => length.shift());
+	},
+	getWriter (metaMap) {
+		this.setKeyIfInMetaMap('screenplay', 'Drehbuch', metaMap);
+	},
+
+	getCover (ctx) {
+		const cover = this.getBySelector(ctx.document.body, '#movie div.movie-poster img');
+
+		if (cover) {
+			this.cover = cover.getAttribute('data-retina');
+		}
+	},
+
+	getHero (ctx) {
+		const hero = this.getBySelector(ctx.document.body, '#movie div.hero-image img');
+
+		if (hero) {
+			this.hero = hero.getAttribute('data-retina');
+		}
+	},
+
+	getGallery (ctx) {
+		const gallery = this.getAllBySelector(ctx.document.body, '.movies-image-gallery a');
+
+		if (gallery && gallery.length) {
+			this.gallery = gallery.map(image => ({
+				normal: image.firstChild.getAttribute('data-retina'),
+				big: image.getAttribute('href')
+			}));
+		}
+	},
+
+	getTrailers (ctx) {
+		const trailers = this.getAllBySelector(ctx.document.body, 'a.trailer-button');
+
+		if (trailers && trailers.length) {
+			const trailerMap = {};
+
+			trailers.forEach(trailer =>
+				trailerMap[trailer.firstChild.innerHTML] = trailer.getAttribute('href')
+			);
+
+			this.trailers = trailerMap;
+		}
+	},
+
+	// util
+	setKeyIfInMetaMap (name, key, map, fn) {
+		let item = map[key];
+
+		if (item) {
+			item = item
+					// fix insane delimiters
+					.replace(/(,\s+|\s+,|,$)/g, '~')
+					// replace bad fixed delimiters
+					.replace(/\~\s+/g, '~')
+					// split by new delimiters
+					.split('~')
+					// filter out empty fields
+					.filter(i => i);
+
+			if (fn) {
+				this[name] = fn(item);
+			} else {
+				this[name] = item;
+			}
+		}
+	},
+
+	getMetaMap (ctx) {
+		let block = this.getAllBySelector(ctx.document.body, '#movie table tbody tr');
+
+		const metaMap = {};
+
+		block.forEach(item => {
+			const fields = this.getAllBySelector(item, 'td h5');
+
+			metaMap[fields[0].innerHTML] = fields[1].innerHTML;
+		});
+
+		return metaMap;
+	},
+
+	getBySelector (ctx, selector) {
+		return ctx.querySelector(selector);
+	},
+
+	getAllBySelector (ctx, selector) {
+		return [].slice.call(ctx.querySelectorAll(selector));
+	}
 };
 
 Movie.fromLink = link => {
@@ -94,8 +305,8 @@ YorckScraper.prototype = {
 	initialize: async(function* () {
 		const movieLinks = yield this.obtainMovieOverview();
 
-		console.log(movieLinks);
-		//yield Promise.map(movieLinks, Movie.fromLink)
+		//console.log(movieLinks);
+		yield Promise.map(movieLinks, Movie.fromLink);
 	}),
 
 	// extract links to movie detail pages
