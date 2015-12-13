@@ -23,6 +23,8 @@
     "express": "^4.13.3",
     "express-graphql": "^0.4.5",
     "graphql": "^0.4.14",
-    "mongodb": "^2.1.0"
+    "jsdom": "^7.2.1",
+    "mongodb": "^2.1.0",
+    "node-etcd": "^4.2.1"
   }
 }
