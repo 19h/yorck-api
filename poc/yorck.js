@@ -19,38 +19,39 @@ const Promise = require('bluebird');
 const async   = Promise.coroutine;
 
 const jsdom = require('jsdom');
-const jquery = fs.readFileSync('jquery.js');
+const jquery = fs.readFileSync(__dirname + '/jquery.js');
 
 /* Configuration */
-const baseURL = 'https://beta.yorck.de';
+const baseURL = 'https://www.yorck.de';
 
 const moviePath = {
-	host: 'beta.yorck.de',
+	host: 'www.yorck.de',
 	port: 443,
 	path: '/filme'
 };
 
 const programPath = id => ({
-	host: 'beta.yorck.de',
+	host: 'www.yorck.de',
 	port: 443,
 	path: `/shows/-/cinemas.js?eventid=${id}&partial=movie`
 });
 
 const inspectPage = url =>
 	new Promise((resolve, reject) => {
-		return jsdom.env({
-				html: fs.readFileSync('./' + url.split('de/').pop()).toString(),
-				src: [jquery],
-				done: (err, ctx) => {
-					if (err) {
-						reject(err);
-					} else {
-						resolve(ctx);
-					}
-				}
-			});
+		// return jsdom.env({
+		// 		html: fs.readFileSync('./' + url.split('de/').pop()).toString(),
+		// 		src: [jquery],
+		// 		done: (err, ctx) => {
+		// 			if (err) {
+		// 				reject(err);
+		// 			} else {
+		// 				resolve(ctx);
+		// 			}
+		// 		}
+		// 	});
+		console.log(`Getting ${url}...`);
 
-		/*jsdom.env({
+		jsdom.env({
 			url: url,
 			src: [jquery],
 			done: function(err, ctx) {
@@ -60,13 +61,13 @@ const inspectPage = url =>
 					resolve(ctx);
 				}
 			}
-		});*/
+		});
 	});
 
 const getSource = url =>
 	new Promise((resolve, reject) => {
 		if (url.path.indexOf('/filme') !== -1) {
-			return resolve(fs.readFileSync('films').toString());
+			return resolve(fs.readFileSync(__dirname + '/films').toString());
 		}
 
 		let data = new Buffer(0);
@@ -119,8 +120,8 @@ const Movie = function (link) {
 };
 
 Movie.prototype = {
-	extract: async(function* () {
-		const ctx = yield inspectPage(this.link);
+	async extract () {
+		const ctx = await inspectPage(this.link);
 
 		this.getEventId(ctx);
 
@@ -149,10 +150,10 @@ Movie.prototype = {
 		this.getLength(metaMap);
 		this.getWriter(metaMap);
 
-		yield this.getProgram(ctx);
+		await this.getProgram(ctx);
 
 		ctx.close();
-	}),
+	},
 
 	getEventId (ctx) {
 		const eventId = ctx.$('.movie-program > .row').first().attr('id');
@@ -165,8 +166,6 @@ Movie.prototype = {
 		if (id) {
 			this.id = id;
 		}
-
-		console.log(id, this.eventId);
 	},
 
 	getTitle (ctx) {
@@ -286,14 +285,12 @@ Movie.prototype = {
 		}
 	},
 
-	getProgram (ctx) {
-		return getSource(programPath(this.eventId))
-		.then(source => {
-			return hijackProgramSource(source);
-		})
-		.then(actualSource => {
-			console.log(1, ctx.$(actualSource)[0].innerHTML, 2);
-		});
+	async getProgram (ctx) {
+		const rawSource = await getSource(programPath(this.eventId));
+
+		const source = await hijackProgramSource(source);
+
+		console.log(1, ctx.$(source)[0].innerHTML, 2);
 	},
 
 	// util
@@ -348,23 +345,18 @@ Movie.fromLink = link => {
 	return movie.extract();
 };
 
-const YorckScraper = function () {
-
-};
-
-YorckScraper.prototype = {
-	// kick off
-	initialize: async(function* () {
-		const movieLinks = yield this.obtainMovieOverview();
+class YorckScraper {
+	async run () {
+		const movieLinks = await this.obtainMovieOverview();
 
 		//console.log(movieLinks);
-		yield Promise.map(movieLinks, Movie.fromLink);
-	}),
+		await Promise.map(movieLinks, Movie.fromLink);
+	}
 
 	// extract links to movie detail pages
-	obtainMovieOverview: async(function* () {
+	async obtainMovieOverview () {
 			// load page as string
-		let source = yield getSource(moviePath);
+		let source = await getSource(moviePath);
 
 			// split into seperate lines
 		    source = source.split('\n');
@@ -380,8 +372,8 @@ YorckScraper.prototype = {
 					 });
 
 		return source;
-	})
-};
+	}
+}
 
 const scraper = new YorckScraper();
-      scraper.initialize();
+      scraper.run();

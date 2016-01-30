@@ -1,13 +1,1852 @@
 <html>
 	<head>
 		<script type="text/javascript" src='./jquery.js'></script>
-		<script type="text/javascript">
-			'use strict';
-
-			var x = '\n<div class="row border-top-dark">\n<div class="col-sm-5">\n<div class="row program-header text-gold bg-gray-dark border-right-dark pdf-container">\n<div class="col-sm-12">\n<h2>Diese Woche</h2>\n<div class="pdf-link">\n<a class="yck-button text-dark" href="/shows/-/cinemas.pdf?eventid=112740">PDF</a>\n</div>\n</div>\n</div>\n<div class="bg-white even row">\n<div class="col-xs-12 cinema-name show-time-row">\n<div class="pull-left">\n<a href="/kinos/capitol-dahlem"><h3 class="text-gold">Capitol Dahlem</h3>\n</a></div>\n<div class="pull-right hidden-xs">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n<div class="bg-white odd row">\n<div class="col-xs-12 cinema-name show-time-row">\n<div class="pull-left">\n<a href="/kinos/delphi-filmpalast"><h3 class="text-gold">Delphi Filmpalast</h3>\n</a></div>\n<div class="pull-right hidden-xs">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n<div class="bg-white even row">\n<div class="col-xs-12 cinema-name show-time-row">\n<div class="pull-left">\n<a href="/kinos/filmtheater-am-friedrichshain"><h3 class="text-gold">Filmtheater am Friedrichshain</h3>\n</a></div>\n<div class="pull-right hidden-xs">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n<div class="bg-white odd row">\n<div class="col-xs-12 cinema-name show-time-row">\n<div class="pull-left">\n<a href="/kinos/international"><h3 class="text-gold">International</h3>\n</a></div>\n<div class="pull-right hidden-xs">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n<div class="bg-white even row">\n<div class="col-xs-12 cinema-name show-time-row">\n<div class="pull-left">\n<a href="/kinos/neues-off"><h3 class="text-gold">Neues Off</h3>\n</a></div>\n<div class="pull-right hidden-xs">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n<div class="bg-white odd row">\n<div class="col-xs-12 cinema-name show-time-row">\n<div class="pull-left">\n<a href="/kinos/odeon"><h3 class="text-gold">Odeon</h3>\n</a></div>\n<div class="pull-right hidden-xs">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n<div class="bg-white even row">\n<div class="col-xs-12 cinema-name show-time-row">\n<div class="pull-left">\n<a href="/kinos/yorck"><h3 class="text-gold">Yorck</h3>\n</a></div>\n<div class="pull-right hidden-xs">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n<div class="col-sm-6">\n<div class="row">\n<div class="shows-slider" data-slick="{&quot;infinite&quot;: false, &quot;slidesToShow&quot;: 6, &quot;slidesToScroll&quot;: 6, &quot;dots&quot;: false, &quot;responsive&quot;: [{&quot;breakpoint&quot;: 768, &quot;settings&quot;: {&quot;slidesToShow&quot;: 4, &quot;slidesToScroll&quot;: 4, &quot;arrows&quot;: false } } ] }">\n<div class="gold-shade-0 show-times-column text-center">\n<div class="bg-gold program-header text-black">\n<h2>So</h2>\n<span class="p-big">13.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262642">17:45</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262643">20:30</a></p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1264097">17:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1264098">20:30</a></p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262145"><span class="show-ticket-time">20:00 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262827">16:45</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262828">19:30</a></p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262682"><span class="show-ticket-time">16:45 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262683"><span class="show-ticket-time">19:30 <span class="show-lang">OmU</span></span></a></p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262702"><span class="show-ticket-time">17:45 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262703"><span class="show-ticket-time">20:30 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1263627">17:20</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1263621">20:00</a></p>\n</div>\n</div>\n<div class="gold-shade-1 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Mo</h2>\n<span class="p-big">14.12</span>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262644">15:00</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262645">17:45</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262646">20:30</a></p>\n</div>\n<div class="odd show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1264099">14:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1264100">17:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1264101">20:30</a></p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262169"><span class="show-ticket-time">20:00 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="odd show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262834">14:00</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262835">16:45</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262836">19:30</a></p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262685"><span class="show-ticket-time">16:45 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262686"><span class="show-ticket-time">19:30 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262687"><span class="show-ticket-time">22:15 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262704"><span class="show-ticket-time">17:45 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262705"><span class="show-ticket-time">20:30 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1263634">17:20</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1263628">20:00</a></p>\n</div>\n</div>\n<div class="gold-shade-2 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Di</h2>\n<span class="p-big">15.12</span>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262647">15:00</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262648">17:45</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262649">20:30</a></p>\n</div>\n<div class="odd show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1264102">14:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1264103">17:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1264104">20:30</a></p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262409">14:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262410">17:15</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262411">20:00</a></p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262688"><span class="show-ticket-time">16:45 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262689"><span class="show-ticket-time">19:30 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262690"><span class="show-ticket-time">22:15 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262706"><span class="show-ticket-time">17:45 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262707"><span class="show-ticket-time">20:30 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1263641">17:20</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1263635">20:00</a></p>\n</div>\n</div>\n<div class="gold-shade-3 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Mi</h2>\n<span class="p-big">16.12</span>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262650">15:00</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262651">17:45</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262652">20:30</a></p>\n</div>\n<div class="odd show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1264105">14:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1264106">17:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1264107">20:30</a></p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262417">14:30</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262418">17:15</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262474">20:00</a></p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1262691"><span class="show-ticket-time">16:45 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262692"><span class="show-ticket-time">19:30 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262693"><span class="show-ticket-time">22:15 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262708"><span class="show-ticket-time">17:45 <span class="show-lang">OmU</span></span></a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1262709"><span class="show-ticket-time">20:30 <span class="show-lang">OmU</span></span></a></p>\n</div>\n<div class="even show-time-row">\n<p><a class="ticket-link" href="/checkout/step01?showid=1263648">17:20</a></p>\n<p><a class="ticket-link" href="/checkout/step01?showid=1263642">20:00</a></p>\n</div>\n</div>\n<div class="gold-shade-4 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Do</h2>\n<span class="p-big">17.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n<div class="gold-shade-5 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Fr</h2>\n<span class="p-big">18.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n<div class="gold-shade-0 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Sa</h2>\n<span class="p-big">19.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n<div class="gold-shade-1 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>So</h2>\n<span class="p-big">20.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n<div class="gold-shade-2 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Mo</h2>\n<span class="p-big">21.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n<div class="gold-shade-3 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Di</h2>\n<span class="p-big">22.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n<div class="gold-shade-4 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Mi</h2>\n<span class="p-big">23.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n<div class="gold-shade-5 show-times-column text-center">\n<div class="bg-gray-dark program-header text-gold">\n<h2>Do</h2>\n<span class="p-big">24.12</span>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="odd show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n<div class="even show-time-row">\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class="col-sm-1">\n<div class="row">\n<div class="program-header border-left-dark"></div>\n</div>\n</div>\n</div>\n';
-
-			document.write(x);
-		</script>
 	</head>
-	<body></body>
+	<body>
+		<div class='program movie-program hidden-xs'>
+			<div class='row border-top-dark'>
+				<div class='col-sm-5'>
+					<div class='row program-header text-gold bg-gray-dark border-right-dark pdf-container'>
+						<div class='col-sm-12'>
+							<h2>Diese Woche</h2>
+							<div class='pdf-link'>
+								<a class="yck-button text-dark" href="/shows/5b8c2619/cinemas.pdf?eventid=113260">PDF</a>
+							</div>
+						</div>
+					</div>
+					<div class='bg-white even row'>
+						<div class='col-xs-12 cinema-name show-time-row'>
+							<div class='pull-left'>
+								<a href="/kinos/cinema-paris">
+									<h3 class='text-gold'>Cinema Paris</h3>
+								</a>
+							</div>
+							<div class='pull-right hidden-xs'>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+					<div class='bg-white odd row'>
+						<div class='col-xs-12 cinema-name show-time-row'>
+							<div class='pull-left'>
+								<a href="/kinos/filmtheater-am-friedrichshain">
+									<h3 class='text-gold'>Filmtheater am Friedrichshain</h3>
+								</a>
+							</div>
+							<div class='pull-right hidden-xs'>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+					<div class='bg-white even row'>
+						<div class='col-xs-12 cinema-name show-time-row'>
+							<div class='pull-left'>
+								<a href="/kinos/kant-kino">
+									<h3 class='text-gold'>Kant Kino</h3>
+								</a>
+							</div>
+							<div class='pull-right hidden-xs'>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+					<div class='bg-white odd row'>
+						<div class='col-xs-12 cinema-name show-time-row'>
+							<div class='pull-left'>
+								<a href="/kinos/passage">
+									<h3 class='text-gold'>Passage</h3>
+								</a>
+							</div>
+							<div class='pull-right hidden-xs'>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+					<div class='bg-white even row'>
+						<div class='col-xs-12 cinema-name show-time-row'>
+							<div class='pull-left'>
+								<a href="/kinos/rollberg">
+									<h3 class='text-gold'>Rollberg</h3>
+								</a>
+							</div>
+							<div class='pull-right hidden-xs'>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+					<div class='bg-white odd row'>
+						<div class='col-xs-12 cinema-name show-time-row'>
+							<div class='pull-left'>
+								<a href="/kinos/yorck">
+									<h3 class='text-gold'>Yorck</h3>
+								</a>
+							</div>
+							<div class='pull-right hidden-xs'>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='col-sm-6'>
+					<div class='row'>
+						<div class='shows-slider' data-slick='{"infinite": false, "slidesToShow": 6, "slidesToScroll": 6, "dots": false, "responsive": [{"breakpoint": 768, "settings": {"slidesToShow": 4, "slidesToScroll": 4, "arrows": false } } ] }'>
+							<div class='gold-shade-0 show-times-column text-center'>
+								<div class='bg-gold program-header text-black'>
+									<h2>Di</h2>
+									<span class='p-big'>15.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div class='gold-shade-1 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Mi</h2>
+									<span class='p-big'>16.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263444">15:15</a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1262189">18:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1262188">20:40</a></p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263671">15:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263672">17:45</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263673">20:30</a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263103">15:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263102">17:45</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263101">20:30</a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263404"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263403"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263646">18:10</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1263647">20:45</a></p>
+								</div>
+							</div>
+							<div class='gold-shade-2 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Do</h2>
+									<span class='p-big'>17.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264769">18:25</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264854">20:50</a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266265">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266266">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266267">21:30</a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265763">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265764">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265765">21:30</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265992"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265406"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265407"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265436">18:10</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265437">20:45</a></p>
+								</div>
+							</div>
+							<div class='gold-shade-3 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Fr</h2>
+									<span class='p-big'>18.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264868">18:25</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264880">20:50</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265181">22:40</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266268">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266269">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266270">21:30</a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265776">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265777">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265778">21:30</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266033"><span class='show-ticket-time'>14:15 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266030"><span class='show-ticket-time'>16:50 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266029"><span class='show-ticket-time'>19:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266113"><span class='show-ticket-time'>22:10 <span class='show-lang'>OmU</span></span></a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265456">18:10</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265457">20:45</a></p>
+								</div>
+							</div>
+							<div class='gold-shade-4 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Sa</h2>
+									<span class='p-big'>19.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264894">18:25</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264893">20:50</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265215">22:40</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266271">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266272">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266273">21:30</a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265785">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265784">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265783">21:30</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266043"><span class='show-ticket-time'>14:15 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266044"><span class='show-ticket-time'>16:50 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266045"><span class='show-ticket-time'>19:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266117"><span class='show-ticket-time'>22:10 <span class='show-lang'>OmU</span></span></a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265468">18:10</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265469">20:45</a></p>
+								</div>
+							</div>
+							<div class='gold-shade-5 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>So</h2>
+									<span class='p-big'>20.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264920">18:25</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264919">20:50</a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266250"><span class='show-ticket-time'>11:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266274">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266275">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266276">21:30</a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265798">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265797">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265796">21:30</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266058"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266057"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266056"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265476">18:10</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265477">20:45</a></p>
+								</div>
+							</div>
+							<div class='gold-shade-0 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Mo</h2>
+									<span class='p-big'>21.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264946">18:25</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264945">20:50</a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266277">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266278">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266279">21:30</a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265811">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265810">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265809">21:30</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266069"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266070"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266071"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265484">18:10</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265485">20:45</a></p>
+								</div>
+							</div>
+							<div class='gold-shade-1 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Di</h2>
+									<span class='p-big'>22.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264973">18:25</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264974">20:50</a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266280">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266281">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266282">21:30</a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265828">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265829">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265830">21:30</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266082"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266083"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266084"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265492">18:10</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265493">20:45</a></p>
+								</div>
+							</div>
+							<div class='gold-shade-2 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Mi</h2>
+									<span class='p-big'>23.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1264999">18:25</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265000">20:50</a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266283">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266284">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266285">21:30</a></p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265841">16:30</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265842">19:00</a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265843">21:30</a></p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266095"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266096"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1266097"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265500">18:10</a></p>
+									<p><a class="ticket-link" href="/checkout/step01?showid=1265501">20:45</a></p>
+								</div>
+							</div>
+							<div class='gold-shade-3 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Do</h2>
+									<span class='p-big'>24.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div class='gold-shade-4 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Fr</h2>
+									<span class='p-big'>25.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div class='gold-shade-5 show-times-column text-center'>
+								<div class='bg-gray-dark program-header text-gold'>
+									<h2>Sa</h2>
+									<span class='p-big'>26.12</span>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='even show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+								<div class='odd show-time-row'>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='col-sm-1'>
+					<div class='row'>
+						<div class='program-header border-left-dark'></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='program movie-program visible-xs-block'>
+			<div class='row border-top-dark program-header text-gold bg-gray-dark pdf-container'>
+				<div class='col-xs-12'>
+					<div class='pull-left'>
+						<h2>Diese Woche</h2>
+					</div>
+					<div class='pull-left pdf-link'>
+						<a class="yck-button text-dark" href="/shows/5b8c2619/cinemas.pdf?eventid=113260">PDF</a>
+					</div>
+				</div>
+			</div>
+			<div class='row bg-white'>
+				<div class='col-xs-12 cinema-name show-time-row'>
+					<a href="/kinos/cinema-paris">
+						<h3 class='text-gold'>Cinema Paris</h3>
+					</a>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='shows-slider border-bottom' data-slick='{"infinite": false, "slidesToShow": 6, "slidesToScroll": 6, "dots": false, "responsive": [{"breakpoint": 768, "settings": {"slidesToShow": 4, "slidesToScroll": 4, "arrows": false } } ] }'>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-white program-header text-black'>
+							<h2>
+								Di
+								<span class='p-big'>15.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>16.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263444">15:15</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>17.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>18.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>19.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								So
+								<span class='p-big'>20.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mo
+								<span class='p-big'>21.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Di
+								<span class='p-big'>22.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>23.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>24.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>25.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>26.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='row bg-white'>
+				<div class='col-xs-12 cinema-name show-time-row'>
+					<a href="/kinos/filmtheater-am-friedrichshain">
+						<h3 class='text-gold'>Filmtheater am Friedrichshain</h3>
+					</a>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='shows-slider border-bottom' data-slick='{"infinite": false, "slidesToShow": 6, "slidesToScroll": 6, "dots": false, "responsive": [{"breakpoint": 768, "settings": {"slidesToShow": 4, "slidesToScroll": 4, "arrows": false } } ] }'>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-white program-header text-black'>
+							<h2>
+								Di
+								<span class='p-big'>15.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>16.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1262189">18:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1262188">20:40</a></p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>17.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264769">18:25</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264854">20:50</a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>18.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264868">18:25</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264880">20:50</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265181">22:40</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>19.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264894">18:25</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264893">20:50</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265215">22:40</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								So
+								<span class='p-big'>20.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264920">18:25</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264919">20:50</a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mo
+								<span class='p-big'>21.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264946">18:25</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264945">20:50</a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Di
+								<span class='p-big'>22.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264973">18:25</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264974">20:50</a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>23.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1264999">18:25</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265000">20:50</a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>24.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>25.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>26.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='row bg-white'>
+				<div class='col-xs-12 cinema-name show-time-row'>
+					<a href="/kinos/kant-kino">
+						<h3 class='text-gold'>Kant Kino</h3>
+					</a>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='shows-slider border-bottom' data-slick='{"infinite": false, "slidesToShow": 6, "slidesToScroll": 6, "dots": false, "responsive": [{"breakpoint": 768, "settings": {"slidesToShow": 4, "slidesToScroll": 4, "arrows": false } } ] }'>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-white program-header text-black'>
+							<h2>
+								Di
+								<span class='p-big'>15.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>16.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263671">15:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263672">17:45</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263673">20:30</a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>17.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266265">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266266">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266267">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>18.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266268">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266269">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266270">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>19.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266271">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266272">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266273">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								So
+								<span class='p-big'>20.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266250"><span class='show-ticket-time'>11:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266274">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266275">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266276">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mo
+								<span class='p-big'>21.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266277">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266278">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266279">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Di
+								<span class='p-big'>22.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266280">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266281">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266282">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>23.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266283">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266284">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266285">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>24.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>25.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>26.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='row bg-white'>
+				<div class='col-xs-12 cinema-name show-time-row'>
+					<a href="/kinos/passage">
+						<h3 class='text-gold'>Passage</h3>
+					</a>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='shows-slider border-bottom' data-slick='{"infinite": false, "slidesToShow": 6, "slidesToScroll": 6, "dots": false, "responsive": [{"breakpoint": 768, "settings": {"slidesToShow": 4, "slidesToScroll": 4, "arrows": false } } ] }'>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-white program-header text-black'>
+							<h2>
+								Di
+								<span class='p-big'>15.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>16.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263103">15:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263102">17:45</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263101">20:30</a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>17.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265763">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265764">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265765">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>18.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265776">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265777">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265778">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>19.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265785">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265784">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265783">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								So
+								<span class='p-big'>20.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265798">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265797">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265796">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mo
+								<span class='p-big'>21.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265811">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265810">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265809">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Di
+								<span class='p-big'>22.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265828">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265829">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265830">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>23.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265841">16:30</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265842">19:00</a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265843">21:30</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>24.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>25.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>26.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='row bg-white'>
+				<div class='col-xs-12 cinema-name show-time-row'>
+					<a href="/kinos/rollberg">
+						<h3 class='text-gold'>Rollberg</h3>
+					</a>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='shows-slider border-bottom' data-slick='{"infinite": false, "slidesToShow": 6, "slidesToScroll": 6, "dots": false, "responsive": [{"breakpoint": 768, "settings": {"slidesToShow": 4, "slidesToScroll": 4, "arrows": false } } ] }'>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-white program-header text-black'>
+							<h2>
+								Di
+								<span class='p-big'>15.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>16.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263404"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263403"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>17.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265992"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265406"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265407"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>18.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266033"><span class='show-ticket-time'>14:15 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266030"><span class='show-ticket-time'>16:50 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266029"><span class='show-ticket-time'>19:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266113"><span class='show-ticket-time'>22:10 <span class='show-lang'>OmU</span></span></a></p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>19.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266043"><span class='show-ticket-time'>14:15 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266044"><span class='show-ticket-time'>16:50 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266045"><span class='show-ticket-time'>19:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266117"><span class='show-ticket-time'>22:10 <span class='show-lang'>OmU</span></span></a></p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								So
+								<span class='p-big'>20.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266058"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266057"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266056"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mo
+								<span class='p-big'>21.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266069"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266070"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266071"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Di
+								<span class='p-big'>22.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266082"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266083"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266084"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>23.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266095"><span class='show-ticket-time'>14:45 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266096"><span class='show-ticket-time'>17:30 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1266097"><span class='show-ticket-time'>20:15 <span class='show-lang'>OmU</span></span></a></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>24.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>25.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>26.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='row bg-white'>
+				<div class='col-xs-12 cinema-name show-time-row'>
+					<a href="/kinos/yorck">
+						<h3 class='text-gold'>Yorck</h3>
+					</a>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='shows-slider border-bottom' data-slick='{"infinite": false, "slidesToShow": 6, "slidesToScroll": 6, "dots": false, "responsive": [{"breakpoint": 768, "settings": {"slidesToShow": 4, "slidesToScroll": 4, "arrows": false } } ] }'>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-white program-header text-black'>
+							<h2>
+								Di
+								<span class='p-big'>15.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>16.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263646">18:10</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1263647">20:45</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>17.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265436">18:10</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265437">20:45</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>18.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265456">18:10</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265457">20:45</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>19.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265468">18:10</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265469">20:45</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								So
+								<span class='p-big'>20.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265476">18:10</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265477">20:45</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mo
+								<span class='p-big'>21.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265484">18:10</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265485">20:45</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Di
+								<span class='p-big'>22.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265492">18:10</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265493">20:45</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-0 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Mi
+								<span class='p-big'>23.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265500">18:10</a></p>
+							<p><a class="ticket-link" href="/checkout/step01?showid=1265501">20:45</a></p>
+						</div>
+					</div>
+					<div class='gold-shade-1 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Do
+								<span class='p-big'>24.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-2 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Fr
+								<span class='p-big'>25.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class='gold-shade-3 show-times-column text-center'>
+						<div class='bg-gray-dark program-header text-gold'>
+							<h2>
+								Sa
+								<span class='p-big'>26.12</span>
+							</h2>
+						</div>
+						<div class='show-time-row'>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		'use strict';
+
+		const cinemas = [].slice.call(document.querySelectorAll('.cinema-name h3')).map(e => e.innerText);
+
+		const timeColumns = [].slice.call(document.querySelectorAll('.show-times-column')).map(q => {
+			let datePrefix = q.querySelector('span').innerText;
+			    datePrefix = datePrefix.split('.').reverse().join('.');
+
+			const fullYear = (new Date()).getFullYear();
+
+			const baseDay = `${datePrefix}.${fullYear}`;
+
+			// day
+			const date = new Date(baseDay);
+
+			const showTimes = [].slice.call(q.querySelectorAll('.show-time-row')).map(z => {
+				return [].slice.call(z.querySelectorAll('p a')).map(e => {
+					let args = e.innerText.split(' ');
+
+					const _args = [new Date(`${args[0]} ${baseDay}`)];
+
+					args = args.slice(1);
+
+					console.log(_args, args, _args.concat(args));
+
+					return _args.concat(args);
+				});
+			});
+
+			return showTimes;
+		});
+
+		const map = cinemas.map((cinema, i) => {
+			return [timeColumns.map(column => column[i]), cinema]
+		});
+
+		console.log(timeColumns);
+	</script>
 </html>
