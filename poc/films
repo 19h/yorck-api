@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://ogp.me/ns#'>
 <head>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"94e87a4502","applicationID":"9256638","transactionName":"cQ0LRUIKDgpRQhdVXUQLAEIfDAwCUUg=","queueTime":0,"applicationTime":377,"agent":"js-agent.newrelic.com/nr-768.min.js"}</script>
-<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):void(r.q&&(r.q[e]||(r.q[e]=[]),r.q[e].push(n)))}var r=e("ee").create();n.exports=t,t.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=window,f=u.document;e(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"94e87a4502","applicationID":"9256638","transactionName":"cQ0LRUIKDgpRQhdVXUQLAEIfDAwCUUg=","queueTime":0,"applicationTime":273,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function c(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),c=a.length,u=0;c>u;u++)a[u].apply(i,r);return i}function u(t,e){p[t]=f(t).concat(e)}function f(t){return p[t]||[]}function s(){return r(c)}var p={};return{on:u,emit:c,create:s,listeners:f,context:e,_events:p}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!v++){var t=l.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(p,function(e,n){t[e]||(t[e]=n)});var n="https"===s.split(":")[0]||t.sslForHttp;l.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=l.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),c=t(1),u=window,f=u.document;t(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),l=e.exports={offset:i(),origin:s,features:{},xhrWrappable:d};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var v=0},{1:12,2:3,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],12:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],13:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}]},{},["G9z0Bl"]);</script>
 <meta content='width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
 <title>Yorck Kinos Berlin - Filme</title>
 <meta content='Yorck' name='description'>
@@ -10,16 +10,16 @@
 <meta content='Yorck Kinogruppe GmbH' name='og:site_name'>
 <meta content='Yorck Kinos Berlin - Filme' name='og:title'>
 <meta content='82638784231' name='fb:page_id'>
-<meta content='https://beta.yorck.de/' name='og:url'>
-<meta content='https://beta.yorck.de/yorck_icon_google.png' name='og:image'>
+<meta content='https://www.yorck.de/' name='og:url'>
+<meta content='https://yorck.de/yorck_icon_google.png' name='og:image'>
 <meta content='Yorck Kinogruppe GmbH' name='og:description'>
 <!-- link -->
-<link rel="stylesheet" media="all" href="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/application-96bd331df19a9e722cf476c5b634a14a.css" />
+<link rel="stylesheet" media="all" href="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/application-04fcc7e8bc59f2f4dd7ba7013632b8b4.css" />
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="SVuBwYOi0UiWtAtQXH75ga2rF8GAJw/dzNv5YSFPaFXcdAjDL/MTHXW+on4ueGCArQ5j54UwvhR+/t2bZJSvDg==" />
+<meta name="csrf-token" content="2qs3askJiAy6ko/NW2URjvXIAkJAzx8V+jdErcO6+l8arRpAmVAzLYoItm3Re6urbC8WD1NNA9jx5RGxqHanGg==" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/application-f73fb13544d4bd8d02cbfa20c6368bc0.js"></script>
+<script src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/application-fc875caa1e7c31e0a790ed89e8f2d8ff.js"></script>
 <noscript>
 <style>
   a img{
@@ -161,22 +161,16 @@ OV
 <p class='p-big text-gold text-uppercase'>A-Z</p>
 </li>
 <li>
-<a data-url="/filme/56279d726465700013010000" class="p-big select-movie-link" href="#">Alles steht Kopf - Inside Out</a>
-</li>
-<li>
-<a data-url="/filme/565f0e35316562002b020000" class="p-big select-movie-link" href="#">Arlo &amp; Spot</a>
+<a data-url="/filme/569e280c37623142ae060000" class="p-big select-movie-link" href="#">Anomalisa</a>
 </li>
 <li>
 <a data-url="/filme/55b0c25668313849a8020000" class="p-big select-movie-link" href="#">B-Movie: Lust &amp; Sound in West-Berlin 1979-1989</a>
 </li>
 <li>
-<a data-url="/filme/5645f2ae623364002b000000" class="p-big select-movie-link" href="#">Ballet Bolschoi - Der widerspenstigen zahmung</a>
+<a data-url="/filme/569cffd365663914c6040000" class="p-big select-movie-link" href="#">Bibi &amp; Tina - Mädchen gegen Jungs</a>
 </li>
 <li>
-<a data-url="/filme/56434262663231002c010000" class="p-big select-movie-link" href="#">Ballet Bolschoi - Die Kameliendame</a>
-</li>
-<li>
-<a data-url="/filme/564355ff6438620023050000" class="p-big select-movie-link" href="#">Ballett-Bolshoi Der Nußknacker</a>
+<a data-url="/filme/569518f93962360724020000" class="p-big select-movie-link" href="#">Big short, The</a>
 </li>
 <li>
 <a data-url="/filme/560bd3756465700136040000" class="p-big select-movie-link" href="#">Brandneue Testament, Das</a>
@@ -185,66 +179,84 @@ OV
 <a data-url="/filme/565c4c416336652f82030000" class="p-big select-movie-link" href="#">Bridge of Spies - Der Unterhändler</a>
 </li>
 <li>
+<a data-url="/filme/569e04353439663868040000" class="p-big select-movie-link" href="#">Brooklyn - Eine Liebe zwischen zwei Welten</a>
+</li>
+<li>
 <a data-url="/filme/564b4ab5386562002b050000" class="p-big select-movie-link" href="#">Carol</a>
+</li>
+<li>
+<a data-url="/filme/564c94c7383236002b000000" class="p-big select-movie-link" href="#">Danish Girl, The</a>
+</li>
+<li>
+<a data-url="/filme/566ab88c3938375289060000" class="p-big select-movie-link" href="#">Dämonen und Wunder - Dheepan</a>
+</li>
+<li>
+<a data-url="/filme/56a63dad613363604d000000" class="p-big select-movie-link" href="#">Ein Atem</a>
 </li>
 </ul>
 </div>
 <div class='col-sm-4'>
 <ul>
 <li>
-<a data-url="/filme/566ab88c3938375289060000" class="p-big select-movie-link" href="#">Dämonen und Wunder - Dheepan</a>
-</li>
-<li>
-<a data-url="/filme/5655a3993131330021010000" class="p-big select-movie-link" href="#">Dürrenmatt</a>
-</li>
-<li>
-<a data-url="/filme/564af1496233640387030000" class="p-big select-movie-link" href="#">Eisenstein in Guanajuato</a>
-</li>
-<li>
 <a data-url="/filme/55e570e7683138752b0b0000" class="p-big select-movie-link" href="#">Ewige Jugend</a>
 </li>
 <li>
-<a data-url="/filme/5628a8e464657008b6040000" class="p-big select-movie-link" href="#">Familienfest</a>
+<a data-url="/filme/56a6330a3865355762020000" class="p-big select-movie-link" href="#">Francofonia - Premiere mit Empfang</a>
+</li>
+<li>
+<a data-url="/filme/56a897a4f4d6cf211dfc89d1" class="p-big select-movie-link" href="#">Goya -Visionen aus Fleisch und Blut - Exhibition on Screen</a>
+</li>
+<li>
+<a data-url="/filme/569cf08e6463300d77000000" class="p-big select-movie-link" href="#">Hateful 8, The</a>
 </li>
 <li>
 <a data-url="/filme/566027cd6362361b55070000" class="p-big select-movie-link" href="#">Heidi</a>
 </li>
 <li>
-<a data-url="/filme/5655dac83632610022050000" class="p-big select-movie-link" href="#">Heiligabend 2015 im Kino International</a>
+<a data-url="/filme/564af67562336474ea020000" class="p-big select-movie-link" href="#">Hello I am David! - Eine Reise mit David Helfgott</a>
 </li>
 <li>
-<a data-url="/filme/5628fa77646570001c000000" class="p-big select-movie-link" href="#">Hotel Transsylvanien 2</a>
+<a data-url="/filme/564b5c08386562083b000000" class="p-big select-movie-link" href="#">Ich bin dann mal weg</a>
 </li>
 <li>
-<a data-url="/filme/564326813932391240000000" class="p-big select-movie-link" href="#">Irrational Man</a>
+<a data-url="/filme/56a63e2d64363274e0000000" class="p-big select-movie-link" href="#">Im Schatten der Frauen</a>
 </li>
 <li>
-<a data-url="/filme/5660400062353313281c0000" class="p-big select-movie-link" href="#">Jonas Kaufmann: Ein Abend mit Puccini</a>
+<a data-url="/filme/56950d4d3034610021070000" class="p-big select-movie-link" href="#">Iraqi Odyssey - 2D</a>
+</li>
+<li>
+<a data-url="/filme/569510be396236002d070000" class="p-big select-movie-link" href="#">Janis: Little Girl Blue</a>
+</li>
+<li>
+<a data-url="/filme/568796e66137647e96060000" class="p-big select-movie-link" href="#">Joy - Alles außer gewöhnlich</a>
 </li>
 <li>
 <a data-url="/filme/5669855f39383725e50c0000" class="p-big select-movie-link" href="#">Kleine Prinz, Der</a>
 </li>
 <li>
-<a data-url="/filme/563795af613765245a000000" class="p-big select-movie-link" href="#">Macbeth</a>
+<a data-url="/filme/56a79499840d0d00214b3756" class="p-big select-movie-link" href="#">Lichtes Meer</a>
+</li>
+<li>
+<a data-url="/filme/56950a64323738002d060000" class="p-big select-movie-link" href="#">Mademoiselle Hanna und die Kunst Nein zu sagen</a>
 </li>
 </ul>
 </div>
 <div class='col-sm-4'>
 <ul>
 <li>
-<a data-url="/filme/5628af676465700013040000" class="p-big select-movie-link" href="#">Pedal the World</a>
+<a data-url="/filme/5681599e6137643aef040000" class="p-big select-movie-link" href="#">Revenant The - Der Rückkehrer</a>
 </li>
 <li>
-<a data-url="/filme/5669b1203032352d2d040000" class="p-big select-movie-link" href="#">Perlmuttknopf, Der</a>
+<a data-url="/filme/56a63a4b643632728f000000" class="p-big select-movie-link" href="#">Sebastian und die Feuerretter</a>
 </li>
 <li>
-<a data-url="/filme/564b4d82386562002b0b0000" class="p-big select-movie-link" href="#">Schüler der Madame Anne, Die</a>
+<a data-url="/filme/55b1f69f6831380687000000" class="p-big select-movie-link" href="#">Sneak FAF</a>
+</li>
+<li>
+<a data-url="/filme/55b1f6e86831387cc4000000" class="p-big select-movie-link" href="#">Sneak OmU</a>
 </li>
 <li>
 <a data-url="/filme/564ef7146162613a7c000000" class="p-big select-movie-link" href="#">Sneak Passage </a>
-</li>
-<li>
-<a data-url="/filme/563b280061336511b1010000" class="p-big select-movie-link" href="#">Spectre (007)</a>
 </li>
 <li>
 <a data-url="/filme/562a2c4a6465702f69000000" class="p-big select-movie-link" href="#">Staat gegen Fritz Bauer, Der</a>
@@ -253,16 +265,25 @@ OV
 <a data-url="/filme/5645b8ed6632611238000000" class="p-big select-movie-link" href="#">Star Wars: Das Erwachen der Macht</a>
 </li>
 <li>
-<a data-url="/filme/560bb6aa6465700057000000" class="p-big select-movie-link" href="#">Steve Jobs</a>
+<a data-url="/filme/56a893902831822346010733" class="p-big select-movie-link" href="#">Suffragette</a>
 </li>
 <li>
-<a data-url="/filme/5645fed1623364001f020000" class="p-big select-movie-link" href="#">Stonewall</a>
+<a data-url="/filme/56966e936561631312020000" class="p-big select-movie-link" href="#">Suffraggette - Filmvorführung mit anschließender Podiumsdiskussion </a>
 </li>
 <li>
-<a data-url="/filme/566176c36235332cee1d0000" class="p-big select-movie-link" href="#">Wie auf Erden</a>
+<a data-url="/filme/569e25793439664a54000000" class="p-big select-movie-link" href="#">The True Cost - Der Preis der Mode</a>
 </li>
 <li>
-<a data-url="/filme/56586a176239363fb3060000" class="p-big select-movie-link" href="#">Zwischen Himmel und Eis</a>
+<a data-url="/filme/56714d4731636162c7000000" class="p-big select-movie-link" href="#">Unsere kleine Schwester</a>
+</li>
+<li>
+<a data-url="/filme/569ce19c64633005a4000000" class="p-big select-movie-link" href="#">Valley of Love - Tal der Liebe</a>
+</li>
+<li>
+<a data-url="/filme/55b5f0c368313804f3060000" class="p-big select-movie-link" href="#">Victoria</a>
+</li>
+<li>
+<a data-url="/filme/5695135c30356102c6000000" class="p-big select-movie-link" href="#">Winzlinge, Die - Operation Zuckerdose</a>
 </li>
 </ul>
 </div>
@@ -312,7 +333,7 @@ Mit Klick auf die Zeit Ticket kaufen
 <p class='p-big text-gold text-uppercase'>Mitte</p>
 </li>
 <li>
-<a data-cinema-id="54ed9ff26831381d721c0000" class="p-big select-cinema-link" href="#">International</a>
+<a data-cinema-id="54ed9ff26831381d721c0000" class="p-big select-cinema-link" href="#">Kino International</a>
 </li>
 <li>
 <p class='p-big text-gold text-uppercase'>Neukölln</p>
@@ -367,7 +388,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 <div class='row'>
 <div class='cinema-container col-xs-12'>
-<div class='shows' data-partial-name='quick_ticket_cinema_movies' id='f78a796d'>
+<div class='shows' data-partial-name='quick_ticket_cinema_movies' id='12ee5c2c'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -408,7 +429,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </a></div>
 <div class='itm hidden-sm hidden-xs col-md-3 col-lg-6 border-left-dark'>
 <div class='pdf-link pull-right'>
-<a class="yck-button text-dark" target="blank" href="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/setting/program_pdf/53ea05d5683138689f000000/wochenplan_26.11.pdf">PDF</a>
+<a class="yck-button text-dark" target="blank" href="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/setting/program_pdf/53ea05d5683138689f000000/28.01.2016.pdf">PDF</a>
 </div>
 </div>
 </div>
@@ -420,65 +441,108 @@ Mit Klick auf die Zeit Ticket kaufen
 <div class='movies-slider-container'>
 <div class='movies-slider slider-with-arrows'>
 <div class='text-center movie-poster'>
-<a href="/filme/daemonen-und-wunder-dheepan"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/566ab88c3938375289060000/home_retina_plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/566ab88c3938375289060000/home_plakat.jpg" alt="Home plakat" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/daemonen-und-wunder-dheepan"><h3 class='text-gold'>Dämonen und Wunder - Dheepan</h3>
-<p class='text-gold'>Jacques Audiard erzählt die Geschichte einer Flüchtlingsfamilie aus Sri Lanka, die sich in Frankreich ein neues Leben aufzubauen versucht. Dafür hat er in Cannes die Goldene Palme bekommen</p>
+<a href="/filme/ein-atem-1"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63dad613363604d000000/home_retina_show_retina_ein%2Datem%2DEA_A4_rgb.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63dad613363604d000000/home_show_retina_ein%2Datem%2DEA_A4_rgb.jpg" alt="Home show retina ein%2datem%2dea a4 rgb" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/ein-atem-1"><h3 class='text-gold'>Ein Atem</h3>
+<p class='text-gold'>Die Griechin Elena flüchtet vor der Krise nach Frankfurt und landet als Kindermädchen beim erfolgreichen Ehepaar Tessa (Jördis Triebel) und Jan. Als Tochter Lotte verloren geht, bricht über alle drei ein Alptraum herein. Von Christian Zübert (Lammbock. Hin und weg).</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/brandneue-testament-das"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/560bd3756465700136040000/home_retina_533349.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/560bd3756465700136040000/home_533349.jpg" alt="Home 533349" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/brandneue-testament-das"><h3 class='text-gold'>Brandneue Testament, Das</h3>
-<p class='text-gold'>Gott existiert. Er lebt in Brüssel. Doch der Allmächtige ist kein weiser Weltenlenker, sondern ein Familienvater, der frustriert durch die Wohnung schlurft und von seinem Computer aus die Menschheit terrorisiert.</p>
+<a href="/filme/hateful-8-the"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569cf08e6463300d77000000/home_retina_THE_HATEFUL_8_Hauptplakat_01.72dpi.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569cf08e6463300d77000000/home_THE_HATEFUL_8_Hauptplakat_01.72dpi.jpg" alt="Home the hateful 8 hauptplakat 01.72dpi" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/hateful-8-the"><h3 class='text-gold'>Hateful 8, The</h3>
+<p class='text-gold'>Quentin Tarantinos achter Film: Wyoming nach dem Bürgerkrieg: Eine Kutsche bahnt sich den Weg Richtung Red Rock. An Bord: Eine zwielichtige Truppe um Kopfgeldjäger John &quot;der Henker&quot; Ruth.</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/ewige-jugend"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55e570e7683138752b0b0000/home_retina_youth%2Dposter%2D01.png" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55e570e7683138752b0b0000/home_youth%2Dposter%2D01.png" alt="Home youth%2dposter%2d01" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/ewige-jugend"><h3 class='text-gold'>Ewige Jugend</h3>
-<p class='text-gold'>Fellini auf dem Zauberberg: Paolo Sorrentino (CHEYENNE, LA GRANDE BELLEZZA) schickt zwei alternde Künstler in ein Schweizer Alpenhotel und lässt sie über das Leben und die Liebe sinnieren. Ganz großes Kino!</p>
+<a href="/filme/brooklyn-eine-liebe-zwischen-zwei-welten"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e04353439663868040000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e04353439663868040000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/brooklyn-eine-liebe-zwischen-zwei-welten"><h3 class='text-gold'>Brooklyn - Eine Liebe zwischen zwei Welten</h3>
+<p class='text-gold'>Basierend auf einem irischen Bestseller erzählt BROOKLYN von einer jungen Frau, die in den 1950er Jahren ihre Heimat Irland zurücklässt und in New York auf ein besseres Leben hofft. </p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/4-koenige"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/566055886235332731000000/home_retina_030255.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/566055886235332731000000/home_030255.jpg" alt="Home 030255" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/4-koenige"><h3 class='text-gold'>4 Könige</h3>
-<p class='text-gold'>Vier der aktuell hoffnungsvollsten Jung-Darsteller das Landes versammelt das sensible Coming-of-Age-Drama 4 KÖNIGE über vier junge Patienten einer Psychiatrie, die die Weihnachtszeit in der Klinik verbringen müssen. Dass man dem Klinikalltag trotz anfänglicher Probleme und gereizter Stimmung auch Positives abgewinnen kann und dass die Patienten immer mehr zusammenwachsen, ist dabei in erster Linie dem unkonventionellen Psychiater zu verdanken.</p>
+<a href="/filme/anomalisa"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e280c37623142ae060000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e280c37623142ae060000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/anomalisa"><h3 class='text-gold'>Anomalisa</h3>
+<p class='text-gold'>Charlie Kaufmann, der Autor einiger der abgefahrensten und vertracktesten Geschichten der frühen 2000er, hat nach langer Pause wieder einen Film gemacht - eine bittersüße Erfahrung!</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/star-wars-das-erwachen-der-macht"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5645b8ed6632611238000000/home_retina_089016.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5645b8ed6632611238000000/home_089016.jpg" alt="Home 089016" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/star-wars-das-erwachen-der-macht"><h3 class='text-gold'>Star Wars: Das Erwachen der Macht</h3>
-<p class='text-gold'>Es war einmal vor langer Zeit in einer weit, weit entfernten Galaxis …
+<a href="/filme/bibi-und-tina-maedchen-gegen-jungs"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569cffd365663914c6040000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569cffd365663914c6040000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/bibi-und-tina-maedchen-gegen-jungs"><h3 class='text-gold'>Bibi &amp; Tina - Mädchen gegen Jungs</h3>
+<p class='text-gold'>Regisseur Detlev Buck inszeniert das dritte Kino-Abenteuer der kleinen Hexe Bibi als Geschlechterkampf: Beim Besuch der Partnerschule wird eine Schatzsuche ausgerufen, in der dem Macho Urs alle Mittel recht sind. Und gerade jetzt verliert Bibi ihre magischen Kräfte.</p>
+</a></div>
+<div class='text-center movie-poster'>
+<a href="/filme/francofonia-premiere-mit-empfang"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a6330a3865355762020000/home_retina_francofonia_plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a6330a3865355762020000/home_francofonia_plakat.jpg" alt="Home francofonia plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/francofonia-premiere-mit-empfang"><h3 class='text-gold'>Francofonia - Premiere mit Empfang</h3>
+<p class='text-gold'>Der Louvre zur Zeit der deutschen Besatzung: Direktor Jacques Jaujard bekommt es mit Franziskus Graf Wolff-Metternich zu tun, Leiter des sogenannten “Kunstschutzes” der Wehrmacht – Kontrahenten, aus denen mehr und mehr Komplizen bei der Rettung der Schätze des Museums vor dem Zugriff der Nazi-Invasoren werden. Mit dem Gravitationszentrum dieser wundersamen Geschichte entfaltet Alexander Sokurov (FAUST, RUSSIAN ARK) Bilder von suggestiver Schönheit.</p>
+</a></div>
+<div class='text-center movie-poster'>
+<a href="/filme/im-schatten-der-frauen"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63e2d64363274e0000000/home_retina_Im%2DSchatten%2Dder%2DFrauen_Plakat%2DA4.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63e2d64363274e0000000/home_Im%2DSchatten%2Dder%2DFrauen_Plakat%2DA4.jpg" alt="Home im%2dschatten%2dder%2dfrauen plakat%2da4" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/im-schatten-der-frauen"><h3 class='text-gold'>Im Schatten der Frauen</h3>
+<p class='text-gold'>Seit 50 Jahren dreht Philippe Garrel Filme, zählt in Frankreich zu den wichtigsten Cineasten dieser Zeit, doch erst jetzt kommt zum ersten Mal ein Film Garrels regulär in deutsche Kinos.  </p>
+</a></div>
+<div class='text-center movie-poster'>
+<a href="/filme/hello-i-am-david-eine-reise-mit-david-helfgott"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564af67562336474ea020000/home_retina_plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564af67562336474ea020000/home_plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/hello-i-am-david-eine-reise-mit-david-helfgott"><h3 class='text-gold'>Hello I am David! - Eine Reise mit David Helfgott</h3>
+<p class='text-gold'>HELLO I AM DAVID! - EINE REISE MIT DAVID HELFGOTT ist der erste Dokumentarfilm über den ebenso herausragenden wie ungewöhnlichen Künstler und Menschen David Helfgott, der 1996 im sechsfach Oscar-nomierten Film SHINE porträtiert wurde.</p>
+</a></div>
+<div class='text-center movie-poster'>
+<a href="/filme/revenant-the-der-rueckkehrer"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5681599e6137643aef040000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5681599e6137643aef040000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/revenant-the-der-rueckkehrer"><h3 class='text-gold'>Revenant The - Der Rückkehrer</h3>
+<p class='text-gold'>Nach BIRDMAN wechselt Oscar-Regisseur Iñárritu mit THE REVENANT das Genre und auch seinen Ton, wirft jedoch erneut existenzielle Fragen auf – mit ganz anderen Antworten … </p>
+</a></div>
+<div class='text-center movie-poster'>
+<a href="/filme/the-true-cost-der-preis-der-mode-5"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e25793439664a54000000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e25793439664a54000000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/the-true-cost-der-preis-der-mode-5"><h3 class='text-gold'>The True Cost - Der Preis der Mode</h3>
+<p class='text-gold'>Was auf Laufstegen schön anmutet, ist oft eine Täuschung. Mode ist keineswegs unschuldig, schon gar nicht die „Fast Fashion“ einiger Textilgroßkonzerne, die ohne Rücksicht auf Menschenrechte, Arbeits- oder Umweltbestimmungen in den ärmsten Gegenden des Planeten marodieren.</p>
+</a></div>
+<div class='text-center movie-poster'>
+<a href="/filme/sebastian-und-die-feuerretter"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63a4b643632728f000000/home_retina_Sebastian%2DFeuerretter_Plakat_A4.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63a4b643632728f000000/home_Sebastian%2DFeuerretter_Plakat_A4.jpg" alt="Home sebastian%2dfeuerretter plakat a4" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/sebastian-und-die-feuerretter"><h3 class='text-gold'>Sebastian und die Feuerretter</h3>
+<p class='text-gold'>Sebastian ist zehn, Waise und verbringt seine Zeit lieber mit Hündin Belle in den Bergen als in der Schule. Voller Vorfreude erwartet er die Ankunft seiner Tante, doch deren Flugzeug stürzt ab und löst einen Waldbrand aus. Heimlich schleichen er und Belle an Bord der Maschine des Piloten Pierre, der nach Überlebenden suchen soll. Die Folge: Chaos, nächster Absturz und ein ausgewachsenes Alpenabenteuer.
+
 </p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/steve-jobs"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/560bb6aa6465700057000000/home_retina_Universal%2DSteve%2DJobs%2DFilmplakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/560bb6aa6465700057000000/home_Universal%2DSteve%2DJobs%2DFilmplakat.jpg" alt="Home universal%2dsteve%2djobs%2dfilmplakat" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/steve-jobs"><h3 class='text-gold'>Steve Jobs</h3>
-<p class='text-gold'>Mit seinen Einfällen und Entwicklungen schuf Steve Jobs nicht nur ein Wirtschaftsimperium, sondern änderte auch die Art, wie Menschen und ganze Gesellschaften leben, arbeiten und interagieren. Danny Boyles Porträt erzählt den Werdegang des Apple-Übervaters als die Geschichte eines getriebenen Egomanen, dargestellt von einem grandios agierenden Michael Fassbender.</p>
+<a href="/filme/winzlinge-die-operation-zuckerdose"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5695135c30356102c6000000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5695135c30356102c6000000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/winzlinge-die-operation-zuckerdose"><h3 class='text-gold'>Winzlinge, Die - Operation Zuckerdose</h3>
+<p class='text-gold'>Nicht auszudenken, was eine in der Hast des Aufbruchs beim Picknick zurückgelassene Zuckerdose anrichten kann. Sie vermag wilde Feindschaften und unerbittliche Verfolgungsjagden unter Ameisen auszulösen, aber auch die Freundschaft zu einem Marienkäfer zu begründen. Und das in ganz ungewöhnlich animierten Bildern!</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/macbeth"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/563795af613765245a000000/home_retina_033869.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/563795af613765245a000000/home_033869.jpg" alt="Home 033869" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/macbeth"><h3 class='text-gold'>Macbeth</h3>
-<p class='text-gold'>Michael Fassbender und Marion Cotillard brillieren in einer bildgewaltigen Neuinterpretation des schottischen Königsdramas von William Shakespeare.</p>
+<a href="/filme/danish-girl-the"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564c94c7383236002b000000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564c94c7383236002b000000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/danish-girl-the"><h3 class='text-gold'>Danish Girl, The</h3>
+<p class='text-gold'>Im Kopenhagen der 1920er-Jahre lebt das Künstlerpaar Einar und Gerda eine harmonische Ehe. Als Einar eines Tages seiner Frau in Frauenkleidung für ein Porträt Modell steht, entdeckt er den femininen Teil seiner Persönlichkeit, den er zunächst als „Lili“ spielerisch auslebt. Doch Lili will kein Rollenspiel sein …</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/staat-gegen-fritz-bauer-der"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/562a2c4a6465702f69000000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/562a2c4a6465702f69000000/home_Plakat.jpg" alt="Home plakat" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/staat-gegen-fritz-bauer-der"><h3 class='text-gold'>Staat gegen Fritz Bauer, Der</h3>
-<p class='text-gold'>Porträt des Generalstaatsanwalts Fritz Bauer, der bedeutend dazu beitrug, dass die junge Bundesrepublik die rechtliche Aufarbeitung des NS-Unrechtsstaats nicht „vergaß“. Im Mittelpunkt steht sein Beitrag zur Ergreifung Adolf Eichmanns durch den israelischen Mossad – gegen massive Widerstände in der eigenen Behörde. Mt einem herausragenden Burghart Klaußner in der Hauptrolle.</p>
+<a href="/filme/carol"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4ab5386562002b050000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4ab5386562002b050000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/carol"><h3 class='text-gold'>Carol</h3>
+<p class='text-gold'>Im New York der 1950er-Jahre lernt die wohlhabende Carol die junge Therese kennen, die in einem Kaufhaus arbeitet und von einem besseren Leben träumt. Sie wird ihre große Liebe. Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der Oscarfavoriten...</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/spectre-007"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/563b280061336511b1010000/home_retina_091636.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/563b280061336511b1010000/home_091636.jpg" alt="Home 091636" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/spectre-007"><h3 class='text-gold'>Spectre (007)</h3>
-<p class='text-gold'>Es kann nur einen geben!!!</p>
+<a href="/filme/unsere-kleine-schwester"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56714d4731636162c7000000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56714d4731636162c7000000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/unsere-kleine-schwester"><h3 class='text-gold'>Unsere kleine Schwester</h3>
+<p class='text-gold'>Allerbeste Filmkunst, beiläufig erzählt, nach einem in Japan sehr bekannten Manga. Im Mittelpunkt steht Suzu, ein junges Mädchen, das mit seinen drei Halbschwestern zusammenzieht. Unspektakulär und dennoch spannend geht es ums Erwachsenwerden.</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/stonewall"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5645fed1623364001f020000/home_retina_354249.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5645fed1623364001f020000/home_354249.jpg" alt="Home 354249" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/stonewall"><h3 class='text-gold'>Stonewall</h3>
-<p class='text-gold'>Deutschlands erfolgreichster Blockbustermeister Roland Emmerich kann auch anders: In seinem neuen Filmdrama widmet sich der offen schwule Regisseur den Aufständen vor der legendäre Schwulenbar Stonewall in New Yorks Christopher Street im Jahr 1969, dem Beginn der Homobewegung.</p>
+<a href="/filme/mademoiselle-hanna-und-die-kunst-nein-zu-sagen"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56950a64323738002d060000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56950a64323738002d060000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/mademoiselle-hanna-und-die-kunst-nein-zu-sagen"><h3 class='text-gold'>Mademoiselle Hanna und die Kunst Nein zu sagen</h3>
+<p class='text-gold'>Französische Filme sind zur Zeit echte Exportschlager und man staunt, wie sich die französischen FilmemacherInnen mit Witz und Verve aktueller politisch-gesellschaftlicher Themen annehmen.</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/schueler-der-madame-anne-die"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4d82386562002b0b0000/home_retina_204286.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4d82386562002b0b0000/home_204286.jpg" alt="Home 204286" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/schueler-der-madame-anne-die"><h3 class='text-gold'>Schüler der Madame Anne, Die</h3>
-<p class='text-gold'>Eine engagierte Lehrerin und eine Klasse voller Underdogs: Dank Madame Anne wird aus der zerstrittenen Teenie-Horde eine echte Gemeinschaft. Nach einer wahren Geschichte</p>
+<a href="/filme/janis-little-girl-blue"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569510be396236002d070000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569510be396236002d070000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/janis-little-girl-blue"><h3 class='text-gold'>Janis: Little Girl Blue</h3>
+<p class='text-gold'>„Ich habe dich je und je geliebt, darum habe ich dich zu mir gezogen aus lauter Güte.“ Jeremia 31,3. Kein Trost nirgends nach diesem Dokumentarfilm über die Janis Joplin, die 27 Jahre alt wurde.</p>
 </a></div>
 <div class='text-center movie-poster'>
-<a href="/filme/irrational-man"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564326813932391240000000/home_retina_289564.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564326813932391240000000/home_289564.jpg" alt="Home 289564" />
-</a><a class="description-overlay text-left hidden-xs" href="/filme/irrational-man"><h3 class='text-gold'>Irrational Man</h3>
-<p class='text-gold'>In Woody Allens neuestem Film wird betrogen, gesoffen und gemordet. Sehenswert ist er vor allem wegen seiner Hauptdarsteller Joaquin Phoenix und Emma Stone.</p>
+<a href="/filme/iraqi-odyssey-2d"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56950d4d3034610021070000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56950d4d3034610021070000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/iraqi-odyssey-2d"><h3 class='text-gold'>Iraqi Odyssey - 2D</h3>
+<p class='text-gold'>Der irakisch-schweizerische Filmemacher Samir hat mit der Chronik seiner eigenen, über die ganze Welt verstreuten, Familie ein unglaublich fesselndes Zeitdokument geschaffen.</p>
+</a></div>
+<div class='text-center movie-poster'>
+<a href="/filme/big-short-the"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569518f93962360724020000/home_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569518f93962360724020000/home_Plakat.jpg" alt="Home plakat" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/big-short-the"><h3 class='text-gold'>Big short, The</h3>
+<p class='text-gold'>In seiner ebenso brillanten wie scharfzüngigen und stargespickten Satire versucht Adam McKay zu ergründen, warum wir aus Finanzkrisen nichts lernen. </p>
+</a></div>
+<div class='text-center movie-poster'>
+<a href="/filme/valley-of-love-tal-der-liebe"><img data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569ce19c64633005a4000000/home_retina_valley_love.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569ce19c64633005a4000000/home_valley_love.jpg" alt="Home valley love" />
+</a><a class="description-overlay text-left hidden-xs" href="/filme/valley-of-love-tal-der-liebe"><h3 class='text-gold'>Valley of Love - Tal der Liebe</h3>
+<p class='text-gold'>Zwei Menschen (Isabelle Huppert &amp; Gérard Dépardieu) ringen mit dem Leben und der Liebe. Sie versuchen den Freitod ihres Sohnes zu begreifen. Guillaume Nicloux verhandelt existenzielle Fragen – vor der Kulisse des Death Valley.
+
+</p>
 </a></div>
 </div>
 </div>
@@ -513,11 +577,11 @@ Mit Klick auf die Zeit Ticket kaufen
 <span class='text-black'>Theresa von Eltz</span>
 </p>
 <br>
-<p>Vier der aktuell hoffnungsvollsten Jung-Darsteller das Landes versammelt das sensible Coming-of-Age-Drama 4 KÖNIGE über vier junge Patienten einer Psychiatrie, die die Weihnachtszeit in der Klinik verbringen müssen. Dass man dem Klinikalltag trotz anfänglicher Probleme und gereizter Stimmung auch Positives abgewinnen kann und dass die Patienten immer mehr zusammenwachsen, ist dabei in erster Linie dem unkonventionellen Psychiater zu verdanken.</p>
+<p>Sensibles Coming-of-Age-Drama 4 KÖNIGE über vier junge Patienten einer Psychiatrie, die die Weihnachtszeit in der Klinik verbringen müssen. Beim Filmfest Hamburg gefeiert!</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113960' id='b86e8349'>
+<div class='shows' data-event-id='113960' id='202b5c56'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -528,24 +592,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-113112'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-114466'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/alles-steht-kopf-inside-out"><img alt="Alles steht Kopf - Inside Out" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56279d726465700013010000/index_s_retina_alles%2Dsteht%2Dkopf%2Dpixar%2Ddisney%2Dposter.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56279d726465700013010000/index_s_alles%2Dsteht%2Dkopf%2Dpixar%2Ddisney%2Dposter.jpg" />
+<a href="/filme/anomalisa"><img alt="Anomalisa" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e280c37623142ae060000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e280c37623142ae060000/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/alles-steht-kopf-inside-out"><h2 class='text-black'>Alles steht Kopf - Inside Out</h2>
-</a><p class='text-gold text-uppercase'>USA • 2015 • 102 min</p>
+<a href="/filme/anomalisa"><h2 class='text-black'>Anomalisa</h2>
+</a><p class='text-gold text-uppercase'>USA • 2016 • 91 min • FSK 12</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Pete Docter</span>
+<span class='text-black'>Duke Johnson, Charlie Kaufman</span>
 </p>
 <br>
-<p>Die innovative Trickfilmschmiede Pixar wird ihrem brillanten Ruf einmal mehr gerecht und präsentiert ein außergewöhnliches Animationsabenteuer.</p>
+<p>Charlie Kaufmann, der Autor einiger der abgefahrensten und vertracktesten Geschichten der frühen 2000er, hat nach langer Pause wieder einen Film gemacht - eine bittersüße Erfahrung!</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113112' id='f648a6f2'>
+<div class='shows' data-event-id='114466' id='9a1a0525'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -556,35 +620,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-113964'>
-<div class='bg-white col-sm-5 movie-info'>
-<div class='movie-poster'>
-<a href="/filme/arlo-und-spot"><img alt="Arlo &amp; Spot" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/565f0e35316562002b020000/index_s_retina_290752.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/565f0e35316562002b020000/index_s_290752.jpg" />
-</a></div>
-<div class='movie-details'>
-<a href="/filme/arlo-und-spot"><h2 class='text-black'>Arlo &amp; Spot</h2>
-</a><p class='text-gold text-uppercase'>USA • 2015 • 93 min • FSK 6</p>
-<p>
-<span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Peter Sohn</span>
-</p>
-<br>
-<p>Im Pixar-Animationsfilm Arlo &amp; Spot müssen ein Dino-Teenager und sein kleiner Menschenfreund eine abenteuerliche Reise überstehen.</p>
-</div>
-</div>
-<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113964' id='06b45888'>
-<div class='row'>
-<div class='loading bg-white col-xs-12'>
-<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class='bg-white border-bottom movie-row odd row' id='movie-112198'>
+<div class='bg-white border-bottom even movie-row row' id='movie-112198'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
 <a href="/filme/b-movie-lust-und-sound-in-west-berlin-1979-1989"><img alt="B-Movie: Lust &amp; Sound in West-Berlin 1979-1989" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55b0c25668313849a8020000/index_s_retina_263801.jpg%2Dr_640_600%2Db_1_D6D6D6%2Df_jpg%2Dq_x%2Dxxyxx.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55b0c25668313849a8020000/index_s_263801.jpg%2Dr_640_600%2Db_1_D6D6D6%2Df_jpg%2Dq_x%2Dxxyxx.jpg" />
@@ -597,11 +633,11 @@ Mit Klick auf die Zeit Ticket kaufen
 <span class='text-black'>Jörg A. Hoppe Klaus Maeck Heiko Lange</span>
 </p>
 <br>
-<p>B-MOVIE wirft einen Blick auf die wilde, bunte, chaotische Musik- und Kunstszene der 80er Jahre. Authentische Zeitdokumente und unveröffentlichte Filme zeigen die Kreativität einer Szene, die so nur in Berlin (West) möglich war.</p>
+<p>B-MOVIE wirft einen Blick auf die wilde, bunte, chaotische Musik- und Kunstszene der 80er Jahre. Zeitdokumente und unveröffentlichte Filme zeigen die Kreativität einer Szene, die so nur hier möglich war.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='112198' id='caeaeccd'>
+<div class='shows' data-event-id='112198' id='aa69abea'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -612,20 +648,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-112499'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-113827'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/ballet-bolschoi-der-widerspenstigen-zahmung-1"><img alt="Ballet Bolschoi - Der widerspenstigen zahmung" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5645f2ae623364002b000000/index_s_retina_Bolshoi.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5645f2ae623364002b000000/index_s_Bolshoi.jpg" />
+<a href="/filme/bibi-und-tina-maedchen-gegen-jungs"><img alt="Bibi &amp; Tina - Mädchen gegen Jungs" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569cffd365663914c6040000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569cffd365663914c6040000/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/ballet-bolschoi-der-widerspenstigen-zahmung-1"><h2 class='text-black'>Ballet Bolschoi - Der widerspenstigen zahmung</h2>
-</a><p class='text-gold text-uppercase'></p>
+<a href="/filme/bibi-und-tina-maedchen-gegen-jungs"><h2 class='text-black'>Bibi &amp; Tina - Mädchen gegen Jungs</h2>
+</a><p class='text-gold text-uppercase'>DE • 20161 • 111 min • FSK 0</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Detlev Buck</span>
+</p>
 <br>
-<p>Viele Verehrer träumen von einer Hochzeit mit der entzückenden und gutmütigen Bianca, auch Lucentio. Jedoch erlaubt ihr Vater ihr nicht zu heiraten bis ihre ältere Schwester, die launische Katharina, unter der Haube ist….</p>
+<p>Regisseur Detlev Buck inszeniert das dritte Kino-Abenteuer der kleinen Hexe Bibi als Geschlechterkampf: Beim Besuch der Partnerschule wird eine Schatzsuche ausgerufen, in der dem Macho Urs alle Mittel recht sind. Und gerade jetzt verliert Bibi ihre magischen Kräfte.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='112499' id='125277da'>
+<div class='shows' data-event-id='113827' id='4ac9bbbc'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -636,44 +676,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-112498'>
+<div class='bg-white border-bottom even movie-row row' id='movie-114086'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/ballet-bolschoi-die-kameliendame"><img alt="Ballet Bolschoi - Die Kameliendame" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56434262663231002c010000/index_s_retina_Bolshoi.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56434262663231002c010000/index_s_Bolshoi.jpg" />
+<a href="/filme/big-short-the"><img alt="Big short, The" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569518f93962360724020000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569518f93962360724020000/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/ballet-bolschoi-die-kameliendame"><h2 class='text-black'>Ballet Bolschoi - Die Kameliendame</h2>
-</a><p class='text-gold text-uppercase'></p>
+<a href="/filme/big-short-the"><h2 class='text-black'>Big short, The</h2>
+</a><p class='text-gold text-uppercase'>USA • 2016 • 131 min • FSK 6</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Adam McKay</span>
+</p>
 <br>
-<p>Schon im ﻿vierten Jahr können Sie im Cinema Paris Liveübertragungen großer Ballettklassiker und zeitgenössischer Choreographien aus Moskau erleben!</p>
+<p>In seiner ebenso brillanten wie scharfzüngigen und stargespickten Satire versucht Adam McKay zu ergründen, warum wir aus Finanzkrisen nichts lernen. </p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='112498' id='eab42bc1'>
-<div class='row'>
-<div class='loading bg-white col-xs-12'>
-<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class='bg-white border-bottom even movie-row row' id='movie-107238'>
-<div class='bg-white col-sm-5 movie-info'>
-<div class='movie-poster'>
-<a href="/filme/ballett-bolshoi-der-nussknacker"><img alt="Ballett-Bolshoi Der Nußknacker" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564355ff6438620023050000/index_s_retina_Bolshoi.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564355ff6438620023050000/index_s_Bolshoi.jpg" />
-</a></div>
-<div class='movie-details'>
-<a href="/filme/ballett-bolshoi-der-nussknacker"><h2 class='text-black'>Ballett-Bolshoi Der Nußknacker</h2>
-</a><p class='text-gold text-uppercase'></p>
-<br>
-<p>1892 schrieb Tschaikowski mit dem &quot;Nussknacker&quot; sein letztes Ballett. Juri Grigorowitsch Choreographie gehört zu dessen berühmtesten Werken. Marie bekommt von ihrem Onkel zu Weihnachten eine seltsame Nussknacker-Figur geschenkt. Nachts erwachen die Spielsachen zum Leben. Der Nussknacker wird zum Anführer der Zinnsoldaten und beschützt Marie vor dem Angriff der Mäusearmee.</p>
-</div>
-</div>
-<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='107238' id='fcc2b0c7'>
+<div class='shows' data-event-id='114086' id='daaa6e9a'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -691,7 +711,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </a></div>
 <div class='movie-details'>
 <a href="/filme/brandneue-testament-das"><h2 class='text-black'>Brandneue Testament, Das</h2>
-</a><p class='text-gold text-uppercase'>BE, FR • 2015</p>
+</a><p class='text-gold text-uppercase'>BE, FR • 2015 • 116 min</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
 <span class='text-black'>Jaco van Dormael</span>
@@ -701,7 +721,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113260' id='f173595d'>
+<div class='shows' data-event-id='113260' id='4cf28b5f'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -725,11 +745,11 @@ Mit Klick auf die Zeit Ticket kaufen
 <span class='text-black'>Steven Spielberg</span>
 </p>
 <br>
-<p>BRIDGE OF SPIES handelt vom wahren Ereignis des ersten Gefangenenaustauschs zwischen den USA und der Sowjetunion auf der Berliner Glienicker Brücke. Ein Agenten- und Spionagethriller klassischer Machart, der Verantwortlich dafür sind vor allem der bedrohlich-unheilvolle Handlungsort Ort-Berlin, der detailgenau zum Leben erweckt wurde, sowie die messerscharfen Dialoge, die vor allem Tom Hanks mit Genuss und viel Zynismus zum Besten gibt. Unser Kino INTERNATIONAL spielt übrigens auch eine kleine Nebenrolle. Mal sehen, ob ihr es erkennt!</p>
+<p>BRIDGE OF SPIES handelt vom ersten Gefangenenaustauschs zwischen den USA und der Sowjetunion auf der Glienicker Brücke. Ein Agenten- und Spionagethriller klassischer Machart, bei dem ein düsteres Ost-Berlin im Mittelpunkt steht. Unser Kino INTERNATIONAL spielt übrigens auch eine Nebenrolle.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113922' id='78722f9b'>
+<div class='shows' data-event-id='113922' id='b2acae37'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -740,7 +760,35 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-113277'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-114092'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/brooklyn-eine-liebe-zwischen-zwei-welten"><img alt="Brooklyn - Eine Liebe zwischen zwei Welten" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e04353439663868040000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e04353439663868040000/index_s_Plakat.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/brooklyn-eine-liebe-zwischen-zwei-welten"><h2 class='text-black'>Brooklyn - Eine Liebe zwischen zwei Welten</h2>
+</a><p class='text-gold text-uppercase'>IE, GB, CA • 2016 • 112 min</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>John Crowley</span>
+</p>
+<br>
+<p>Basierend auf einem irischen Bestseller erzählt BROOKLYN von einer jungen Frau, die in den 1950er Jahren ihre Heimat Irland zurücklässt und in New York auf ein besseres Leben hofft. </p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='114092' id='9674af35'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom even movie-row row' id='movie-113277'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
 <a href="/filme/carol"><img alt="Carol" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4ab5386562002b050000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4ab5386562002b050000/index_s_Plakat.jpg" />
@@ -753,11 +801,39 @@ Mit Klick auf die Zeit Ticket kaufen
 <span class='text-black'>Todd Haynes</span>
 </p>
 <br>
-<p>Eine Liebe, die ihren Namen nicht zu nennen wagt: In Todd Haynes’ Melomeisterwerk spielen Cate Blanchett und Rooney Mara ein lesbisches Paar im New York der Fünfziger Jahre. Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der Oscarfavoriten...</p>
+<p>Im New York der 1950er-Jahre lernt die wohlhabende Carol die junge Therese kennen, die in einem Kaufhaus arbeitet und von einem besseren Leben träumt. Sie wird ihre große Liebe. Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der Oscarfavoriten...</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113277' id='44d1c574'>
+<div class='shows' data-event-id='113277' id='f128664b'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom movie-row odd row' id='movie-113531'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/danish-girl-the"><img alt="Danish Girl, The" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564c94c7383236002b000000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564c94c7383236002b000000/index_s_Plakat.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/danish-girl-the"><h2 class='text-black'>Danish Girl, The</h2>
+</a><p class='text-gold text-uppercase'>USA/GB/DE • 2016 • 120 min</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Tom Hooper</span>
+</p>
+<br>
+<p>Im Kopenhagen der 1920er-Jahre lebt das Künstlerpaar Einar und Gerda eine harmonische Ehe. Als Einar eines Tages seiner Frau in Frauenkleidung für ein Porträt Modell steht, entdeckt er den femininen Teil seiner Persönlichkeit, den er zunächst als „Lili“ spielerisch auslebt. Doch Lili will kein Rollenspiel sein …</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='113531' id='106b1cd8'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -785,7 +861,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113809' id='993fcac3'>
+<div class='shows' data-event-id='113809' id='448e1c22'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -796,24 +872,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-113468'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-114102'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/duerrenmatt"><img alt="Dürrenmatt" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5655a3993131330021010000/index_s_retina_565598.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5655a3993131330021010000/index_s_565598.jpg" />
+<a href="/filme/ein-atem-1"><img alt="Ein Atem" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63dad613363604d000000/index_s_retina_show_retina_ein%2Datem%2DEA_A4_rgb.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63dad613363604d000000/index_s_show_retina_ein%2Datem%2DEA_A4_rgb.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/duerrenmatt"><h2 class='text-black'>Dürrenmatt</h2>
-</a><p class='text-gold text-uppercase'>Schweiz • 2015 • 85 min • FSK 6</p>
+<a href="/filme/ein-atem-1"><h2 class='text-black'>Ein Atem</h2>
+</a><p class='text-gold text-uppercase'>D • 2015 • 97 min</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Sabine Gisiger</span>
+<span class='text-black'>Christian Zübert</span>
 </p>
 <br>
-<p>Den Schriftsteller und Dramatiker Friedrich Dürrenmatt werden die meisten noch erinnern, vielleicht sogar den Maler. Wenig aber weiß man über die tiefe, 40 Jahre währende Beziehung zu seiner ersten Ehefrau, der Schauspielerin Lotti Dürrenmatt-Geissler, ohne deren Einfluss viele seiner Werke wohl ganz anders ausgesehen hätten. Regisseurin Sabine Gisiger begibt sich auf dokumentarische Spurensuche.</p>
+<p>Die Griechin Elena flüchtet vor der Krise nach Frankfurt und landet als Kindermädchen beim erfolgreichen Ehepaar Tessa (Jördis Triebel) und Jan. Als Tochter Lotte verloren geht, bricht über alle drei ein Alptraum herein. Von Christian Zübert (Lammbock. Hin und weg).</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113468' id='f536e951'>
+<div class='shows' data-event-id='114102' id='3994a5c1'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -824,38 +900,10 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-113476'>
+<div class='bg-white border-bottom even movie-row row' id='movie-112740'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/eisenstein-in-guanajuato"><img alt="Eisenstein in Guanajuato" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564af1496233640387030000/index_s_retina_plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564af1496233640387030000/index_s_plakat.jpg" />
-</a></div>
-<div class='movie-details'>
-<a href="/filme/eisenstein-in-guanajuato"><h2 class='text-black'>Eisenstein in Guanajuato</h2>
-</a><p class='text-gold text-uppercase'>NL/MEX/FIN/BE/FR • 2015 • 105 min • FSK 16</p>
-<p>
-<span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Peter Greenaway</span>
-</p>
-<br>
-<p>Da haben sich zwei gefunden: Das Enfant terrible des britischen Kinos Peter Greenaway fantasiert sich das Coming-out von Sergej Eisenstein in Mexiko 1931/32 zusammen und liefert ein ebenso experimentierfreudiges wie freizügiges Biopic über den russischen Stummfilmregisseur, der wie kein anderer das Kino revolutionierte. Toll!</p>
-</div>
-</div>
-<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113476' id='375866b2'>
-<div class='row'>
-<div class='loading bg-white col-xs-12'>
-<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class='bg-white border-bottom movie-row odd row' id='movie-112740'>
-<div class='bg-white col-sm-5 movie-info'>
-<div class='movie-poster'>
-<a href="/filme/ewige-jugend"><img alt="Ewige Jugend" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55e570e7683138752b0b0000/index_s_retina_youth%2Dposter%2D01.png" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55e570e7683138752b0b0000/index_s_youth%2Dposter%2D01.png" />
+<a href="/filme/ewige-jugend"><img alt="Ewige Jugend" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55e570e7683138752b0b0000/index_s_retina_Ewige_jugend.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55e570e7683138752b0b0000/index_s_Ewige_jugend.jpg" />
 </a></div>
 <div class='movie-details'>
 <a href="/filme/ewige-jugend"><h2 class='text-black'>Ewige Jugend</h2>
@@ -869,7 +917,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='112740' id='5b02c5d4'>
+<div class='shows' data-event-id='112740' id='6c451037'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -880,24 +928,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-113130'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-114299'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/familienfest"><img alt="Familienfest" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5628a8e464657008b6040000/index_s_retina_002042.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5628a8e464657008b6040000/index_s_002042.jpg" />
+<a href="/filme/francofonia-premiere-mit-empfang"><img alt="Francofonia - Premiere mit Empfang" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a6330a3865355762020000/index_s_retina_francofonia_plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a6330a3865355762020000/index_s_francofonia_plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/familienfest"><h2 class='text-black'>Familienfest</h2>
-</a><p class='text-gold text-uppercase'>D • 2015 • 89 min • FSK 12</p>
+<a href="/filme/francofonia-premiere-mit-empfang"><h2 class='text-black'>Francofonia - Premiere mit Empfang</h2>
+</a><p class='text-gold text-uppercase'>F/D/NL • 2015 • 87 min</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Lars Kraume</span>
+<span class='text-black'>Alexander Sokurov </span>
 </p>
 <br>
-<p>Wenn sich die Familie auf der Leinwand zum runden Geburtstag versammelt, knallen mit Sicherheit nicht nur die Korken. So bewegt wie bei Lars Kraumes Feier war man allerdings schon lange nicht mehr.</p>
+<p>Der Louvre zur Zeit der deutschen Besatzung: Direktor Jacques Jaujard bekommt es mit Franziskus Graf Wolff-Metternich zu tun, Leiter des sogenannten “Kunstschutzes” der Wehrmacht – Kontrahenten, aus denen mehr und mehr Komplizen bei der Rettung der Schätze des Museums vor dem Zugriff der Nazi-Invasoren werden. Mit dem Gravitationszentrum dieser wundersamen Geschichte entfaltet Alexander Sokurov (FAUST, RUSSIAN ARK) Bilder von suggestiver Schönheit.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113130' id='43bd6327'>
+<div class='shows' data-event-id='114299' id='aba7a303'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -908,7 +956,62 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-113262'>
+<div class='bg-white border-bottom even movie-row row' id='movie-114499'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/goya-visionen-aus-fleisch-und-blut-exhibition-on-screen"><img alt="Goya -Visionen aus Fleisch und Blut - Exhibition on Screen" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a897a4f4d6cf211dfc89d1/index_s_retina_goya.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a897a4f4d6cf211dfc89d1/index_s_goya.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/goya-visionen-aus-fleisch-und-blut-exhibition-on-screen"><h2 class='text-black'>Goya -Visionen aus Fleisch und Blut - Exhibition on Screen</h2>
+</a><p class='text-gold text-uppercase'>Großbritannien • 2015 • 90 min</p>
+<br>
+<p>Exhibition on Screen bringt die größten Meisterwerke der Kunstgeschichte auf die große Kinoleinwand. Verknüpft mit Künstlerbiografien und einem beispiellosen Blick hinter die Kulissen bahnbrechender Ausstellungen aus den bedeutendsten Kunsthäusern unserer Zeit.
+Ab Februar 2016 kommen drei neue Dokumentationen aus der Reihe in die Kinos.
+Den Anfang macht GOYA von der National Gallery in London.
+</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='114499' id='515a5089'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom movie-row odd row' id='movie-113924'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/hateful-8-the"><img alt="Hateful 8, The" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569cf08e6463300d77000000/index_s_retina_THE_HATEFUL_8_Hauptplakat_01.72dpi.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569cf08e6463300d77000000/index_s_THE_HATEFUL_8_Hauptplakat_01.72dpi.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/hateful-8-the"><h2 class='text-black'>Hateful 8, The</h2>
+</a><p class='text-gold text-uppercase'>USA • 2015 • 168 min</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Quentin Tarantino</span>
+</p>
+<br>
+<p>Quentin Tarantinos achter Film: Wyoming nach dem Bürgerkrieg: Eine Kutsche bahnt sich den Weg Richtung Red Rock. An Bord: Eine zwielichtige Truppe um Kopfgeldjäger John &quot;der Henker&quot; Ruth.</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='113924' id='9f1a2411'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom even movie-row row' id='movie-113262'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
 <a href="/filme/heidi"><img alt="Heidi" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/566027cd6362361b55070000/index_s_retina_plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/566027cd6362361b55070000/index_s_plakat.jpg" />
@@ -921,11 +1024,11 @@ Mit Klick auf die Zeit Ticket kaufen
 <span class='text-black'>Alain Gsponer</span>
 </p>
 <br>
-<p>Inzwischen ist HEIDI ja schon weit über 130 Jahre alt, aber auch in ihrer neusten Version hat sie nichts von ihrem ursprünglichen Charme verloren, im Gegenteil: Hauptdarstellerin Anuk Steffen ist ein Ausbund an kindlicher Energie, Wärme und Neugier, Bruno Ganz nörgelt den Alm-Öhi wie seinerzeit das Pendant in der Zeichentrickserie und die verschnöselte Gouvernante Frau Rottenmeier … – aber schaut selbst!</p>
+<p>Über 130 Jahre ist sie alt, aber auch in ihrer neusten Version hat HEIDI nichts von ihrem ursprünglichen Charme verloren. Mit einer sprühenden Hauptdarstellerin Anuk Steffen und Bruno Ganz als nörgelndem Alm-Öhi.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113262' id='ae48acf4'>
+<div class='shows' data-event-id='113262' id='cf04875f'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -936,73 +1039,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-113600'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-113605'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/heiligabend-2015-im-kino-international"><img alt="Heiligabend 2015 im Kino International" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5655dac83632610022050000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5655dac83632610022050000/index_s_Plakat.jpg" />
+<a href="/filme/hello-i-am-david-eine-reise-mit-david-helfgott"><img alt="Hello I am David! - Eine Reise mit David Helfgott" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564af67562336474ea020000/index_s_retina_plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564af67562336474ea020000/index_s_plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/heiligabend-2015-im-kino-international"><h2 class='text-black'>Heiligabend 2015 im Kino International</h2>
-</a><p class='text-gold text-uppercase'></p>
-<br>
-<p>Sektempfang, 2 Filme und Köstliches vom Balthazar
-</p>
-</div>
-</div>
-<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113600' id='4e1aba10'>
-<div class='row'>
-<div class='loading bg-white col-xs-12'>
-<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class='bg-white border-bottom movie-row odd row' id='movie-113374'>
-<div class='bg-white col-sm-5 movie-info'>
-<div class='movie-poster'>
-<a href="/filme/hotel-transsylvanien-2"><img alt="Hotel Transsylvanien 2" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5628fa77646570001c000000/index_s_retina_490603.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5628fa77646570001c000000/index_s_490603.jpg" />
-</a></div>
-<div class='movie-details'>
-<a href="/filme/hotel-transsylvanien-2"><h2 class='text-black'>Hotel Transsylvanien 2</h2>
-</a><p class='text-gold text-uppercase'>USA • 2015 • 89 min • FSK 6</p>
-<br>
-<p>Alles scheint sich im Hotel Transsilvanien zum Besseren entwickelt zu haben… Drakulas strenge Regel, dass nur Monster willkommen sind, wurde endlich gelockert und die Türen stehen auch für menschliche Gäste offen....</p>
-</div>
-</div>
-<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113374' id='ae303b92'>
-<div class='row'>
-<div class='loading bg-white col-xs-12'>
-<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class='bg-white border-bottom even movie-row row' id='movie-113244'>
-<div class='bg-white col-sm-5 movie-info'>
-<div class='movie-poster'>
-<a href="/filme/irrational-man"><img alt="Irrational Man" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564326813932391240000000/index_s_retina_289564.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564326813932391240000000/index_s_289564.jpg" />
-</a></div>
-<div class='movie-details'>
-<a href="/filme/irrational-man"><h2 class='text-black'>Irrational Man</h2>
-</a><p class='text-gold text-uppercase'>USA • 2015 • 105 min • FSK 12</p>
+<a href="/filme/hello-i-am-david-eine-reise-mit-david-helfgott"><h2 class='text-black'>Hello I am David! - Eine Reise mit David Helfgott</h2>
+</a><p class='text-gold text-uppercase'>DE • 2015 • 105 min</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Woody Allen</span>
+<span class='text-black'>Cosima Lange</span>
 </p>
 <br>
-<p>In Woody Allens neuestem Film wird betrogen, gesoffen und gemordet. Sehenswert ist er vor allem wegen seiner Hauptdarsteller Joaquin Phoenix und Emma Stone.</p>
+<p>HELLO I AM DAVID! - EINE REISE MIT DAVID HELFGOTT ist der erste Dokumentarfilm über den ebenso herausragenden wie ungewöhnlichen Künstler und Menschen David Helfgott, der 1996 im sechsfach Oscar-nomierten Film SHINE porträtiert wurde.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113244' id='074f5f34'>
+<div class='shows' data-event-id='113605' id='00fe8340'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1013,24 +1067,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-113348'>
+<div class='bg-white border-bottom even movie-row row' id='movie-113590'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/jonas-kaufmann-ein-abend-mit-puccini-1"><img alt="Jonas Kaufmann: Ein Abend mit Puccini" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5660400062353313281c0000/index_s_retina_GD_380x506_99_cropped_auto_1446563710_image.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5660400062353313281c0000/index_s_GD_380x506_99_cropped_auto_1446563710_image.jpg" />
+<a href="/filme/ich-bin-dann-mal-weg"><img alt="Ich bin dann mal weg" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b5c08386562083b000000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b5c08386562083b000000/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/jonas-kaufmann-ein-abend-mit-puccini-1"><h2 class='text-black'>Jonas Kaufmann: Ein Abend mit Puccini</h2>
-</a><p class='text-gold text-uppercase'>IT • 2015 • 90 min</p>
+<a href="/filme/ich-bin-dann-mal-weg"><h2 class='text-black'>Ich bin dann mal weg</h2>
+</a><p class='text-gold text-uppercase'>DE • 2015 • 92 min</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Brian Large</span>
+<span class='text-black'>Julia von Heinz</span>
 </p>
 <br>
-<p>Am 14. Juni 2015 gab Jonas Kaufmann seinen lang erwarteten Solo-Abend an der Mailänder Scala. Das Konzert, ein reines Puccini-Programm, machte in Italien Schlagzeilen: nach fünf Zugaben und 40 Minuten Applaus wollte das Publikum immer noch mehr. Dieser legendäre Auftritt steht im Mittelpunkt eines neuen Konzertfilms, inszeniert von Regisseur Brian Large und produziert von Arts Alliance.</p>
+<p>Charmante Verfilmung des gleichnamigen Hape-Kerkeling-Bestsellers. Mit Devid Strisow als Hape. Martina Gedeck, Karoline Schuch und Birol Ünel wandern auch mit.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113348' id='f149cbaf'>
+<div class='shows' data-event-id='113590' id='bccf3237'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1041,7 +1095,119 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-113275'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-114104'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/im-schatten-der-frauen"><img alt="Im Schatten der Frauen" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63e2d64363274e0000000/index_s_retina_Im%2DSchatten%2Dder%2DFrauen_Plakat%2DA4.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63e2d64363274e0000000/index_s_Im%2DSchatten%2Dder%2DFrauen_Plakat%2DA4.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/im-schatten-der-frauen"><h2 class='text-black'>Im Schatten der Frauen</h2>
+</a><p class='text-gold text-uppercase'>Frankreich • 2015 • 73 min</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Philippe Garrel</span>
+</p>
+<br>
+<p>Seit 50 Jahren dreht Philippe Garrel Filme, zählt in Frankreich zu den wichtigsten Cineasten dieser Zeit, doch erst jetzt kommt zum ersten Mal ein Film Garrels regulär in deutsche Kinos.  </p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='114104' id='62bb7df5'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom even movie-row row' id='movie-114288'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/iraqi-odyssey-2d"><img alt="Iraqi Odyssey - 2D" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56950d4d3034610021070000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56950d4d3034610021070000/index_s_Plakat.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/iraqi-odyssey-2d"><h2 class='text-black'>Iraqi Odyssey - 2D</h2>
+</a><p class='text-gold text-uppercase'>CH, Irak, D, Vereinigte Arabische Emirate • 2014 • 0 min</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Samir</span>
+</p>
+<br>
+<p>Der irakisch-schweizerische Filmemacher Samir hat mit der Chronik seiner eigenen, über die ganze Welt verstreuten, Familie ein unglaublich fesselndes Zeitdokument geschaffen.</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='114288' id='e6c432c9'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom movie-row odd row' id='movie-113821'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/janis-little-girl-blue"><img alt="Janis: Little Girl Blue" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569510be396236002d070000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569510be396236002d070000/index_s_Plakat.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/janis-little-girl-blue"><h2 class='text-black'>Janis: Little Girl Blue</h2>
+</a><p class='text-gold text-uppercase'>USA • 2016 • 103 min</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Amy Berg</span>
+</p>
+<br>
+<p>„Ich habe dich je und je geliebt, darum habe ich dich zu mir gezogen aus lauter Güte.“ Jeremia 31,3. Kein Trost nirgends nach diesem Dokumentarfilm über die Janis Joplin, die 27 Jahre alt wurde.</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='113821' id='f36311a8'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom even movie-row row' id='movie-113819'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/joy-alles-ausser-gewoehnlich"><img alt="Joy - Alles außer gewöhnlich" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/568796e66137647e96060000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/568796e66137647e96060000/index_s_Plakat.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/joy-alles-ausser-gewoehnlich"><h2 class='text-black'>Joy - Alles außer gewöhnlich</h2>
+</a><p class='text-gold text-uppercase'>USA • 2015 • 123 min</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>David O. Russell</span>
+</p>
+<br>
+<p>Die Familiengeschichte des Mädchens Joy (Jennifer Lawrence) die ein Geschäftsimperium begründet. Verrat, Vertrauensmissbrauch und verletzte Liebe Joys zeichnen Joys Lebensweg zum Familienoberhaupt.</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='113819' id='3af89a4c'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom movie-row odd row' id='movie-113275'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
 <a href="/filme/kleine-prinz-der"><img alt="Kleine Prinz, Der" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5669855f39383725e50c0000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5669855f39383725e50c0000/index_s_Plakat.jpg" />
@@ -1058,7 +1224,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113275' id='e9f2ec60'>
+<div class='shows' data-event-id='113275' id='1fa0bf55'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1069,24 +1235,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-112832'>
+<div class='bg-white border-bottom even movie-row row' id='movie-114106'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/macbeth"><img alt="Macbeth" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/563795af613765245a000000/index_s_retina_033869.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/563795af613765245a000000/index_s_033869.jpg" />
+<a href="/filme/lichtes-meer"><img alt="Lichtes Meer" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a79499840d0d00214b3756/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a79499840d0d00214b3756/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/macbeth"><h2 class='text-black'>Macbeth</h2>
-</a><p class='text-gold text-uppercase'>GB / FR / USA • 2015 • 113 min • FSK 12</p>
+<a href="/filme/lichtes-meer"><h2 class='text-black'>Lichtes Meer</h2>
+</a><p class='text-gold text-uppercase'>DE • 2016 • 81 min • FSK 12</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Justin Kurzel</span>
+<span class='text-black'>Stefan Butzmühlen</span>
 </p>
 <br>
-<p>Michael Fassbender und Marion Cotillard brillieren in einer bildgewaltigen Neuinterpretation des schottischen Königsdramas von William Shakespeare.</p>
+<p>Marek beginnt ein Praktikum auf einem Containerschiff: 197 Meter lang, 30 Meter breit, mit dem Ziel Martinique. Voller Vorfreude geht er an Bord. Dort verliebt er sich in den geheimnisvollen Matrosen Jean.  </p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='112832' id='dc951f70'>
+<div class='shows' data-event-id='114106' id='ac2a4a4a'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1097,24 +1263,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-113376'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-113823'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/pedal-the-world"><img alt="Pedal the World" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5628af676465700013040000/index_s_retina_100900765_cxxposter_1_gross.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5628af676465700013040000/index_s_100900765_cxxposter_1_gross.jpg" />
+<a href="/filme/mademoiselle-hanna-und-die-kunst-nein-zu-sagen"><img alt="Mademoiselle Hanna und die Kunst Nein zu sagen" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56950a64323738002d060000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56950a64323738002d060000/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/pedal-the-world"><h2 class='text-black'>Pedal the World</h2>
-</a><p class='text-gold text-uppercase'>D • 2014 • 89 min</p>
+<a href="/filme/mademoiselle-hanna-und-die-kunst-nein-zu-sagen"><h2 class='text-black'>Mademoiselle Hanna und die Kunst Nein zu sagen</h2>
+</a><p class='text-gold text-uppercase'>FR • 2016 • 100 min • FSK 12</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Felix Starck</span>
+<span class='text-black'>Baya Kasmi</span>
 </p>
 <br>
-<p>Es gibt sie noch, die hidden champions in den Kinos, die ohne Support eines großen Filmverleihs und ohne bekannte Namen ein erstaunlich großes Publikum erreichen. Der Dokumentarfilm Pedal the World - 18.000 km, 22 Länder, 365 Tage von Felix Starck ist so ein Fall: 135.000 Zuschauer wollten bislang den Film über eine Weltumrundung auf zwei Rädern und mit dem Flugzeug mittlerweile sehen.</p>
+<p>Französische Filme sind zur Zeit echte Exportschlager und man staunt, wie sich die französischen FilmemacherInnen mit Witz und Verve aktueller politisch-gesellschaftlicher Themen annehmen.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113376' id='e9f35214'>
+<div class='shows' data-event-id='113823' id='7b1b494d'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1125,24 +1291,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-113805'>
+<div class='bg-white border-bottom even movie-row row' id='movie-114080'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/perlmuttknopf-der"><img alt="Perlmuttknopf, Der" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5669b1203032352d2d040000/index_s_retina_297136.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5669b1203032352d2d040000/index_s_297136.jpg" />
+<a href="/filme/revenant-the-der-rueckkehrer"><img alt="Revenant The - Der Rückkehrer" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5681599e6137643aef040000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5681599e6137643aef040000/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/perlmuttknopf-der"><h2 class='text-black'>Perlmuttknopf, Der</h2>
-</a><p class='text-gold text-uppercase'>FR / SP / CL • 2015 • 82 min</p>
+<a href="/filme/revenant-the-der-rueckkehrer"><h2 class='text-black'>Revenant The - Der Rückkehrer</h2>
+</a><p class='text-gold text-uppercase'>USA • 2015 • 151 min</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Patricio Guzmán</span>
+<span class='text-black'>Alejandro González Iñárritu</span>
 </p>
 <br>
-<p>Das Wasser gilt Patricio Guzmán gleichnishaft als ewiger Zeuge der Menscheitsgeschichte im Allgemeinen, der Geschichte der chilenischen Ureinwohner im Besonderen. Nicht zum ersten Mal gelingt es dem Filmessayisten, poetische Bilderwelten mit politischen Inhalten zu füllen – von der Siedlungsgeschichte bis zu den Verfolgungen unter Pinochet. Für das Drehbuch gab es bei der Berlinale den Silbernen Bären.</p>
+<p>Nach BIRDMAN wechselt Oscar-Regisseur Iñárritu mit THE REVENANT das Genre und auch seinen Ton, wirft jedoch erneut existenzielle Fragen auf – mit ganz anderen Antworten … </p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113805' id='f39e31f6'>
+<div class='shows' data-event-id='114080' id='944175f8'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1153,24 +1319,22 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-112842'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-114100'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/schueler-der-madame-anne-die"><img alt="Schüler der Madame Anne, Die" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4d82386562002b0b0000/index_s_retina_204286.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4d82386562002b0b0000/index_s_204286.jpg" />
+<a href="/filme/sebastian-und-die-feuerretter"><img alt="Sebastian und die Feuerretter" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63a4b643632728f000000/index_s_retina_Sebastian%2DFeuerretter_Plakat_A4.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a63a4b643632728f000000/index_s_Sebastian%2DFeuerretter_Plakat_A4.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/schueler-der-madame-anne-die"><h2 class='text-black'>Schüler der Madame Anne, Die</h2>
-</a><p class='text-gold text-uppercase'>FR • 2014 • 105 min • FSK 6</p>
-<p>
-<span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Marie-Castille Mention-Schaar</span>
-</p>
+<a href="/filme/sebastian-und-die-feuerretter"><h2 class='text-black'>Sebastian und die Feuerretter</h2>
+</a><p class='text-gold text-uppercase'>Frankreich • 2015 • 97 min</p>
 <br>
-<p>Eine engagierte Lehrerin und eine Klasse voller Underdogs: Dank Madame Anne wird aus der zerstrittenen Teenie-Horde eine echte Gemeinschaft. Nach einer wahren Geschichte</p>
+<p>Sebastian ist zehn, Waise und verbringt seine Zeit lieber mit Hündin Belle in den Bergen als in der Schule. Voller Vorfreude erwartet er die Ankunft seiner Tante, doch deren Flugzeug stürzt ab und löst einen Waldbrand aus. Heimlich schleichen er und Belle an Bord der Maschine des Piloten Pierre, der nach Überlebenden suchen soll. Die Folge: Chaos, nächster Absturz und ein ausgewachsenes Alpenabenteuer.
+
+</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='112842' id='a7aa0c6b'>
+<div class='shows' data-event-id='114100' id='ff7153f4'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1181,49 +1345,69 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-100222'>
+<div class='bg-white border-bottom even movie-row row' id='movie-100227'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/sneak-faf"><img alt="Sneak FAF" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55b1f69f6831380687000000/index_s_retina_Sneak_Preview.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55b1f69f6831380687000000/index_s_Sneak_Preview.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/sneak-faf"><h2 class='text-black'>Sneak FAF</h2>
+</a><p class='text-gold text-uppercase'></p>
+<br>
+<p>Die Überraschungspremiere vor offiziellem Deutschlandstart im Filmtheater am Friedrichshain. Nur der Filmtitel wird vorher nicht verraten! Vorher zeigen wir einen Kurzfilm.</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='100227' id='49c62cf2'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom movie-row odd row' id='movie-110912'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/sneak-omu"><img alt="Sneak OmU" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55b1f6e86831387cc4000000/index_s_retina_Sneak_Preview.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55b1f6e86831387cc4000000/index_s_Sneak_Preview.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/sneak-omu"><h2 class='text-black'>Sneak OmU</h2>
+</a><p class='text-gold text-uppercase'></p>
+<br>
+<p>Die Überraschungspremiere vor offiziellem Deutschlandstart... nur der Filmtitel wird vorher nicht verraten!</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='110912' id='b0486786'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom even movie-row row' id='movie-100222'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
 <a href="/filme/sneak-passage"><img alt="Sneak Passage " data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564ef7146162613a7c000000/index_s_retina_Sneak_Preview.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564ef7146162613a7c000000/index_s_Sneak_Preview.jpg" />
 </a></div>
 <div class='movie-details'>
 <a href="/filme/sneak-passage"><h2 class='text-black'>Sneak Passage </h2>
-</a><p class='text-gold text-uppercase'></p>
+</a><p class='text-gold text-uppercase'>FSK 18</p>
 <br>
-<p>Die Überraschungspremiere vor offiziellem Deutschlandstart... nur der Filmtitel wird vorher nicht verraten!
+<p>Die Überraschungspremiere vor offiziellem Deutschlandstart im Neuköllner Passage Kino. Nur der Filmtitel wird vorher nicht verraten!
 </p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='100222' id='2b27395d'>
-<div class='row'>
-<div class='loading bg-white col-xs-12'>
-<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class='bg-white border-bottom even movie-row row' id='movie-113359'>
-<div class='bg-white col-sm-5 movie-info'>
-<div class='movie-poster'>
-<a href="/filme/spectre-007"><img alt="Spectre (007)" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/563b280061336511b1010000/index_s_retina_091636.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/563b280061336511b1010000/index_s_091636.jpg" />
-</a></div>
-<div class='movie-details'>
-<a href="/filme/spectre-007"><h2 class='text-black'>Spectre (007)</h2>
-</a><p class='text-gold text-uppercase'>USA • 2015 • 148 min • FSK 12</p>
-<p>
-<span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Sam Mendes</span>
-</p>
-<br>
-<p>Es kann nur einen geben!!!</p>
-</div>
-</div>
-<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113359' id='5b3a4bb9'>
+<div class='shows' data-event-id='100222' id='2bf94937'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1247,11 +1431,11 @@ Mit Klick auf die Zeit Ticket kaufen
 <span class='text-black'>Lars Kraume</span>
 </p>
 <br>
-<p>Porträt des Generalstaatsanwalts Fritz Bauer, der bedeutend dazu beitrug, dass die junge Bundesrepublik die rechtliche Aufarbeitung des NS-Unrechtsstaats nicht „vergaß“. Im Mittelpunkt steht sein Beitrag zur Ergreifung Adolf Eichmanns durch den israelischen Mossad – gegen massive Widerstände in der eigenen Behörde. Mt einem herausragenden Burghart Klaußner in der Hauptrolle.</p>
+<p>Der Generalstaatsanwalts Fritz Bauer trug maßgeblich zur rechtliche Aufarbeitung des NS-Unrechtsstaats in der jungen Bundesrepublik bei und half dem Mossad bei der Ergreifung Adolf Eichmanns- gegen massive Widerstände in der eigenen Behörde.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='112737' id='4a751e3d'>
+<div class='shows' data-event-id='112737' id='3873d5a0'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1269,7 +1453,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </a></div>
 <div class='movie-details'>
 <a href="/filme/star-wars-das-erwachen-der-macht"><h2 class='text-black'>Star Wars: Das Erwachen der Macht</h2>
-</a><p class='text-gold text-uppercase'>USA • 2015 • 136 min • FSK folgt</p>
+</a><p class='text-gold text-uppercase'>USA • 2015 • 136 min • FSK 12</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
 <span class='text-black'>J.J. Abrams</span>
@@ -1280,7 +1464,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113491' id='296bee36'>
+<div class='shows' data-event-id='113491' id='c11ce1f5'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1291,24 +1475,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-113246'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-113837'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/steve-jobs"><img alt="Steve Jobs" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/560bb6aa6465700057000000/index_s_retina_Universal%2DSteve%2DJobs%2DFilmplakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/560bb6aa6465700057000000/index_s_Universal%2DSteve%2DJobs%2DFilmplakat.jpg" />
+<a href="/filme/suffragette"><img alt="Suffragette" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a893902831822346010733/index_s_retina_plakat_suffragette.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56a893902831822346010733/index_s_plakat_suffragette.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/steve-jobs"><h2 class='text-black'>Steve Jobs</h2>
-</a><p class='text-gold text-uppercase'>USA • 2015</p>
+<a href="/filme/suffragette"><h2 class='text-black'>Suffragette</h2>
+</a><p class='text-gold text-uppercase'>GB • 2015</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Danny Boyle</span>
+<span class='text-black'>Sarah Gavro</span>
 </p>
 <br>
-<p>Mit seinen Einfällen und Entwicklungen schuf Steve Jobs nicht nur ein Wirtschaftsimperium, sondern änderte auch die Art, wie Menschen und ganze Gesellschaften leben, arbeiten und interagieren. Danny Boyles Porträt erzählt den Werdegang des Apple-Übervaters als die Geschichte eines getriebenen Egomanen, dargestellt von einem grandios agierenden Michael Fassbender.</p>
+<p>Fesselnd wie ein Thriller erzählt Regisseurin Sarah Gavron leidenschaftlich von den mutigen Pionierinnen der britischen Frauenbewegung und ihrem Kampf um das Frauenwahlrecht.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113246' id='341fcfc0'>
+<div class='shows' data-event-id='113837' id='b06650da'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1319,24 +1503,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-113252'>
+<div class='bg-white border-bottom even movie-row row' id='movie-114319'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/stonewall"><img alt="Stonewall" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5645fed1623364001f020000/index_s_retina_354249.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5645fed1623364001f020000/index_s_354249.jpg" />
+<a href="/filme/suffraggette-filmvorfuehrung-mit-anschliessender-podiumsdiskussion"><img alt="Suffraggette - Filmvorführung mit anschließender Podiumsdiskussion " data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56966e936561631312020000/index_s_retina_plakat_suffragette.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56966e936561631312020000/index_s_plakat_suffragette.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/stonewall"><h2 class='text-black'>Stonewall</h2>
-</a><p class='text-gold text-uppercase'>usa • 2015 • 129 min • FSK 12</p>
+<a href="/filme/suffraggette-filmvorfuehrung-mit-anschliessender-podiumsdiskussion"><h2 class='text-black'>Suffraggette - Filmvorführung mit anschließender Podiumsdiskussion </h2>
+</a><p class='text-gold text-uppercase'>GB • 2015 • 107 min</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Roland Emmerich</span>
+<span class='text-black'>Sarah Gavro</span>
 </p>
 <br>
-<p>Deutschlands erfolgreichster Blockbustermeister Roland Emmerich kann auch anders: In seinem neuen Filmdrama widmet sich der offen schwule Regisseur den Aufständen vor der legendäre Schwulenbar Stonewall in New Yorks Christopher Street im Jahr 1969, dem Beginn der Homobewegung.</p>
+<p>Fesselnd wie ein Thriller erzählt Regisseurin Sarah Gavron leidenschaftlich von den mutigen Pionierinnen der britischen Frauenbewegung und ihrem Kampf um das Frauenwahlrecht.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113252' id='644955e9'>
+<div class='shows' data-event-id='114319' id='a08f8cb1'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1347,24 +1531,24 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom movie-row odd row' id='movie-113258'>
+<div class='bg-white border-bottom movie-row odd row' id='movie-114094'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/wie-auf-erden"><img alt="Wie auf Erden" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/566176c36235332cee1d0000/index_s_retina_220432.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/566176c36235332cee1d0000/index_s_220432.jpg" />
+<a href="/filme/the-true-cost-der-preis-der-mode-5"><img alt="The True Cost - Der Preis der Mode" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e25793439664a54000000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569e25793439664a54000000/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/wie-auf-erden"><h2 class='text-black'>Wie auf Erden</h2>
-</a><p class='text-gold text-uppercase'>SE • 2015 • 135 min • FSK 6</p>
+<a href="/filme/the-true-cost-der-preis-der-mode-5"><h2 class='text-black'>The True Cost - Der Preis der Mode</h2>
+</a><p class='text-gold text-uppercase'>GB, BD, KH,  • 2015 • 93 min</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Kay Pollak, Carin Pollak</span>
+<span class='text-black'>Andrew Morgan</span>
 </p>
 <br>
-<p>Zehn Jahre nach dem schwedischen Hit WIE IM HIMMEL nimmt Kay Pollack in WIE AUF ERDEN den Faden wieder auf und erzählt, wie es mit dem Kirchenchor nach Daniels Tod in Ljusåker weitergeht …</p>
+<p>Was auf Laufstegen schön anmutet, ist oft eine Täuschung. Mode ist keineswegs unschuldig, schon gar nicht die „Fast Fashion“ einiger Textilgroßkonzerne, die ohne Rücksicht auf Menschenrechte, Arbeits- oder Umweltbestimmungen in den ärmsten Gegenden des Planeten marodieren.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113258' id='cdc7a3b0'>
+<div class='shows' data-event-id='114094' id='44b026f7'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1375,24 +1559,110 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 </div>
 
-<div class='bg-white border-bottom even movie-row row' id='movie-113254'>
+<div class='bg-white border-bottom even movie-row row' id='movie-113835'>
 <div class='bg-white col-sm-5 movie-info'>
 <div class='movie-poster'>
-<a href="/filme/zwischen-himmel-und-eis"><img alt="Zwischen Himmel und Eis" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56586a176239363fb3060000/index_s_retina_240155.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56586a176239363fb3060000/index_s_240155.jpg" />
+<a href="/filme/unsere-kleine-schwester"><img alt="Unsere kleine Schwester" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56714d4731636162c7000000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/56714d4731636162c7000000/index_s_Plakat.jpg" />
 </a></div>
 <div class='movie-details'>
-<a href="/filme/zwischen-himmel-und-eis"><h2 class='text-black'>Zwischen Himmel und Eis</h2>
-</a><p class='text-gold text-uppercase'>FR • 2015 • 89 min</p>
+<a href="/filme/unsere-kleine-schwester"><h2 class='text-black'>Unsere kleine Schwester</h2>
+</a><p class='text-gold text-uppercase'>JP • 2015 • 128 min • FSK 0</p>
 <p>
 <span class='text-gold text-uppercase'>Regie:</span>
-<span class='text-black'>Luc Jacquet</span>
+<span class='text-black'>Hirokazu Kore-Eda</span>
 </p>
 <br>
-<p>Nach DIE REISE DER PINGUINE zieht es Dokumentarfilmer Luc Jacquet erneut in das nicht mehr ewige Eis der Antarktis. Diesmal an der Seite des 82-jährigen Wissenschaftlers Claude Lorius, dessen Forschungen bereits vor über dreißig Jahren die Verantwortlichkeit des Menschen für den Klimawandel nachgewiesen haben. Ebenso spektakuläre wie nachdenklich stimmende Bilder, wortreich begleitet von Max Moor.</p>
+<p>Allerbeste Filmkunst, beiläufig erzählt, nach einem in Japan sehr bekannten Manga. Im Mittelpunkt steht Suzu, ein junges Mädchen, das mit seinen drei Halbschwestern zusammenzieht. Unspektakulär und dennoch spannend geht es ums Erwachsenwerden.</p>
 </div>
 </div>
 <div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
-<div class='shows' data-event-id='113254' id='75224d38'>
+<div class='shows' data-event-id='113835' id='15c7d940'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom movie-row odd row' id='movie-114096'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/valley-of-love-tal-der-liebe"><img alt="Valley of Love - Tal der Liebe" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569ce19c64633005a4000000/index_s_retina_valley_love.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/569ce19c64633005a4000000/index_s_valley_love.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/valley-of-love-tal-der-liebe"><h2 class='text-black'>Valley of Love - Tal der Liebe</h2>
+</a><p class='text-gold text-uppercase'>Frankreich • 2015 • 91 min</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Guillaume Nicloux</span>
+</p>
+<br>
+<p>Zwei Menschen (Isabelle Huppert &amp; Gérard Dépardieu) ringen mit dem Leben und der Liebe. Sie versuchen den Freitod ihres Sohnes zu begreifen. Guillaume Nicloux verhandelt existenzielle Fragen – vor der Kulisse des Death Valley.
+
+</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='114096' id='9b23bf79'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom even movie-row row' id='movie-112328'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/victoria-1"><img alt="Victoria" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55b5f0c368313804f3060000/index_s_retina_media%2Dtitle%2DVicto%2D10.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/55b5f0c368313804f3060000/index_s_media%2Dtitle%2DVicto%2D10.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/victoria-1"><h2 class='text-black'>Victoria</h2>
+</a><p class='text-gold text-uppercase'>Deutschland • 2015 • 139 min • FSK ab 12 freigegeben </p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'> Sebastian Schipper</span>
+</p>
+<br>
+<p>Sebastian Schippers Echtzeit-Thriller ist zweifellos das Aufregendste, was Sie diese Jahr zu sehen bekommen. Für seine überragende Kameraarbeit bekam Kameramann Sturla Brandth Grøvlen den Silbernen Bären!</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='112328' id='ef14600b'>
+<div class='row'>
+<div class='loading bg-white col-xs-12'>
+<img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class='bg-white border-bottom movie-row odd row' id='movie-114090'>
+<div class='bg-white col-sm-5 movie-info'>
+<div class='movie-poster'>
+<a href="/filme/winzlinge-die-operation-zuckerdose"><img alt="Winzlinge, Die - Operation Zuckerdose" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5695135c30356102c6000000/index_s_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/5695135c30356102c6000000/index_s_Plakat.jpg" />
+</a></div>
+<div class='movie-details'>
+<a href="/filme/winzlinge-die-operation-zuckerdose"><h2 class='text-black'>Winzlinge, Die - Operation Zuckerdose</h2>
+</a><p class='text-gold text-uppercase'>FR, BE • 2016 • 98 min • FSK 0</p>
+<p>
+<span class='text-gold text-uppercase'>Regie:</span>
+<span class='text-black'>Thomas Szabo, Hélène Giraud</span>
+</p>
+<br>
+<p>Nicht auszudenken, was eine in der Hast des Aufbruchs beim Picknick zurückgelassene Zuckerdose anrichten kann. Sie vermag wilde Feindschaften und unerbittliche Verfolgungsjagden unter Ameisen auszulösen, aber auch die Freundschaft zu einem Marienkäfer zu begründen. Und das in ganz ungewöhnlich animierten Bildern!</p>
+</div>
+</div>
+<div class='bg-gray-dark program-container col-sm-7 col-xs-12'>
+<div class='shows' data-event-id='114090' id='7d382441'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -1537,7 +1807,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 
 <div class='alert alert-yorck alert-dismissible fade in' role='alert'>
-<p>BETA-VERSION - Während unserer Testphase sind Kinokarten nur für das Kino International erhältlich. Kaufen Sie Karten durch Klick auf die Uhrzeit im Programm!</p>
+<p>Willkommen auf unserer neuen Webseite! Buchen Sie Ihre Tickets durch Klick auf die Uhrzeit.</p>
 <button class='close' data-dismiss='alert'>
 <span>&times;</span>
 </button>

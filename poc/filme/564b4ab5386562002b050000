@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://ogp.me/ns#'>
 <head>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"94e87a4502","applicationID":"9256638","transactionName":"cQ0LRUIKDgpRQhdVXUQLAEIfFgoJQw==","queueTime":0,"applicationTime":277,"agent":"js-agent.newrelic.com/nr-768.min.js"}</script>
-<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):void(r.q&&(r.q[e]||(r.q[e]=[]),r.q[e].push(n)))}var r=e("ee").create();n.exports=t,t.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=window,f=u.document;e(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"94e87a4502","applicationID":"9256638","transactionName":"cQ0LRUIKDgpRQhdVXUQLAEIfFgoJQw==","queueTime":0,"applicationTime":123,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function c(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),c=a.length,u=0;c>u;u++)a[u].apply(i,r);return i}function u(t,e){p[t]=f(t).concat(e)}function f(t){return p[t]||[]}function s(){return r(c)}var p={};return{on:u,emit:c,create:s,listeners:f,context:e,_events:p}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!v++){var t=l.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(p,function(e,n){t[e]||(t[e]=n)});var n="https"===s.split(":")[0]||t.sslForHttp;l.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=l.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),c=t(1),u=window,f=u.document;t(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),l=e.exports={offset:i(),origin:s,features:{},xhrWrappable:d};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var v=0},{1:12,2:3,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],12:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],13:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}]},{},["G9z0Bl"]);</script>
 <meta content='width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
 <title>Yorck Kinos Berlin - Carol</title>
 <meta content='Yorck' name='description'>
@@ -10,16 +10,16 @@
 <meta content='Yorck Kinogruppe GmbH' name='og:site_name'>
 <meta content='Yorck Kinos Berlin - Carol' name='og:title'>
 <meta content='82638784231' name='fb:page_id'>
-<meta content='https://beta.yorck.de/filme/carol' name='og:url'>
+<meta content='https://www.yorck.de/filme/carol' name='og:url'>
 <meta content='https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4ab5386562002b050000/Plakat.jpg' name='og:image'>
-<meta content='Eine Liebe, die ihren Namen nicht zu nennen wagt: In Todd Haynes’ Melomeisterwerk spielen Cate Blanchett und Rooney Mara ein lesbisches Paar im New York der Fünfziger Jahre. Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der Oscarfavoriten...' name='og:description'>
+<meta content='Im New York der 1950er-Jahre lernt die wohlhabende Carol die junge Therese kennen, die in einem Kaufhaus arbeitet und von einem besseren Leben träumt. Sie wird ihre große Liebe. Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der Oscarfavoriten...' name='og:description'>
 <!-- link -->
-<link rel="stylesheet" media="all" href="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/application-96bd331df19a9e722cf476c5b634a14a.css" />
+<link rel="stylesheet" media="all" href="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/application-04fcc7e8bc59f2f4dd7ba7013632b8b4.css" />
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="bQeSVFmxhkjB2AIv5meAaAny07rgChyh7+RgW5zL7qACkDnrnYjULb71CvUbAgCZqVMxhsS4Q7RFtTKtk4jg3g==" />
+<meta name="csrf-token" content="2naPSWNwiIvtJbk4aIRYpEVnkn3xL9yMEhYegzMnKm/Of4y4sX2jsqEpgeKn3lX8Sg3+m6MUlM2IOOvoCDYBKA==" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/application-f73fb13544d4bd8d02cbfa20c6368bc0.js"></script>
+<script src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/application-fc875caa1e7c31e0a790ed89e8f2d8ff.js"></script>
 <noscript>
 <style>
   a img{
@@ -161,22 +161,16 @@ OV
 <p class='p-big text-gold text-uppercase'>A-Z</p>
 </li>
 <li>
-<a data-url="/filme/56279d726465700013010000" class="p-big select-movie-link" href="#">Alles steht Kopf - Inside Out</a>
-</li>
-<li>
-<a data-url="/filme/565f0e35316562002b020000" class="p-big select-movie-link" href="#">Arlo &amp; Spot</a>
+<a data-url="/filme/569e280c37623142ae060000" class="p-big select-movie-link" href="#">Anomalisa</a>
 </li>
 <li>
 <a data-url="/filme/55b0c25668313849a8020000" class="p-big select-movie-link" href="#">B-Movie: Lust &amp; Sound in West-Berlin 1979-1989</a>
 </li>
 <li>
-<a data-url="/filme/5645f2ae623364002b000000" class="p-big select-movie-link" href="#">Ballet Bolschoi - Der widerspenstigen zahmung</a>
+<a data-url="/filme/569cffd365663914c6040000" class="p-big select-movie-link" href="#">Bibi &amp; Tina - Mädchen gegen Jungs</a>
 </li>
 <li>
-<a data-url="/filme/56434262663231002c010000" class="p-big select-movie-link" href="#">Ballet Bolschoi - Die Kameliendame</a>
-</li>
-<li>
-<a data-url="/filme/564355ff6438620023050000" class="p-big select-movie-link" href="#">Ballett-Bolshoi Der Nußknacker</a>
+<a data-url="/filme/569518f93962360724020000" class="p-big select-movie-link" href="#">Big short, The</a>
 </li>
 <li>
 <a data-url="/filme/560bd3756465700136040000" class="p-big select-movie-link" href="#">Brandneue Testament, Das</a>
@@ -185,66 +179,84 @@ OV
 <a data-url="/filme/565c4c416336652f82030000" class="p-big select-movie-link" href="#">Bridge of Spies - Der Unterhändler</a>
 </li>
 <li>
+<a data-url="/filme/569e04353439663868040000" class="p-big select-movie-link" href="#">Brooklyn - Eine Liebe zwischen zwei Welten</a>
+</li>
+<li>
 <a data-url="/filme/564b4ab5386562002b050000" class="p-big select-movie-link" href="#">Carol</a>
+</li>
+<li>
+<a data-url="/filme/564c94c7383236002b000000" class="p-big select-movie-link" href="#">Danish Girl, The</a>
+</li>
+<li>
+<a data-url="/filme/566ab88c3938375289060000" class="p-big select-movie-link" href="#">Dämonen und Wunder - Dheepan</a>
+</li>
+<li>
+<a data-url="/filme/56a63dad613363604d000000" class="p-big select-movie-link" href="#">Ein Atem</a>
 </li>
 </ul>
 </div>
 <div class='col-sm-4'>
 <ul>
 <li>
-<a data-url="/filme/566ab88c3938375289060000" class="p-big select-movie-link" href="#">Dämonen und Wunder - Dheepan</a>
-</li>
-<li>
-<a data-url="/filme/5655a3993131330021010000" class="p-big select-movie-link" href="#">Dürrenmatt</a>
-</li>
-<li>
-<a data-url="/filme/564af1496233640387030000" class="p-big select-movie-link" href="#">Eisenstein in Guanajuato</a>
-</li>
-<li>
 <a data-url="/filme/55e570e7683138752b0b0000" class="p-big select-movie-link" href="#">Ewige Jugend</a>
 </li>
 <li>
-<a data-url="/filme/5628a8e464657008b6040000" class="p-big select-movie-link" href="#">Familienfest</a>
+<a data-url="/filme/56a6330a3865355762020000" class="p-big select-movie-link" href="#">Francofonia - Premiere mit Empfang</a>
+</li>
+<li>
+<a data-url="/filme/56a897a4f4d6cf211dfc89d1" class="p-big select-movie-link" href="#">Goya -Visionen aus Fleisch und Blut - Exhibition on Screen</a>
+</li>
+<li>
+<a data-url="/filme/569cf08e6463300d77000000" class="p-big select-movie-link" href="#">Hateful 8, The</a>
 </li>
 <li>
 <a data-url="/filme/566027cd6362361b55070000" class="p-big select-movie-link" href="#">Heidi</a>
 </li>
 <li>
-<a data-url="/filme/5655dac83632610022050000" class="p-big select-movie-link" href="#">Heiligabend 2015 im Kino International</a>
+<a data-url="/filme/564af67562336474ea020000" class="p-big select-movie-link" href="#">Hello I am David! - Eine Reise mit David Helfgott</a>
 </li>
 <li>
-<a data-url="/filme/5628fa77646570001c000000" class="p-big select-movie-link" href="#">Hotel Transsylvanien 2</a>
+<a data-url="/filme/564b5c08386562083b000000" class="p-big select-movie-link" href="#">Ich bin dann mal weg</a>
 </li>
 <li>
-<a data-url="/filme/564326813932391240000000" class="p-big select-movie-link" href="#">Irrational Man</a>
+<a data-url="/filme/56a63e2d64363274e0000000" class="p-big select-movie-link" href="#">Im Schatten der Frauen</a>
 </li>
 <li>
-<a data-url="/filme/5660400062353313281c0000" class="p-big select-movie-link" href="#">Jonas Kaufmann: Ein Abend mit Puccini</a>
+<a data-url="/filme/56950d4d3034610021070000" class="p-big select-movie-link" href="#">Iraqi Odyssey - 2D</a>
+</li>
+<li>
+<a data-url="/filme/569510be396236002d070000" class="p-big select-movie-link" href="#">Janis: Little Girl Blue</a>
+</li>
+<li>
+<a data-url="/filme/568796e66137647e96060000" class="p-big select-movie-link" href="#">Joy - Alles außer gewöhnlich</a>
 </li>
 <li>
 <a data-url="/filme/5669855f39383725e50c0000" class="p-big select-movie-link" href="#">Kleine Prinz, Der</a>
 </li>
 <li>
-<a data-url="/filme/563795af613765245a000000" class="p-big select-movie-link" href="#">Macbeth</a>
+<a data-url="/filme/56a79499840d0d00214b3756" class="p-big select-movie-link" href="#">Lichtes Meer</a>
+</li>
+<li>
+<a data-url="/filme/56950a64323738002d060000" class="p-big select-movie-link" href="#">Mademoiselle Hanna und die Kunst Nein zu sagen</a>
 </li>
 </ul>
 </div>
 <div class='col-sm-4'>
 <ul>
 <li>
-<a data-url="/filme/5628af676465700013040000" class="p-big select-movie-link" href="#">Pedal the World</a>
+<a data-url="/filme/5681599e6137643aef040000" class="p-big select-movie-link" href="#">Revenant The - Der Rückkehrer</a>
 </li>
 <li>
-<a data-url="/filme/5669b1203032352d2d040000" class="p-big select-movie-link" href="#">Perlmuttknopf, Der</a>
+<a data-url="/filme/56a63a4b643632728f000000" class="p-big select-movie-link" href="#">Sebastian und die Feuerretter</a>
 </li>
 <li>
-<a data-url="/filme/564b4d82386562002b0b0000" class="p-big select-movie-link" href="#">Schüler der Madame Anne, Die</a>
+<a data-url="/filme/55b1f69f6831380687000000" class="p-big select-movie-link" href="#">Sneak FAF</a>
+</li>
+<li>
+<a data-url="/filme/55b1f6e86831387cc4000000" class="p-big select-movie-link" href="#">Sneak OmU</a>
 </li>
 <li>
 <a data-url="/filme/564ef7146162613a7c000000" class="p-big select-movie-link" href="#">Sneak Passage </a>
-</li>
-<li>
-<a data-url="/filme/563b280061336511b1010000" class="p-big select-movie-link" href="#">Spectre (007)</a>
 </li>
 <li>
 <a data-url="/filme/562a2c4a6465702f69000000" class="p-big select-movie-link" href="#">Staat gegen Fritz Bauer, Der</a>
@@ -253,16 +265,25 @@ OV
 <a data-url="/filme/5645b8ed6632611238000000" class="p-big select-movie-link" href="#">Star Wars: Das Erwachen der Macht</a>
 </li>
 <li>
-<a data-url="/filme/560bb6aa6465700057000000" class="p-big select-movie-link" href="#">Steve Jobs</a>
+<a data-url="/filme/56a893902831822346010733" class="p-big select-movie-link" href="#">Suffragette</a>
 </li>
 <li>
-<a data-url="/filme/5645fed1623364001f020000" class="p-big select-movie-link" href="#">Stonewall</a>
+<a data-url="/filme/56966e936561631312020000" class="p-big select-movie-link" href="#">Suffraggette - Filmvorführung mit anschließender Podiumsdiskussion </a>
 </li>
 <li>
-<a data-url="/filme/566176c36235332cee1d0000" class="p-big select-movie-link" href="#">Wie auf Erden</a>
+<a data-url="/filme/569e25793439664a54000000" class="p-big select-movie-link" href="#">The True Cost - Der Preis der Mode</a>
 </li>
 <li>
-<a data-url="/filme/56586a176239363fb3060000" class="p-big select-movie-link" href="#">Zwischen Himmel und Eis</a>
+<a data-url="/filme/56714d4731636162c7000000" class="p-big select-movie-link" href="#">Unsere kleine Schwester</a>
+</li>
+<li>
+<a data-url="/filme/569ce19c64633005a4000000" class="p-big select-movie-link" href="#">Valley of Love - Tal der Liebe</a>
+</li>
+<li>
+<a data-url="/filme/55b5f0c368313804f3060000" class="p-big select-movie-link" href="#">Victoria</a>
+</li>
+<li>
+<a data-url="/filme/5695135c30356102c6000000" class="p-big select-movie-link" href="#">Winzlinge, Die - Operation Zuckerdose</a>
 </li>
 </ul>
 </div>
@@ -312,7 +333,7 @@ Mit Klick auf die Zeit Ticket kaufen
 <p class='p-big text-gold text-uppercase'>Mitte</p>
 </li>
 <li>
-<a data-cinema-id="54ed9ff26831381d721c0000" class="p-big select-cinema-link" href="#">International</a>
+<a data-cinema-id="54ed9ff26831381d721c0000" class="p-big select-cinema-link" href="#">Kino International</a>
 </li>
 <li>
 <p class='p-big text-gold text-uppercase'>Neukölln</p>
@@ -367,7 +388,7 @@ Mit Klick auf die Zeit Ticket kaufen
 </div>
 <div class='row'>
 <div class='cinema-container col-xs-12'>
-<div class='shows' data-partial-name='quick_ticket_cinema_movies' id='af6d0339'>
+<div class='shows' data-partial-name='quick_ticket_cinema_movies' id='adfaa149'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -397,8 +418,9 @@ Mit Klick auf die Zeit Ticket kaufen
 <div class='hero-image-overlay grad col-xs-12'></div>
 <div class='trailers'>
 <a class="trailer-play-button" target="blank" href="https://www.youtube.com/watch?v=A5vqrkMRHro"><i class="fa fa-play-circle"></i>
-</a><a class="trailer-button trailer-link active" target="blank" href="https://www.youtube.com/watch?v=A5vqrkMRHro"><span>DEUTSCH</span>
-</a><a class="trailer-button trailer-link" target="blank" href="https://www.youtube.com/watch?v=EH3zcuRQXNo"><span>ORIGINAL</span>
+</a><a class="trailer-button trailer-link active hidden-xs" target="blank" href="https://www.youtube.com/watch?v=A5vqrkMRHro"><span>DEUTSCH</span>
+</a><a class="trailer-button trailer-link" target="blank" href="https://www.youtube.com/watch?v=EH3zcuRQXNo"><span class='hidden-xs'>ORIGINAL</span>
+<span class='visible-xs'>OV</span>
 </a></div>
 </div>
 <div class='row movie-details'>
@@ -410,8 +432,7 @@ GB/USA
 </h5>
 <div class='row movie-description'>
 <div class='col-sm-6 movie-description-text text-gold'>
-<p>Eine Liebe, die ihren Namen nicht zu nennen wagt: In Todd Haynes’ Melomeisterwerk spielen Cate Blanchett und Rooney Mara ein lesbisches Paar im New York der Fünfziger Jahre.
-Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der Oscarfavoriten. Der Film ist jedoch weit mehr: ein Klassiker für die Ewigkeit.</p>
+<p>Im New York der 1950er-Jahre führt Carol eine unerfüllte Ehe mit ihrem wohlhabenden Mann Harge. Sie lernt die junge Therese kennen, die in einem Kaufhaus arbeitet und von einem besseren Leben träumt. Sie wird Carols große Liebe. Harge will das neue Glück seiner Frau jedoch nicht akzeptieren. Carol muss schon bald um das Sorgerecht ihrer geliebten Tochter kämpfen. Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der Oscarfavoriten...</p>
 
 </div>
 <div class='col-sm-6'>
@@ -424,12 +445,28 @@ Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der 
 <h5 class='text-gold'>Todd Haynes</h5>
 </td>
 </tr>
+<tr class='dolly hidden-xs'>
+<td>
+<h5 class='text-white'>Drehbuch</h5>
+</td>
+<td>
+<h5 class='text-gold'>Phyllis Nagy nach dem Roman von Patricia Highsmith</h5>
+</td>
+</tr>
 <tr class='dolly'>
 <td>
 <h5 class='text-white'>Besetzung</h5>
 </td>
 <td>
 <h5 class='text-gold'>Cate Blanchett, Rooney Mara, Kyle Chandler</h5>
+</td>
+</tr>
+<tr class='dolly hidden-xs'>
+<td>
+<h5 class='text-white'>Kamera</h5>
+</td>
+<td>
+<h5 class='text-gold'>Ed Lachman</h5>
 </td>
 </tr>
 <tr class='dolly'>
@@ -449,7 +486,7 @@ Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der 
 <img alt="Carol" data-retina="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4ab5386562002b050000/show_retina_Plakat.jpg" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/movie/poster_image/564b4ab5386562002b050000/show_Plakat.jpg" />
 </div>
 <!-- Social buttons - Shariff -->
-<div class='shariff social-links text-center' data-mail-url='mailto:' data-url='https://beta.yorck.de/filme/carol'></div>
+<div class='shariff social-links text-center' data-mail-url='mailto:' data-url='https://www.yorck.de/filme/carol'></div>
 </div>
 </div>
 </section>
@@ -474,7 +511,7 @@ Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der 
 </div>
 <div class='row' id='movie-113277'>
 <div class='col-xs-12 movie-program-container bg-gray-dark'>
-<div class='shows' data-event-id='113277' data-partial-name='movie' id='e962bd06'>
+<div class='shows' data-event-id='113277' data-partial-name='movie' id='76e2cb7e'>
 <div class='row'>
 <div class='loading bg-white col-xs-12'>
 <img src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_assets_production/assets/icons/yorck_loading-a0b2be525ea22313a9fc5001f371574c.gif" alt="Yorck loading" />
@@ -482,6 +519,36 @@ Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der 
 </div>
 </div>
 
+</div>
+</div>
+</section>
+<section class='yorcker-review'>
+<div class='row'>
+<div class='col-sm-4 text-center text-gold yorcker-cover'>
+<a href="/yorckers/123"><h2>Kritik<br/>Yorcker</h2>
+<span class='yorcker-numero'>Nº123</span>
+<div class='hidden-xs'>
+<img data-retina="null" src="https://object-dd2a.cloudandheat.com:8080/v1/AUTH_4492ca06b762422bb8098a06ece4f54b/yorck_uploads_production/system/uploads/yorcker/poster_image/5637659634333811d4020000/YORCKER_123.jpg" alt="Yorcker 123" />
+<a href="/yorckers/123/download"><span class='download-icon'></span>
+<h3 class='light'>Download</h3>
+<h3>Yorcker</h3>
+</a></div>
+</a></div>
+<div class='col-sm-8'>
+<p class='yorcker-review-text text-gold'>
+Es ist kurz vor Weihnachten 1952, als Carol Aird in die Spielzeugabteilung eines großen New Yorker Kaufhauses kommt, auf der Suche nach einem Geschenk für ihre kleine Tochter. Das junge Shopgirl Therese am Tresen ist sichtlich nervös, als die elegante Kundin auf sie zukommt und ein Gespräch beginnt. Als Frau eines wohlhabenden Bankers hat Carol im repressiven Amerika viel zu verlieren, als sie schließlich nicht nur ihre Adresse für die Lieferung hinterlässt, sondern auch ihre Handschuhe auf dem Tresen »vergisst«. Und doch ist es der Beginn einer Liebesgeschichte, wie sie schöner kaum im Kino zu sehen ist. 
+	Regisseur Todd Haynes, nicht erst seit -DEM HIMMEL SO FERN ein Meister des Melodrams, versteht es wie kein zweiter, komplexe weibliche Charaktere zu kreieren. Seine Inszenierung atmosphärischer, makellos ausgestatteter Innenräume mit Perspektiven durch Fenster und Türrahmen erinnert an klassische Hollywoodfilme jener Ära, ist aber vor allem in seinen Straßenaufnahmen noch weit mehr von der Fotokunst der Zeit geprägt, von Fotografinnen wie Vivian Maier und Ruth Orkin. Kameramann Ed Lachman hat auf Super-16-Millimeter gedreht und einen in jeder Einstellung wirklich atemberaubenden Look kreiert.
+	CAROL beruht auf dem Roman Salz und sein Preis, den die spätere Krimibestsellerautorin Patricia Highsmith 1952 unter Pseudonym veröffentlichte. Sie erzählte darin, basierend auf einer ganz ähnlichen realen Begegnung, die sie selbst hatte, aber nicht weiterverfolgte, eine fiktive Liebesgeschichte, die damals zum Skandal wurde. 
+	Haynes hat daraus nun einen Film der Blicke gemacht, in denen mehr Begehren und Bedeutung steckt als im gesprochenen Wort. Die Liebe zwischen Carol und Therese ist nach Oscar Wilde eine, »die ihren Namen nicht zu nennen wagt«. Offen gelebte Homosexualität bedeutete damals noch das gesellschaftliche Aus und der Film nimmt seine historische Verortung ernst, erzählt aber zugleich die universell gültige Geschichte einer Beziehung, die an den Umständen zu scheitern droht. 	
+	CAROL gilt schon jetzt als einer der Oscarfavoriten. Der Film ist weit mehr: ein Klassiker für die Ewigkeit.
+<br>
+<span class='yorcker-author dolly'>jg</span>
+</p>
+<div class='visible-xs-block text-center'>
+<a href="/yorckers/123/download"><span class='download-icon'></span>
+<h3 class='light'>Download</h3>
+<h3>Yorcker</h3>
+</a></div>
 </div>
 </div>
 </section>
@@ -618,7 +685,7 @@ Die Verfilmung des Romans von Patricia Highsmith gilt schon jetzt als einer der 
 </div>
 
 <div class='alert alert-yorck alert-dismissible fade in' role='alert'>
-<p>BETA-VERSION - Während unserer Testphase sind Kinokarten nur für das Kino International erhältlich. Kaufen Sie Karten durch Klick auf die Uhrzeit im Programm!</p>
+<p>Willkommen auf unserer neuen Webseite! Buchen Sie Ihre Tickets durch Klick auf die Uhrzeit.</p>
 <button class='close' data-dismiss='alert'>
 <span>&times;</span>
 </button>

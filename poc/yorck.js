@@ -18,6 +18,8 @@ const db = require('../server/util/db').init('yorck');
 const Promise = require('bluebird');
 const async   = Promise.coroutine;
 
+const _ = require('lodash');
+
 const jsdom = require('jsdom');
 const jquery = fs.readFileSync(__dirname + '/jquery.js');
 
@@ -30,25 +32,26 @@ const moviePath = {
 	path: '/filme'
 };
 
-const programPath = id => ({
+const programPath = (movieId, eventId) => ({
 	host: 'www.yorck.de',
 	port: 443,
-	path: `/shows/-/cinemas.js?eventid=${id}&partial=movie`
+	path: `/shows/${movieId}/cinemas.js?eventid=${eventId}&partial=movie`
 });
 
 const inspectPage = url =>
 	new Promise((resolve, reject) => {
-		// return jsdom.env({
-		// 		html: fs.readFileSync('./' + url.split('de/').pop()).toString(),
-		// 		src: [jquery],
-		// 		done: (err, ctx) => {
-		// 			if (err) {
-		// 				reject(err);
-		// 			} else {
-		// 				resolve(ctx);
-		// 			}
-		// 		}
-		// 	});
+		return jsdom.env({
+			html: fs.readFileSync(__dirname + '/' + url.split('de/').pop()).toString(),
+			src: [jquery],
+			done: (err, ctx) => {
+				if (err) {
+					reject(err);
+				} else {
+					resolve(ctx);
+				}
+			}
+		});
+
 		console.log(`Getting ${url}...`);
 
 		jsdom.env({
@@ -64,28 +67,42 @@ const inspectPage = url =>
 		});
 	});
 
-const getSource = url =>
+const getSource = (url, omitXHRHeader) =>
 	new Promise((resolve, reject) => {
-		if (url.path.indexOf('/filme') !== -1) {
+		if (url.path === '/filme') {
 			return resolve(fs.readFileSync(__dirname + '/films').toString());
+		}
+
+		if (url.path.indexOf('/shows') === 0) {
+			if (fs.existsSync(__dirname + '/shows_' + url.path)) {
+				return resolve(fs.readFileSync(__dirname + '/shows_' + url.path).toString());
+			}
 		}
 
 		let data = new Buffer(0);
 
-		console.log(`Getting '${url}'...`);
+		const config = _.chain(url).cloneDeep().value();
 
-		const config = url;
+		if (!omitXHRHeader) {
+			config.headers = {
+				'X-Requested-With': 'XMLHttpRequest'
+			};
+		}
 
-		config.headers = {
-			'X-Requested-With': 'XMLHttpRequest'
-		};
+		console.log(url.path);
 
 		https.request(config, sock => {
 			sock.on('data', buf =>
 				data = Buffer.concat([data, buf])
 			);
 
-			sock.on('end',    () => resolve(data.toString()));
+			sock.on('end',    () => {
+				if (url.path.indexOf('/shows') === 0) {
+					fs.writeFileSync(__dirname + '/shows_' + Buffer(url.path).toString('hex'), data);
+				}
+
+				resolve(data.toString())
+			});
 			sock.on('error', err => reject(err));
 		}).end();
 	});
@@ -94,15 +111,25 @@ const hijackProgramSource = source =>
 	new Promise((resolve, reject) => {
 		const fail = setTimeout(reject, 2000);
 
+		const _quickFail = () =>
+			(clearTimeout(fail), reject());
+
 		const $ = () => ({
 			replaceWith (args) {
 				clearTimeout(fail);
 
 				resolve(args);
+			},
+			remove () {
+				_quickFail();
 			}
 		});
 
-		eval(source);
+		try {
+			eval(source);
+		} catch(e) {
+			_quickFail();
+		}
 	});
 
 const unescape = text =>
@@ -122,6 +149,8 @@ const Movie = function (link) {
 Movie.prototype = {
 	async extract () {
 		const ctx = await inspectPage(this.link);
+
+		console.log(1);
 
 		this.getEventId(ctx);
 
@@ -286,34 +315,41 @@ Movie.prototype = {
 	},
 
 	async getProgram (ctx) {
-		const rawSource = await getSource(programPath(this.eventId));
+		const rawSource = await getSource(programPath(this.id, this.eventId));
 
-		const source = await hijackProgramSource(source);
+		try {
+			const source = await hijackProgramSource(rawSource);
 
-		console.log(1, ctx.$(source)[0].innerHTML, 2);
+			//console.log(1, ctx.$(source)[0].innerHTML, 2);
+			console.log(source);
+		} catch(e) {
+			// not available
+		}
 	},
 
 	// util
 	setKeyIfInMetaMap (name, key, map, fn) {
 		let item = map[key];
 
-		if (item) {
-			item = item
-					// fix insane delimiters
-					.replace(/(,\s+|\s+,|,$)/g, '~')
-					// replace bad fixed delimiters
-					.replace(/\~\s+/g, '~')
-					// split by new delimiters
-					.split('~')
-					// filter out empty fields
-					.filter(i => i);
-
-			if (fn) {
-				this[name] = fn(item);
-			} else {
-				this[name] = item;
-			}
+		if (!item) {
+			return;
 		}
+
+		item = item
+				// fix insane delimiters
+				.replace(/(,\s+|\s+,|,$)/g, '~')
+				// replace bad fixed delimiters
+				.replace(/\~\s+/g, '~')
+				// split by new delimiters
+				.split('~')
+				// filter out empty fields
+				.filter(i => i);
+
+		if (fn) {
+			return this[name] = fn(item);
+		}
+
+		return this[name] = item;
 	},
 
 	getMetaMap (ctx) {
@@ -349,27 +385,26 @@ class YorckScraper {
 	async run () {
 		const movieLinks = await this.obtainMovieOverview();
 
-		//console.log(movieLinks);
 		await Promise.map(movieLinks, Movie.fromLink);
 	}
 
 	// extract links to movie detail pages
 	async obtainMovieOverview () {
 			// load page as string
-		let source = await getSource(moviePath);
+		let source = await getSource(moviePath, true);
 
 			// split into seperate lines
 		    source = source.split('\n');
 
 		    // extract anchor elements
 		    source = source.filter(line =>
-		    			line.indexOf('select-movie-link') !== -1
-		    		 );
+				line.indexOf('select-movie-link') !== -1
+			);
 
 		    // extract link paths (/filme/<id>)
-			source = source.map(line => {
-						return line.split('url="').pop().split('"').shift();
-					 });
+			source = source.map(line =>
+				line.split('url="').pop().split('"').shift()
+			);
 
 		return source;
 	}
