@@ -40,18 +40,6 @@ const programPath = (movieId, eventId) => ({
 
 const inspectPage = url =>
 	new Promise((resolve, reject) => {
-		return jsdom.env({
-			html: fs.readFileSync(__dirname + '/' + url.split('de/').pop()).toString(),
-			src: [jquery],
-			done: (err, ctx) => {
-				if (err) {
-					reject(err);
-				} else {
-					resolve(ctx);
-				}
-			}
-		});
-
 		console.log(`Getting ${url}...`);
 
 		jsdom.env({
@@ -69,19 +57,11 @@ const inspectPage = url =>
 
 const getSource = (url, omitXHRHeader) =>
 	new Promise((resolve, reject) => {
-		if (url.path === '/filme') {
-			return resolve(fs.readFileSync(__dirname + '/films').toString());
-		}
-
-		if (url.path.indexOf('/shows') === 0) {
-			if (fs.existsSync(__dirname + '/shows_' + url.path)) {
-				return resolve(fs.readFileSync(__dirname + '/shows_' + url.path).toString());
-			}
-		}
-
 		let data = new Buffer(0);
 
-		const config = _.chain(url).cloneDeep().value();
+		const config = _.chain(url)
+						.cloneDeep()
+						.value();
 
 		if (!omitXHRHeader) {
 			config.headers = {
@@ -142,15 +122,13 @@ const unescape = text =>
 		'&#96;': '`'
 	})[chr]).trim();
 
-const Movie = function (link) {
-	this.link = `${baseURL}${link}`;
-};
+class Movie {
+	constructor (link) {
+		this.link = `${baseURL}${link}`;
+	}
 
-Movie.prototype = {
-	async extract () {
-		const ctx = await inspectPage(this.link);
-
-		console.log(1);
+	* extract () {
+		const ctx = yield inspectPage(this.link);
 
 		this.getEventId(ctx);
 
@@ -179,10 +157,10 @@ Movie.prototype = {
 		this.getLength(metaMap);
 		this.getWriter(metaMap);
 
-		await this.getProgram(ctx);
+		yield* this.getProgram(ctx);
 
 		ctx.close();
-	},
+	}
 
 	getEventId (ctx) {
 		const eventId = ctx.$('.movie-program > .row').first().attr('id');
@@ -195,7 +173,7 @@ Movie.prototype = {
 		if (id) {
 			this.id = id;
 		}
-	},
+	}
 
 	getTitle (ctx) {
 		const title = this.getBySelector(ctx.document.body, '#movie > section > div > div > h1');
@@ -203,7 +181,7 @@ Movie.prototype = {
 		if (title) {
 			this.title = unescape(title.innerHTML);
 		}
-	},
+	}
 
 	getDescription (ctx) {
 		const description = this.getBySelector(ctx.document.body, '#movie section div p');
@@ -211,10 +189,10 @@ Movie.prototype = {
 		if (description) {
 			this.description = unescape(description.innerHTML);
 		}
-	},
+	}
 
 	getYorckerReview (ctx) {
-		let review = this.getBySelector(ctx.document.body, '.yorcker-review');
+		const review = this.getBySelector(ctx.document.body, '.yorcker-review');
 
 		if (review) {
 			const text = review.querySelector('.yorcker-review-text').innerText;
@@ -231,7 +209,7 @@ Movie.prototype = {
 				text: text.trim()
 			}];
 		}
-	},
+	}
 
 	getCountryAndYear (ctx) {
 		let cy = this.getBySelector(ctx.document.body, '#movie section h5');
@@ -252,26 +230,26 @@ Movie.prototype = {
 			this.countries = countries;
 			this.year = year;
 		}
-	},
+	}
 
 	getCamera (metaMap) {
 		this.setKeyIfInMetaMap('camera', 'Kamera', metaMap);
-	},
+	}
 	getComposer (metaMap) {
 		this.setKeyIfInMetaMap('composer', 'Musik', metaMap);
-	},
+	}
 	getDirector (metaMap) {
 		this.setKeyIfInMetaMap('director', 'Regie', metaMap);
-	},
+	}
 	getFSK (metaMap) {
 		this.setKeyIfInMetaMap('fsk', 'FSK', metaMap, fsk => fsk.shift());
-	},
+	}
 	getLength (metaMap) {
 		this.setKeyIfInMetaMap('length', 'Länge', metaMap, length => length.shift());
-	},
+	}
 	getWriter (metaMap) {
 		this.setKeyIfInMetaMap('screenplay', 'Drehbuch', metaMap);
-	},
+	}
 
 	getCover (ctx) {
 		const cover = this.getBySelector(ctx.document.body, '#movie div.movie-poster img');
@@ -279,7 +257,7 @@ Movie.prototype = {
 		if (cover) {
 			this.cover = cover.getAttribute('data-retina');
 		}
-	},
+	}
 
 	getHero (ctx) {
 		const hero = this.getBySelector(ctx.document.body, '#movie div.hero-image img');
@@ -287,7 +265,7 @@ Movie.prototype = {
 		if (hero) {
 			this.hero = hero.getAttribute('data-retina');
 		}
-	},
+	}
 
 	getGallery (ctx) {
 		const gallery = this.getAllBySelector(ctx.document.body, '.movies-image-gallery a');
@@ -298,7 +276,7 @@ Movie.prototype = {
 				big: image.getAttribute('href')
 			}));
 		}
-	},
+	}
 
 	getTrailers (ctx) {
 		const trailers = this.getAllBySelector(ctx.document.body, 'a.trailer-button');
@@ -312,20 +290,22 @@ Movie.prototype = {
 
 			this.trailers = trailerMap;
 		}
-	},
+	}
 
-	async getProgram (ctx) {
-		const rawSource = await getSource(programPath(this.id, this.eventId));
+	* getProgram (ctx) {
+		return;
+
+		const rawSource = yield getSource(programPath(this.id, this.eventId));
 
 		try {
-			const source = await hijackProgramSource(rawSource);
+			const source = yield hijackProgramSource(rawSource);
 
 			//console.log(1, ctx.$(source)[0].innerHTML, 2);
 			console.log(source);
 		} catch(e) {
 			// not available
 		}
-	},
+	}
 
 	// util
 	setKeyIfInMetaMap (name, key, map, fn) {
@@ -350,10 +330,10 @@ Movie.prototype = {
 		}
 
 		return this[name] = item;
-	},
+	}
 
 	getMetaMap (ctx) {
-		let block = this.getAllBySelector(ctx.document.body, '#movie table tbody tr');
+		const block = this.getAllBySelector(ctx.document.body, '#movie table tbody tr');
 
 		const metaMap = {};
 
@@ -364,44 +344,46 @@ Movie.prototype = {
 		});
 
 		return metaMap;
-	},
+	}
 
 	getBySelector (ctx, selector) {
 		return ctx.querySelector(selector);
-	},
+	}
 
 	getAllBySelector (ctx, selector) {
 		return [].slice.call(ctx.querySelectorAll(selector));
 	}
 };
 
-Movie.fromLink = link => {
+Movie.fromLink = async(function* (link) {
 	const movie = new Movie(link);
 
-	return movie.extract();
-};
+	yield* movie.extract();
+
+	return movie;
+});
 
 class YorckScraper {
-	async run () {
-		const movieLinks = await this.obtainMovieOverview();
+	* run () {
+		const movieLinks = yield* this.obtainMovieOverview();
 
-		await Promise.map(movieLinks, Movie.fromLink);
+		return yield Promise.map(movieLinks, Movie.fromLink);
 	}
 
 	// extract links to movie detail pages
-	async obtainMovieOverview () {
+	* obtainMovieOverview () {
 			// load page as string
-		let source = await getSource(moviePath, true);
+		let source = yield getSource(moviePath, true);
 
 			// split into seperate lines
-		    source = source.split('\n');
+			source = source.split('\n');
 
-		    // extract anchor elements
-		    source = source.filter(line =>
+			// extract anchor elements
+			source = source.filter(line =>
 				line.indexOf('select-movie-link') !== -1
 			);
 
-		    // extract link paths (/filme/<id>)
+			// extract link paths (/filme/<id>)
 			source = source.map(line =>
 				line.split('url="').pop().split('"').shift()
 			);
@@ -410,5 +392,9 @@ class YorckScraper {
 	}
 }
 
-const scraper = new YorckScraper();
-      scraper.run();
+async(function* () {
+	const scraper = new YorckScraper();
+	const movies = yield* scraper.run();
+
+	console.log(movies);
+})();
