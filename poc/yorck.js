@@ -1,15 +1,5 @@
 'use strict';
 
-/* for beta.yorck.de */
-
-/*
-	Approach:
-
-	- collect movies from movie page
-	- scrape movie detail pages
-	- retrofit data from detail pages and populate time map
-*/
-
 const fs = require('fs');
 const https = require('https');
 
@@ -40,38 +30,26 @@ const programPath = (movieId, eventId) => ({
 	path: `/shows/${movieId}/cinemas.js?eventid=${eventId}&partial=movie`
 });
 
-const inspectPage = url =>
+const jsdomWithArgs = (url, isRaw) =>
 	new Promise((resolve, reject) => {
-		console.log(`Getting ${url}...`);
-
 		jsdom.env({
-			url: url,
+			[isRaw ? 'html' : 'url']: url,
 			src: [jquery],
-			done: function(err, ctx) {
-				if (err) {
-					reject(err);
-				} else {
-					resolve(ctx);
-				}
+			done (err, ctx) {
+				if (err) return reject(err);
+
+				resolve(ctx);
 			}
 		});
 	});
 
-const getSource = (url, omitXHRHeader) =>
+const inspectPage = function* (url) {
+	return yield jsdomWithArgs(url);
+};
+
+const getUrl = config =>
 	new Promise((resolve, reject) => {
 		let data = new Buffer(0);
-
-		const config = _.chain(url)
-						.cloneDeep()
-						.value();
-
-		if (!omitXHRHeader) {
-			config.headers = {
-				'X-Requested-With': 'XMLHttpRequest'
-			};
-		}
-
-		console.log(url.path);
 
 		https.request(config, sock => {
 			sock.on('data', buf =>
@@ -82,6 +60,20 @@ const getSource = (url, omitXHRHeader) =>
 			sock.on('error', err => reject(err));
 		}).end();
 	});
+
+const getSource = function* (url, omitXHRHeader) {
+	const config = _.chain(url)
+					.cloneDeep()
+					.value();
+
+	if (!omitXHRHeader) {
+		config.headers = {
+			'X-Requested-With': 'XMLHttpRequest'
+		};
+	}
+
+	return yield getUrl(config);
+};
 
 const unescape = text =>
 	text.replace(/&(?:amp|lt|gt|quot|#39|#96);/g, chr => ({
@@ -205,7 +197,7 @@ class Movie {
 	}
 
 	* extract () {
-		const ctx = yield inspectPage(this.link);
+		const ctx = yield* inspectPage(this.link);
 
 		this.getEventId(ctx);
 
@@ -370,10 +362,10 @@ class Movie {
 	}
 
 	* getProgram (ctx) {
-		const rawSource = yield getSource(programPath(this.id, this.eventId));
+		const rawSource = yield* getSource(programPath(this.id, this.eventId));
 
 		try {
-			this.program = Program.fromSource(rawSource, cinemas);
+			this.program = Program.fromSource(rawSource, this.cinemas);
 		} catch(e) {
 			// not available
 		}
@@ -437,7 +429,7 @@ Movie.fromLink = async(function* (link, cinemas) {
 
 class Cinemas {
 	* getCinemas () {
-		let source = yield getSource(cinemaPath, true);
+		let source = yield* getSource(cinemaPath, true);
 
 			source = source.split('\n');
 
@@ -468,18 +460,10 @@ class Cinemas {
 }
 
 class YorckScraper {
-	* run () {
-		const cinemas = yield* Cinemas.init();
-
-		const movieLinks = yield* this.obtainMovieOverview();
-
-		return yield Promise.map(movieLinks, link => Movie.fromLink(link, cinemas));
-	}
-
 	// extract links to movie detail pages
 	* obtainMovieOverview () {
 			// load page as string
-		let source = yield getSource(moviePath, true);
+		let source = yield* getSource(moviePath, true);
 
 			// split into seperate lines
 			source = source.split('\n');
@@ -496,11 +480,32 @@ class YorckScraper {
 
 		return source;
 	}
+
+	* run () {
+		const cinemas = yield* Cinemas.init();
+
+		const movieLinks = yield* this.obtainMovieOverview();
+
+		this.movies = yield Promise.map(movieLinks, link => Movie.fromLink(link, cinemas));
+	}
+
+	* loop () {
+		yield* this.run();
+
+		const ctx = this;
+
+		setTimeout(async(function* () {
+			yield* ctx.loop();
+		}), 1000);
+	}
+
+	static * bootstrap () {
+		const scraper = new YorckScraper();
+
+		yield* scraper.loop();
+
+		return scraper;
+	}
 }
 
-async(function* () {
-	const scraper = new YorckScraper();
-	const movies = yield* scraper.run();
-
-	console.log(movies);
-})();
+module.exports = async(YorckScraper.bootstrap)();
