@@ -139,7 +139,12 @@ class Program {
 		const bS4 = bS3.slice(_bO3);
 
 		const cinemas = bS4.filter(line => ~line.indexOf('h3'))
-						   .map(line => [line.slice(line.indexOf('text-gold') + 12, -6), []]);
+						   .map(line => {
+						   		const cinema = line.slice(line.indexOf('text-gold') + 12, -6);
+						   		const cinemaId = this.cinemas.name.get(cinema);
+
+						   		return [cinemaId, []];
+							});
 
 		const csections = [];
 
@@ -447,13 +452,25 @@ class Cinemas {
 				]
 			);
 
+		this.id = new Map(source);
+		this.name = new Map(source.map(arr => arr.reverse()));
+
 		return source;
+	}
+
+	static * init () {
+		const cinemas = new Cinemas();
+
+		yield* cinemas.getCinemas();
+
+		return cinemas;
 	}
 }
 
 class YorckScraper {
 	* run () {
-		const cinemas = yield* this.obtainCinemaOverview();
+		const cinemas = yield* Cinemas.init();
+
 		const movieLinks = yield* this.obtainMovieOverview();
 
 		return yield Promise.map(movieLinks, link => Movie.fromLink(link, cinemas));
