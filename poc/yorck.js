@@ -26,11 +26,13 @@ const jquery = fs.readFileSync(__dirname + '/jquery.js');
 /* Configuration */
 const baseURL = 'https://www.yorck.de';
 
-const moviePath = {
+const basePath = {
 	host: 'www.yorck.de',
-	port: 443,
-	path: '/filme'
+	port: 443
 };
+
+const moviePath = _.extend({}, basePath, { path: '/filme' });
+const cinemaPath = _.extend({}, basePath, { path: '/kinos' });
 
 const programPath = (movieId, eventId) => ({
 	host: 'www.yorck.de',
@@ -76,40 +78,9 @@ const getSource = (url, omitXHRHeader) =>
 				data = Buffer.concat([data, buf])
 			);
 
-			sock.on('end',    () => {
-				if (url.path.indexOf('/shows') === 0) {
-					fs.writeFileSync(__dirname + '/shows_' + Buffer(url.path).toString('hex'), data);
-				}
-
-				resolve(data.toString())
-			});
+			sock.on('end', () => resolve(data.toString()));
 			sock.on('error', err => reject(err));
 		}).end();
-	});
-
-const hijackProgramSource = source =>
-	new Promise((resolve, reject) => {
-		const fail = setTimeout(reject, 2000);
-
-		const _quickFail = () =>
-			(clearTimeout(fail), reject());
-
-		const $ = () => ({
-			replaceWith (args) {
-				clearTimeout(fail);
-
-				resolve(args);
-			},
-			remove () {
-				_quickFail();
-			}
-		});
-
-		try {
-			eval(source);
-		} catch(e) {
-			_quickFail();
-		}
 	});
 
 const unescape = text =>
@@ -122,8 +93,109 @@ const unescape = text =>
 		'&#96;': '`'
 	})[chr]).trim();
 
+class Program {
+	constructor(source, cinemas) {
+		this.cinemas = cinemas;
+
+		this.shows = [];
+
+		this.thisYear = (new Date).getFullYear();
+
+		this.parseProgram(source);
+	}
+
+	matchOrBail (str, rgx) {
+		const res = str.match(rgx);
+
+		if (!res) return null;
+
+		return res[1];
+	}
+
+	composeDate (day, time) {
+		return new Date(`${this.thisYear}-${day.split('.').reverse().join('-')}T${time}:00.000Z`);
+	}
+
+	firstGTE(arr, i) {
+		const r = arr.map(a => a < i).indexOf(false);
+
+		return (r > -1 ? r : arr.length) - 1;
+	}
+
+	parseProgram(source) {
+		const sL = source.split('\n');
+
+		if (!sL.some(line => /has\_shows\ \=\ true/.test(line)))
+			return null;
+
+		const pSL = sL.filter(line => ~line.indexOf('replaceWith'))[0];
+
+		const bS1 = String(pSL);
+		const bS2 = bS1.slice(bS1.indexOf('replaceWith') + 12, -2);
+
+		const bS3 = bS2.split('\\n');
+		const _bO3 = bS3.indexOf(bS3.filter(a => ~a.indexOf('movie-program'))[1]);
+
+		const bS4 = bS3.slice(_bO3);
+
+		const cinemas = bS4.filter(line => ~line.indexOf('h3'))
+						   .map(line => [line.slice(line.indexOf('text-gold') + 12, -6), []]);
+
+		const csections = [];
+
+		bS4.filter((a, i) => ~a.indexOf('\\\'row\\\'') && csections.push(i));
+
+		/* program statemachine */
+
+		let currentDay;
+
+		for (let i = 0; i < bS4.length; ++i) {
+			const dayOffset = bS4[i].indexOf('p-big');
+
+			if (~dayOffset) {
+				currentDay = bS4[i].slice(dayOffset + 8, -8);
+
+				continue;
+			}
+
+			const cIndex = this.firstGTE(csections, i);
+
+			let showTime;
+
+			/* strategy 1 */
+
+			const defaultFormat = this.matchOrBail(bS4[i], /\"\>(.*?)\<\\\/a\>/);
+
+			if (~bS4[i].indexOf('ticket-link') && !~bS4[i].indexOf('show-ticket-time') && defaultFormat) {
+				cinemas[cIndex][1].push([this.composeDate(currentDay, defaultFormat)]);
+
+				continue;
+			}
+
+			/* strategy 2 */
+
+			const extendedFormat = this.matchOrBail(bS4[i], /time\\\'\>(.*?) \</);
+			const showSpecialType = this.matchOrBail(bS4[i], /lang\\\'\>(.*?)\</);
+
+			if (extendedFormat) {
+				cinemas[cIndex][1].push([this.composeDate(currentDay, extendedFormat), showSpecialType]);
+
+				continue;
+			}
+		}
+
+		this.program = cinemas;
+	}
+
+	static fromSource(source, cinemas) {
+		return (new Program(source, cinemas)).program;
+	}
+}
+
 class Movie {
-	constructor (link) {
+	constructor (link, cinemas) {
+		this.cinemas = cinemas;
+
 		this.link = `${baseURL}${link}`;
 	}
 
@@ -293,15 +365,10 @@ class Movie {
 	}
 
 	* getProgram (ctx) {
-		return;
-
 		const rawSource = yield getSource(programPath(this.id, this.eventId));
 
 		try {
-			const source = yield hijackProgramSource(rawSource);
-
-			//console.log(1, ctx.$(source)[0].innerHTML, 2);
-			console.log(source);
+			this.program = Program.fromSource(rawSource, cinemas);
 		} catch(e) {
 			// not available
 		}
@@ -351,23 +418,45 @@ class Movie {
 	}
 
 	getAllBySelector (ctx, selector) {
-		return [].slice.call(ctx.querySelectorAll(selector));
+		return [...ctx.querySelectorAll(selector)];
 	}
 };
 
-Movie.fromLink = async(function* (link) {
-	const movie = new Movie(link);
+Movie.fromLink = async(function* (link, cinemas) {
+	const movie = new Movie(link, cinemas);
 
 	yield* movie.extract();
 
 	return movie;
 });
 
+class Cinemas {
+	* getCinemas () {
+		let source = yield getSource(cinemaPath, true);
+
+			source = source.split('\n');
+
+			source = source.filter(line =>
+				line.indexOf('select-cinema-link') !== -1
+			);
+
+			source = source.map(line =>
+				[
+					line.split('data-cinema-id="').pop().split('"').shift(),
+					line.split('">').pop().split('</a>').shift()
+				]
+			);
+
+		return source;
+	}
+}
+
 class YorckScraper {
 	* run () {
+		const cinemas = yield* this.obtainCinemaOverview();
 		const movieLinks = yield* this.obtainMovieOverview();
 
-		return yield Promise.map(movieLinks, Movie.fromLink);
+		return yield Promise.map(movieLinks, link => Movie.fromLink(link, cinemas));
 	}
 
 	// extract links to movie detail pages
