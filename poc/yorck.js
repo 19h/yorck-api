@@ -190,13 +190,11 @@ class Program {
 }
 
 class Movie {
-	constructor (link, cinemas) {
-		this.cinemas = cinemas;
-
+	constructor (link) {
 		this.link = `${baseURL}${link}`;
 	}
 
-	* extract () {
+	* extract (cinemas) {
 		const ctx = yield* inspectPage(this.link);
 
 		this.getEventId(ctx);
@@ -226,7 +224,7 @@ class Movie {
 		this.getLength(metaMap);
 		this.getWriter(metaMap);
 
-		yield* this.getProgram(ctx);
+		yield* this.getProgram(ctx, cinemas);
 
 		ctx.close();
 	}
@@ -361,11 +359,11 @@ class Movie {
 		}
 	}
 
-	* getProgram (ctx) {
+	* getProgram (ctx, cinemas) {
 		const rawSource = yield* getSource(programPath(this.id, this.eventId));
 
 		try {
-			this.program = Program.fromSource(rawSource, this.cinemas);
+			this.program = Program.fromSource(rawSource, cinemas);
 		} catch(e) {
 			// not available
 		}
@@ -420,9 +418,9 @@ class Movie {
 };
 
 Movie.fromLink = async(function* (link, cinemas) {
-	const movie = new Movie(link, cinemas);
+	const movie = new Movie(link);
 
-	yield* movie.extract();
+	yield* movie.extract(cinemas);
 
 	return movie;
 });
@@ -444,8 +442,8 @@ class Cinemas {
 				]
 			);
 
-		this.id = new Map(source);
-		this.name = new Map(source.map(arr => arr.reverse()));
+		this.id = source;
+		this.name = source.map(arr => arr.reverse());
 
 		return source;
 	}
@@ -456,6 +454,44 @@ class Cinemas {
 		yield* cinemas.getCinemas();
 
 		return cinemas;
+	}
+}
+
+class ProgramProjection {
+	constructor (movies, cinemas) {
+		this.cinemas = cinemas;
+	}
+
+	populateByMovie() {
+		return;
+	}
+
+	populateByCinema(movies) {
+		const cinemaMap = {};
+
+		movies.forEach(movie => {
+			if (!movie.program)
+				return;
+
+			movie.program.forEach(entry => {
+				cinemaMap[entry[0]] = cinemaMap[entry[0]] || [];
+
+				cinemaMap[entry[0]].push(
+					...entry[1].map(e => [movie.eventId, e])
+				);
+			});
+		});
+
+		this.byCinema = cinemaMap;
+	}
+
+	static * populate (movies, cinemas) {
+		const population = new ProgramProjection(movies, cinemas);
+
+		population.populateByCinema(movies);
+		population.populateByMovie();
+
+		return population;
 	}
 }
 
@@ -484,9 +520,13 @@ class YorckScraper {
 	* run () {
 		const cinemas = yield* Cinemas.init();
 
+		return console.log(JSON.stringify(cinemas));
+
 		const movieLinks = yield* this.obtainMovieOverview();
 
 		this.movies = yield Promise.map(movieLinks, link => Movie.fromLink(link, cinemas));
+
+		//const programProjection = yield* ProgramProjection.populate(this.movies, cinemas);
 	}
 
 	* loop () {
