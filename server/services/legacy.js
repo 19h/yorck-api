@@ -69,7 +69,12 @@ const populate = function (movies, truth) {
     });
 };
 
-module.exports = async(function* ({app, yorck}) {
+const markRevision = (req, res, next) => {
+    res.set('X-Yorck-Revision', 'legacy');
+    next();
+};
+
+module.exports = function* ({app, yorck}) {
     const scraper = yield yorck;
 
     /* bootstrap */
@@ -89,24 +94,19 @@ module.exports = async(function* ({app, yorck}) {
 
     /* routes */
 
-    const markAsLegacy = (req, res, next) => {
-        res.set('X-Yorck-Revision', 'legacy');
-        next();
-    };
-
-    app.get('/', markAsLegacy, (req, res) => {
+    app.get('/', markRevision, (req, res) => {
       return res.send(truth.cmx);
     });
 
-    app.get('/meta', markAsLegacy, (req, res) => {
+    app.get('/meta', markRevision, (req, res) => {
       return res.send(truth.meta);
     });
 
-    app.get('/cinemas', markAsLegacy, (req, res) => {
+    app.get('/cinemas', markRevision, (req, res) => {
       return res.send(truth.cinemas);
     });
 
-    app.get('/static/assets/films/:id/still.jpg', (req, res) => {
+    app.get('/static/assets/films/:id/still.jpg', markRevision, (req, res) => {
         const {id} = req.params;
 
         const url = _.get(truth.mBasePairs, `${id}.gallery.0.big`);
@@ -121,4 +121,4 @@ module.exports = async(function* ({app, yorck}) {
 
         res.send(defaultImage);
     });
-});
+};

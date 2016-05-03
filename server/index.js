@@ -12,15 +12,17 @@ const log = bunyan.createLogger({
 });
 
 const legacyRoutes = require('./services/legacy');
+const graphRoutes = require('./services/graph');
 
 const yorck = require('./kernel/yorck')({
     log
 });
 
 async(function* () {
-    yield legacyRoutes({
+    yield* legacyRoutes({
         app, yorck
     });
+
 
     app.listen(9651, '127.0.0.1', () => console.log('Online.'));
 })();
