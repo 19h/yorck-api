@@ -272,18 +272,18 @@ class Movie {
 	}
 
 	getTitle (ctx) {
-		const title = this.getBySelector(ctx.document.body, '#movie > section > div > div > h1');
+		const title = ctx.$('#movie > section > div > div > h1');
 
-		if (title) {
-			this.title = unescape(title.innerHTML);
+		if (_.size(title)) {
+			this.title = unescape(title.text().trim());
 		}
 	}
 
 	getDescription (ctx) {
-		const description = this.getBySelector(ctx.document.body, '#movie section div p');
+		const description = ctx.$('#movie section div p');
 
-		if (description) {
-			this.description = unescape(description.innerHTML);
+		if (_.size(description)) {
+			this.description = unescape(description.text().trim());
 		}
 	}
 
