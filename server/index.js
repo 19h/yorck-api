@@ -8,14 +8,14 @@ const app = express();
 
 const log = bunyan.createLogger({
     name: 'yorck',
-    level: 'debug'
+    level: 'trace'
 });
 
 const legacyRoutes = require('./services/legacy');
 const graphRoutes = require('./services/graph');
 
 const yorck = require('./kernel/yorck')({
-    log
+    log: log.child({type: 'kernel'})
 });
 
 async(function* () {
@@ -23,6 +23,8 @@ async(function* () {
         app, yorck
     });
 
+    const host = '127.0.0.1';
+    const port = 9651;
 
-    app.listen(9651, '127.0.0.1', () => console.log('Online.'));
-})();
+    app.listen(port, host, () => log.info({type: 'server'}, `Online: ${host} ${port}`));
+})().catch(err => log.fatal(err));

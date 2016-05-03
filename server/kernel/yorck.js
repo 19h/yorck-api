@@ -13,6 +13,28 @@ const _ = require('lodash');
 const jsdom = require('jsdom');
 const jquery = fs.readFileSync(__dirname + '/../misc/jquery.js');
 
+const currentPeriod = () => {
+	const now = Date.now();
+
+	return now - (now % (7200 * 1000));
+};
+
+const level = require('level');
+const db = Promise.promisifyAll(level('/tmp/foo'));
+
+_.assign(db, {
+	* periodGet (key) {
+		const qkey = ['', currentPeriod(), key];
+
+		return yield this.getAsync(qkey.join('\xFF'));
+	},
+	* periodSet (key, value) {
+		const qkey = ['', currentPeriod(), key];
+
+		return yield this.putAsync(qkey.join('\xFF'), value);
+	}
+});
+
 /* Configuration */
 const baseURL = 'https://www.yorck.de';
 
@@ -48,7 +70,7 @@ class YorckHelpers {
 
 	jsdomWithArgs(url, isRaw) {
 		return new Promise((resolve, reject) => {
-			this.log.trace(`jsdom: inspecting ${url}..`);
+			this.log.debug({module: 'jsdom'}, `Inspecting ${url}..`);
 
 			jsdom.env({
 				[isRaw ? 'html' : 'url']: url,
@@ -70,7 +92,11 @@ class YorckHelpers {
 		return new Promise((resolve, reject) => {
 			let data = new Buffer(0);
 
-			this.log.trace(`https: requesting ${JSON.stringify(config)}..`);
+			const {host, port, path} = config;
+
+			const debugUrl = ['https://', host, port, path].join('');
+
+			this.log.debug({module: 'https'}, `Requesting ${debugUrl}..`);
 
 			https.request(config, sock => {
 				sock.on('data', buf =>
@@ -441,14 +467,51 @@ class Movie {
 	getAllBySelector (ctx, selector) {
 		return [...ctx.querySelectorAll(selector)];
 	}
+
+	toString () {
+		const fields = [
+			'camera',
+			'composer',
+			'countries',
+			'cover',
+			'description',
+			'director',
+			'eventId',
+			'fsk',
+			'gallery',
+			'hero',
+			'id',
+			'length',
+			'program',
+			'reviews',
+			'screenplay',
+			'title',
+			'trailers',
+			'year'
+		];
+
+		return JSON.stringify(_.pick(this, fields));
+	}
 };
 
 Movie.fromLink = async(function* (link, cinemas, {log}) {
-	const movie = new Movie(link, {log});
+	try {
+		const cache = JSON.parse(yield* db.periodGet(link));
 
-	yield* movie.extract(cinemas);
+		log.trace({module: 'movie'}, `Cache hit - ${link}`);
 
-	return movie;
+		return cache;
+	} catch(err) {
+		log.trace({module: 'movie'}, `Cache miss - ${link}`);
+
+		const movie = new Movie(link, {log});
+
+		yield* movie.extract(cinemas);
+
+		yield* db.periodSet(link, movie.toString());
+
+		return movie;
+	}
 });
 
 class Cinemas {
@@ -561,6 +624,8 @@ class YorckScraper extends events {
 
 		const movieLinks = yield* this.obtainMovieOverview();
 
+		this.log.debug(`Resolving ${movieLinks.length} movies..`);
+
 		this.movies = yield Promise.map(movieLinks, link =>
 			Movie.fromLink(link, cinemas, {log: this.log})
 		);
@@ -573,7 +638,7 @@ class YorckScraper extends events {
 	}
 
 	lemit (event, ...data) {
-		this.log.debug(`Yorck: emitting event: ${event}`);
+		this.log.debug(`Emitting event: ${event}`);
 		this.emit(event, ...data);
 	}
 
@@ -585,7 +650,7 @@ class YorckScraper extends events {
 		this._cycle = this._cycle || 0;
 		++this._cycle;
 
-		this.log.info(`Yorck: cycle ${this._cycle}`);
+		this.log.info(`Cycle ${this._cycle}`);
 	}
 
 	* loop () {
@@ -603,7 +668,7 @@ class YorckScraper extends events {
 	static * bootstrap ({log}) {
 		const scraper = new YorckScraper({log});
 
-		log.info(`Yorck: bootstrap`);
+		log.info(`Bootstrapping`);
 
 		yield* scraper.loop();
 
