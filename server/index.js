@@ -1,41 +1,26 @@
 'use strict';
 
-import bunyan from 'bunyan';
-import express from 'express';
+const async = require('bluebird').coroutine;
 
-import {
-	schema
-} from './schemas/';
-
+const bunyan = require('bunyan');
+const express = require('express');
 const app = express();
 
-const port = 3000;
-
-require('../fm');
-
-module.exports = app;
-
-/* Dependencies */
-app.querySchema = schema();
-
-// util
-app.log = bunyan.createLogger({
-	name: 'sdk'
+const log = bunyan.createLogger({
+    name: 'yorck',
+    level: 'debug'
 });
 
-/* bootstrap */
+const legacyRoutes = require('./services/legacy');
 
-// static assets
-require('./core/static');
+const yorck = require('./kernel/yorck')({
+    log
+});
 
-// graphql endpoint
-require('./core/graphql');
+async(function* () {
+    yield legacyRoutes({
+        app, yorck
+    });
 
-// ota endpoint
-// TO BE IMPLEMENTED
-
-/* Services */
-
-app.listen(port, () =>
-	app.log.info('Listening on port %s.', port)
-);
+    app.listen(9651, '127.0.0.1', () => console.log('Online.'));
+})();

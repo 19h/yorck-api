@@ -150,4 +150,4 @@ fm = Buffer.concat([cp, fm]);
 
 let hello = (who) => require('fs').write(1, `${String(fm)}\n\n${who}\n\n`);
 
-hello`  \x1B[91m       Their kindness is charade\n       It's used to sedate\n       They remain unashamed\n       If you are being used\n       You should remain confused\n       To keep them amused\x1B[0m`;
+hello`  \x1B[91m       The only way to deal with\n       an unfree world is to become\n       so absolutely free that your\n       very existence is an act of\n       rebellion.\x1B[0m`;
