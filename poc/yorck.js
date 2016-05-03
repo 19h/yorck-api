@@ -2,6 +2,23 @@
 
 const fs = require('fs');
 const https = require('https');
+const assert = require('assert');
+const events = require('events');
+
+const bunyan = require('bunyan');
+
+const log = bunyan.createLogger({
+	name: 'yorck',
+	level: 'debug'
+});
+
+const lassert = (...args) => {
+	try {
+		assert(...args);
+	} catch(err) {
+		log.error(err);
+	};
+}
 
 const db = require('../server/util/db').init('yorck');
 
@@ -32,11 +49,17 @@ const programPath = (movieId, eventId) => ({
 
 const jsdomWithArgs = (url, isRaw) =>
 	new Promise((resolve, reject) => {
+		log.trace(`jsdom: inspecting ${url}..`);
+
 		jsdom.env({
 			[isRaw ? 'html' : 'url']: url,
 			src: [jquery],
 			done (err, ctx) {
-				if (err) return reject(err);
+				if (err) {
+					log.info(err);
+
+					return reject(err);
+				}
 
 				resolve(ctx);
 			}
@@ -51,13 +74,19 @@ const getUrl = config =>
 	new Promise((resolve, reject) => {
 		let data = new Buffer(0);
 
+		log.trace(`https: requesting ${JSON.stringify(config)}..`);
+
 		https.request(config, sock => {
 			sock.on('data', buf =>
 				data = Buffer.concat([data, buf])
 			);
 
 			sock.on('end', () => resolve(data.toString()));
-			sock.on('error', err => reject(err));
+			sock.on('error', err => {
+				log.info(err);
+
+				process.nextTick(() => getUrl(err));
+			});
 		}).end();
 	});
 
@@ -365,6 +394,7 @@ class Movie {
 		try {
 			this.program = Program.fromSource(rawSource, cinemas);
 		} catch(e) {
+			log.info(e);
 			// not available
 		}
 	}
@@ -442,8 +472,8 @@ class Cinemas {
 				]
 			);
 
-		this.id = source;
-		this.name = source.map(arr => arr.reverse());
+		this.id = new Map(source);
+		this.name = new Map(source.map(arr => arr.reverse()));
 
 		return source;
 	}
@@ -495,7 +525,11 @@ class ProgramProjection {
 	}
 }
 
-class YorckScraper {
+class YorckScraper extends events {
+	constructor () {
+		super();
+	}
+
 	// extract links to movie detail pages
 	* obtainMovieOverview () {
 			// load page as string
@@ -520,27 +554,49 @@ class YorckScraper {
 	* run () {
 		const cinemas = yield* Cinemas.init();
 
-		return console.log(JSON.stringify(cinemas));
-
 		const movieLinks = yield* this.obtainMovieOverview();
 
 		this.movies = yield Promise.map(movieLinks, link => Movie.fromLink(link, cinemas));
 
 		//const programProjection = yield* ProgramProjection.populate(this.movies, cinemas);
+
+		this._lastRun = new Date();
+
+		this.lemit('update');
+	}
+
+	lemit (event, ...data) {
+		log.debug(`Yorck: emitting event: ${event}`);
+		this.emit(event, ...data);
+	}
+
+	get _age () {
+		return Date.now() - this._lastRun;
+	}
+
+	logCycle () {
+		this._cycle = this._cycle || 0;
+		++this._cycle;
+
+		log.info(`Yorck: cycle ${this._cycle}`);
 	}
 
 	* loop () {
+		this.logCycle();
+
 		yield* this.run();
 
 		const ctx = this;
 
 		setTimeout(async(function* () {
 			yield* ctx.loop();
-		}), 1000);
+		}), 30 * 1000);
 	}
 
 	static * bootstrap () {
 		const scraper = new YorckScraper();
+
+		log.info(`Yorck: bootstrap`);
 
 		yield* scraper.loop();
 
