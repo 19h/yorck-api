@@ -161,7 +161,7 @@ class Program {
 
 		const cinemas = bS4.filter(line => ~line.indexOf('h3'))
 						   .map(line => {
-						   		const cinema = line.slice(line.indexOf('text-gold') + 12, -6);
+						   		const cinema = line.slice(line.indexOf('text-gold') + 12, -6).trim();
 						   		const cinemaId = this.cinemas.name.get(cinema);
 
 						   		return [cinemaId, []];
@@ -179,7 +179,7 @@ class Program {
 			const dayOffset = bS4[i].indexOf('p-big');
 
 			if (~dayOffset) {
-				currentDay = bS4[i].slice(dayOffset + 8, -8);
+				currentDay = bS4[i].slice(dayOffset + 8, -8).trim();
 
 				continue;
 			}
@@ -288,17 +288,17 @@ class Movie {
 	}
 
 	getYorckerReview (ctx) {
-		const review = this.getBySelector(ctx.document.body, '.yorcker-review');
+		const review = ctx.$('.yorcker-review');
 
-		if (review) {
-			const text = review.querySelector('.yorcker-review-text').innerText;
+		if (_.size(review)) {
+			const text = review.find('.yorcker-review-text').text().trim();
 
 			if (!text) {
 				// empty review
 				return;
 			}
 
-			const number = review.querySelector('.yorcker-numero').innerHTML.trim();
+			const number = review.find('.yorcker-numero').text().trim();
 
 			this.reviews = [{
 				title: `Yorcker ${number}`,
@@ -467,8 +467,8 @@ class Cinemas {
 
 			source = source.map(line =>
 				[
-					line.split('data-cinema-id="').pop().split('"').shift(),
-					line.split('">').pop().split('</a>').shift()
+					String(line.split('data-cinema-id="').pop().split('"').shift()).trim(),
+					String(line.split('">').pop().split('</a>').shift()).trim()
 				]
 			);
 
@@ -590,7 +590,7 @@ class YorckScraper extends events {
 
 		setTimeout(async(function* () {
 			yield* ctx.loop();
-		}), 30 * 1000);
+		}), 5 * 60 * 1000);
 	}
 
 	static * bootstrap () {
