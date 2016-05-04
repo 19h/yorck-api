@@ -5,7 +5,7 @@ const {
     GraphQLObjectType
 } = require('graphql');
 
-const yorckEdge = require('./yorckType');
+const YorckEdge = require('./yorckType');
 
 class BaseTypeProvider {
     constructor(name) {
@@ -25,11 +25,17 @@ class BaseTypeProvider {
     }
 }
 
-const queryTypeProvider = new BaseTypeProvider('RootQueryType');
+module.exports = ({kernel}) => {
+    const queryTypeProvider = new BaseTypeProvider('RootQueryType');
 
-queryTypeProvider.registerType('yorck', yorckEdge.schema);
+    const yorckEdge = new YorckEdge({
+        name: 'Yorck',
+        description: 'The Yorck base edge'
+    }, {kernel});
 
-module.exports = () =>
-    new GraphQLSchema({
+    queryTypeProvider.registerType('yorck', yorckEdge.schema);
+
+    return new GraphQLSchema({
         query: queryTypeProvider.getSchema()
     });
+}

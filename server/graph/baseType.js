@@ -5,10 +5,9 @@ const {
 } = require('graphql');
 
 module.exports = class BaseType {
-    constructor(dependencies, name, description) {
+    constructor({name, description}) {
         this.name = name;
         this.description = description;
-        this.dependencies = dependencies;
     }
 
     get schema() {

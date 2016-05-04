@@ -13,12 +13,14 @@ const markRevision = (req, res, next) => {
 };
 
 module.exports = function* ({app, yorck}) {
-    const scraper = yield yorck;
+    const kernel = yield yorck;
+
+    const initializedQuerySchema = querySchema({kernel});
 
     app.use('/graph', expressGraphql(
         request =>
             ({
-                schema: querySchema,
+                schema: initializedQuerySchema,
                 rootValue: {},
                 graphiql: true
             })
