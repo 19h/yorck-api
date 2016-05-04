@@ -1,6 +1,6 @@
 'use strict';
 
-let cp = new Buffer(`  \x1B[10m${(new Date()).getFullYear()} dipsh1t\x1B[0m\n`);
+let cp = new Buffer(`  \x1B[10m${(new Date()).getFullYear()} apx\x1B[0m\n`);
 
 let fm = new Buffer([
 	0x0a, 0x1b, 0x5b, 0x39, 0x30, 0x6d, 0x20, 0x20, 0x20,

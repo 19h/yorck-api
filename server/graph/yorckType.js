@@ -8,6 +8,12 @@ const {
 const BaseType = require('./baseType');
 
 class YorckType extends BaseType {
+    constructor (...args, {yorck}) {
+        super(...args);
+
+        this.yorck = yorck;
+    }
+
     get fields() {
         return () => ({
             height: {

@@ -707,8 +707,6 @@ class YorckScraper extends events {
 	* gc (epoch) {
 		const log = this.log.child({module: 'gc'});
 
-		log.info('Pruning expired keys..');
-
 		const expiredKeys = yield* db.getFilteredKeys(key =>
 			key.indexOf(['', epoch, ''].join('\xFF'))
 		);

@@ -5,10 +5,6 @@ const {
 } = require('graphql');
 
 module.exports = class BaseType {
-    get defaultLanguage() {
-        return 'en';
-    }
-
     constructor(dependencies, name, description) {
         this.name = name;
         this.description = description;

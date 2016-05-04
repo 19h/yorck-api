@@ -1,5 +1,7 @@
 'use strict';
 
+require('../fm');
+
 const async = require('bluebird').coroutine;
 
 const bunyan = require('bunyan');
@@ -21,6 +23,10 @@ const yorck = require('./kernel/yorck')({
 async(function* () {
     yield* legacyRoutes({
         app, yorck
+    });
+
+    yield* graphRoutes({
+    	app, yorck
     });
 
     const host = '127.0.0.1';

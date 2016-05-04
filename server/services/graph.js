@@ -5,17 +5,17 @@ const async   = Promise.coroutine;
 
 const _ = require('lodash');
 
-const querySchema = require('../graph')
+const querySchema = require('../graph');
 
 const markRevision = (req, res, next) => {
     res.set('X-Yorck-Revision', 'legacy');
     next();
 };
 
-module.exports = async(function* ({app, yorck}) {
+module.exports = function* ({app, yorck}) {
     const scraper = yield yorck;
 
-    app.use('/', expressGraphql(
+    app.use('/graph', expressGraphql(
         request =>
             ({
                 schema: querySchema,
@@ -24,4 +24,4 @@ module.exports = async(function* ({app, yorck}) {
             })
         )
     );
-});
+};
