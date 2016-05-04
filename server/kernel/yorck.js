@@ -13,25 +13,46 @@ const _ = require('lodash');
 const jsdom = require('jsdom');
 const jquery = fs.readFileSync(__dirname + '/../misc/jquery.js');
 
-const currentPeriod = () => {
-	const now = Date.now();
+const currentEpoch = () => {
+	const interval = 7200 * 1000;
 
-	return now - (now % (7200 * 1000));
+	const now = Date.now();
+	const mod = now % interval;
+
+	return {
+		interval, mod,
+
+		offset: interval - mod,
+		epoch: now - mod
+	};
 };
 
 const level = require('level');
 const db = Promise.promisifyAll(level('/tmp/foo'));
 
 _.assign(db, {
-	* periodGet (key) {
-		const qkey = ['', currentPeriod(), key];
+	* epochGet (key) {
+		const qkey = ['', currentEpoch().epoch, key];
 
 		return yield this.getAsync(qkey.join('\xFF'));
 	},
-	* periodSet (key, value) {
-		const qkey = ['', currentPeriod(), key];
+	* epochSet (key, value) {
+		const qkey = ['', currentEpoch().epoch, key];
 
 		return yield this.putAsync(qkey.join('\xFF'), value);
+	},
+	* getFilteredKeys (iterator) {
+		const keys = [];
+
+		return yield new Promise(res =>
+			db.createKeyStream()
+			.on('data', key => {
+				iterator(key) && keys.push(key);
+			})
+			.on('end', data => {
+				res(keys);
+			})
+		);
 	}
 });
 
@@ -88,13 +109,17 @@ class YorckHelpers {
 		})
 	}
 
+	_getUrlFromConfig (config) {
+		const {host, port, path} = config;
+
+		return ['https://', host, ':', port, path].join('');
+	}
+
 	getUrl(config) {
 		return new Promise((resolve, reject) => {
 			let data = new Buffer(0);
 
-			const {host, port, path} = config;
-
-			const debugUrl = ['https://', host, port, path].join('');
+			const debugUrl = this._getUrlFromConfig(config);
 
 			this.log.debug({module: 'https'}, `Requesting ${debugUrl}..`);
 
@@ -118,17 +143,33 @@ class YorckHelpers {
 	}
 
 	* getSource(url, omitXHRHeader) {
-		const config = _.chain(url)
-						.cloneDeep()
-						.value();
+		const cacheId = this._getUrlFromConfig(url);
 
-		if (!omitXHRHeader) {
-			config.headers = {
-				'X-Requested-With': 'XMLHttpRequest'
-			};
+		try {
+			const cache = yield* db.epochGet(cacheId);
+
+			this.log.trace({module: 'getSource'}, `Cache hit - ${cacheId}`);
+
+			return cache;
+		} catch (err) {
+			this.log.trace({module: 'getSource'}, `Cache miss - ${cacheId}`);
+
+			const config = _.chain(url)
+							.cloneDeep()
+							.value();
+
+			if (!omitXHRHeader) {
+				config.headers = {
+					'X-Requested-With': 'XMLHttpRequest'
+				};
+			}
+
+			const source = yield this.getUrl(config);
+
+			yield* db.epochSet(cacheId, source);
+
+			return source;
 		}
-
-		return yield this.getUrl(config);
 	}
 }
 
@@ -496,7 +537,7 @@ class Movie {
 
 Movie.fromLink = async(function* (link, cinemas, {log}) {
 	try {
-		const cache = JSON.parse(yield* db.periodGet(link));
+		const cache = JSON.parse(yield* db.epochGet(link));
 
 		log.trace({module: 'movie'}, `Cache hit - ${link}`);
 
@@ -508,7 +549,7 @@ Movie.fromLink = async(function* (link, cinemas, {log}) {
 
 		yield* movie.extract(cinemas);
 
-		yield* db.periodSet(link, movie.toString());
+		yield* db.epochSet(link, movie.toString());
 
 		return movie;
 	}
@@ -653,6 +694,35 @@ class YorckScraper extends events {
 		this.log.info(`Cycle ${this._cycle}`);
 	}
 
+	* boot () {
+		/* Infos about current epoch */
+		const {offset, epoch, interval, mod} = currentEpoch();
+
+		this.log.info({interval}, `Epoch: ${epoch}, ${mod}ms (${offset}ms left).`);
+
+		/* Kickoff cache GC */
+		yield* this.gc(epoch);
+	}
+
+	* gc (epoch) {
+		const log = this.log.child({module: 'gc'});
+
+		log.info('Pruning expired keys..');
+
+		const expiredKeys = yield* db.getFilteredKeys(key =>
+			key.indexOf(['', epoch, ''].join('\xFF'))
+		);
+
+		const mappedOps = expiredKeys.map(key => ({type: 'del', key}));
+
+		if (!_.size(mappedOps))
+			return;
+
+		yield db.batchAsync(mappedOps);
+
+		log.info(`Removed ${expiredKeys.length} expired keys..`);
+	}
+
 	* loop () {
 		this.logCycle();
 
@@ -666,10 +736,11 @@ class YorckScraper extends events {
 	}
 
 	static * bootstrap ({log}) {
+		log.info(`Bootstrapping..`);
+
 		const scraper = new YorckScraper({log});
 
-		log.info(`Bootstrapping`);
-
+		yield* scraper.boot();
 		yield* scraper.loop();
 
 		return scraper;
