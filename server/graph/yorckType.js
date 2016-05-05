@@ -9,63 +9,128 @@ const {
 
 const BaseType = require('./baseType');
 
-/*
-    yorck
-        -> cinema
-            meta ---|
-        -> movies <-/
-*/
-
 class YorckMovieType extends BaseType {
-    constructor({name, description}, {kernel}) {
+    constructor({name, description}, {kernel, yorckType}) {
         super({name, description});
+
+        this.yorckType = yorckType;
     }
 
     get fields() {
+        const movieGalleryImage = new GraphQLObjectType({
+            name: 'movieGalleryImage',
+            description: 'An image in the movie gallery',
+            fields: () => ({
+                normal: {
+                    type: GraphQLString
+                },
+                big: {
+                    type: GraphQLString
+                }
+            })
+        });
+
+        const movieImage = new GraphQLObjectType({
+            name: 'movieImage',
+            description: 'A movie image',
+            fields: () => ({
+                hero: {
+                    type: GraphQLString
+                },
+                cover: {
+                    type: GraphQLString
+                },
+                gallery: {
+                    type: new GraphQLList(movieGalleryImage)
+                }
+            })
+        });
+
+        const movieMeta = new GraphQLObjectType({
+            name: 'movieMeta',
+            description: 'Metainformation about a movie',
+            fields: () => ({
+                camera: {
+                    type: new GraphQLList(GraphQLString)
+                },
+                composer: {
+                    type: new GraphQLList(GraphQLString)
+                },
+                countries: {
+                    type: new GraphQLList(GraphQLString)
+                },
+                fsk: {
+                    type: GraphQLString
+                },
+                length: {
+                    type: GraphQLString
+                },
+                year: {
+                    type: GraphQLString
+                },
+                screenplay: {
+                    type: new GraphQLList(GraphQLString)
+                },
+                director: {
+                    type: new GraphQLList(GraphQLString)
+                }
+            })
+        });
+
+    const movieReview = new GraphQLObjectType({
+            name: 'movieReview',
+            description: 'A movie review',
+            fields: () => ({
+                title: {
+                    type: GraphQLString
+                },
+                text: {
+                    type: GraphQLString
+                }
+            })
+        });
+
         return () => ({
-            camera: {
-                type: new GraphQLList(GraphQLString)
-            },
-            composer: {
-                type: new GraphQLList(GraphQLString)
-            },
-            countries: {
-                type: new GraphQLList(GraphQLString)
-            },
-            cover: {
-                type: GraphQLString
-            },
-            description: {
-                type: GraphQLString
-            },
             eventId: {
-                type: GraphQLString
-            },
-            fsk: {
-                type: GraphQLString
-            },
-            //gallery: {
-            //    type: GraphQLString
-            //},
-            hero: {
                 type: GraphQLString
             },
             id: {
                 type: GraphQLString
             },
-            length: {
+
+            description: {
                 type: GraphQLString
+            },
+            reviews: {
+                type: new GraphQLList(movieReview)
             },
             title: {
                 type: GraphQLString
             },
-            year: {
-                type: GraphQLString
+
+            meta: {
+                type: movieMeta,
+                resolve: root => root
             },
-            screenplay: {
-                type: new GraphQLList(GraphQLString)
-            },
-            director: {
+
+            images: {
+                type: movieImage,
+                resolve: root => root
+            }
+        });
+    }
+}
+
+class YorckCinemaType extends BaseType {
+    constructor({name, description}, {kernel, yorckType}) {
+        super({name, description});
+
+        this.yorckType = yorckType;
+    }
+
+    get fields() {
+        return () => ({
+            camera: {
                 type: new GraphQLList(GraphQLString)
             }
         });
@@ -79,14 +144,22 @@ class YorckType extends BaseType {
         this.yorckMovieType = new YorckMovieType({
             name: 'Movie',
             description: 'A movie'
-        }, {kernel});
+        }, {kernel, yorckType: this});
+
+        this.yorckCinemaType = new YorckCinemaType({
+            name: 'Cinema',
+            description: 'A cinema'
+        }, {kernel, yorckType: this});
     }
 
     get fields() {
         return () => ({
             movies: {
                 type: new GraphQLList(this.yorckMovieType.schema)
-            }
+            },
+            //cinemas: {
+            //    type: new GraphQLList(this.yorckMovieType.schema)
+            //}
         });
     }
 }

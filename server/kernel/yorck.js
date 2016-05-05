@@ -197,13 +197,23 @@ class Program {
 		return new Date(`${this.thisYear}-${day.split('.').reverse().join('-')}T${time}:00.000Z`);
 	}
 
-	firstGTE(arr, i) {
+	firstGTE (arr, i) {
 		const r = arr.map(a => a < i).indexOf(false);
 
 		return (r > -1 ? r : arr.length) - 1;
 	}
 
-	parseProgram(source) {
+	mapProgram (cinemasPerMovie) {
+		const mappedProgram = {};
+
+		cinemasPerMovie.forEach(([movieId, showtimes]) => {
+			mappedProgram[movieId] = showtimes;
+		});
+
+		return mappedProgram;
+	}
+
+	parseProgram (source) {
 		const sL = source.split('\n');
 
 		if (!sL.some(line => /has\_shows\ \=\ true/.test(line)))
@@ -219,7 +229,7 @@ class Program {
 
 		const bS4 = bS3.slice(_bO3);
 
-		const cinemas = bS4.filter(line => ~line.indexOf('h3'))
+		const cinemasPerMovie = bS4.filter(line => ~line.indexOf('h3'))
 						   .map(line => {
 						   		const cinema = line.slice(line.indexOf('text-gold') + 12, -6).trim();
 						   		const cinemaId = this.cinemas.name.get(cinema);
@@ -253,7 +263,7 @@ class Program {
 			const defaultFormat = this.matchOrBail(bS4[i], /\"\>(.*?)\<\\\/a\>/);
 
 			if (~bS4[i].indexOf('ticket-link') && !~bS4[i].indexOf('show-ticket-time') && defaultFormat) {
-				cinemas[cIndex][1].push([this.composeDate(currentDay, defaultFormat)]);
+				cinemasPerMovie[cIndex][1].push([this.composeDate(currentDay, defaultFormat)]);
 
 				continue;
 			}
@@ -264,13 +274,13 @@ class Program {
 			const showSpecialType = this.matchOrBail(bS4[i], /lang\\\'\>(.*?)\</);
 
 			if (extendedFormat) {
-				cinemas[cIndex][1].push([this.composeDate(currentDay, extendedFormat), showSpecialType]);
+				cinemasPerMovie[cIndex][1].push([this.composeDate(currentDay, extendedFormat), showSpecialType]);
 
 				continue;
 			}
 		}
 
-		this.program = cinemas;
+		this.program = this.mapProgram(cinemasPerMovie);
 	}
 
 	static fromSource(source, {cinemas, log}) {

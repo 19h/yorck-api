@@ -12,22 +12,20 @@ const RFOO = movies => ({
         movies.map(movie => {
             if (!movie.program) return;
 
-            movie.program.forEach(entry => {
-                const realName = constants.cinemaRelation.name.get(entry[0]);
+            Object.keys(movie.program).forEach(movieId => {
+                const realName = constants.cinemaRelation.name.get(movieId);
 
                 cinemas[realName] = cinemas[realName] || {
                     movies: [],
-                    geometry: constants.locationRelation[entry[0]]
+                    geometry: constants.locationRelation[movieId]
                 };
 
-                /*
-                    name id times
-                */
+                const showtimes = movie.program[movieId];
 
                 cinemas[realName].movies.push({
                     movieName: movie.title,
                     movieId: movie.eventId,
-                    times: entry[1].map(a => +(new Date(a[0])))
+                    times: showtimes.map(([showtime]) => +(new Date(showtime)))
                 });
             });
         });
