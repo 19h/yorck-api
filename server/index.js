@@ -1,6 +1,10 @@
 'use strict';
 
-require('newrelic');
+require('pmx').init({
+	http: true,
+	network: true,
+	ports: true
+});
 
 require('../fm');
 

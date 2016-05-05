@@ -23,6 +23,7 @@
     "lodash": "^4.1.0",
     "mongodb": "^2.1.4",
     "newrelic": "^1.27.1",
-    "node-etcd": "^4.2.1"
+    "node-etcd": "^4.2.1",
+    "pmx": "^0.6.1"
   }
 }
