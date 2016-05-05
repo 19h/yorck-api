@@ -1,5 +1,7 @@
 'use strict';
 
+require('newrelic');
+
 require('../fm');
 
 const async = require('bluebird').coroutine;
