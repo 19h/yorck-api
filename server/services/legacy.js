@@ -8,32 +8,47 @@ const RFOO = movies => ({
     cmx () {
         /* accumulate movies */
         const cinemas = {};
+        const showtimes = {};
 
         movies.map(movie => {
             if (!movie.program) return;
 
-            Object.keys(movie.program).forEach(movieId => {
-                const realName = constants.cinemaRelation.name.get(movieId);
+            Object.keys(movie.program).forEach(cinemaId => {
+                const realName = constants.cinemaRelation.name.get(cinemaId);
 
                 cinemas[realName] = cinemas[realName] || {
+                    id: cinemaId,
                     movies: [],
-                    geometry: constants.locationRelation[movieId]
+                    geometry: constants.locationRelation[cinemaId]
                 };
 
-                const showtimes = movie.program[movieId];
+                const timestamps = movie.program[cinemaId].map(([showtime]) =>
+                    +(new Date(showtime))
+                );
+
+                showtimes[movie.eventId] = showtimes[movie.eventId] || [];
+
+                showtimes[movie.eventId].push(
+                    ...timestamps.map(stamp => [stamp, realName])
+                );
 
                 cinemas[realName].movies.push({
                     movieName: movie.title,
                     movieId: movie.eventId,
-                    times: showtimes.map(([showtime]) => +(new Date(showtime)))
+                    times: timestamps
                 });
             });
         });
 
-        return cinemas;
+        return {
+            showtimes,
+            cinemas
+        };
     },
 
-    meta () {
+    meta (showtimes) {
+        console.log(showtimes)
+
         const _m = movies.map(movie => ({
             eventId: movie.eventId,
 
@@ -45,23 +60,33 @@ const RFOO = movies => ({
                 fsk: movie.fsk || ''
             },
             desc: movie.description,
-            review: _.size(movie.reviews) ? _.get(movie.reviews, '0.text') : ''
+            review: _.size(movie.reviews) ? _.get(movie.reviews, '0.text') : '',
+
+            times: _.get(showtimes, movie.eventId) || []
         }));
 
         return _.keyBy(_m, 'eventId');
     },
 
     cinemas () {
-        return _.keyBy(Object.keys(constants.locationRelation).map(k => constants.locationRelation[k]), 'name');
+        const listOfCinemas = Object.keys(constants.locationRelation).map(k =>
+            _.extend({}, constants.locationRelation[k], {
+                id: k
+            })
+        );
+
+        return _.keyBy(listOfCinemas, 'name');
     }
 });
 
 const populate = function (movies, truth) {
     const foo = RFOO(movies);
 
+    const cmx = foo.cmx();
+
     _.assign(truth, {
-        cmx: foo.cmx(),
-        meta: foo.meta(),
+        cmx: cmx.cinemas,
+        meta: foo.meta(cmx.showtimes),
         cinemas: foo.cinemas(),
         mBasePairs: _.keyBy(movies, 'eventId')
     });
