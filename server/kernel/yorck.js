@@ -602,40 +602,24 @@ class Cinemas {
 }
 
 class ProgramProjection {
-	constructor (movies, cinemas) {
-		this.cinemas = cinemas;
+	constructor (movies, cinemaRef) {
+		this.cinemaRef = cinemaRef;
 	}
 
-	populateByMovie() {
-		return;
-	}
-
-	populateByCinema(movies) {
-		const cinemaMap = {};
-
-		movies.forEach(movie => {
-			if (!movie.program)
-				return;
-
-			movie.program.forEach(entry => {
-				cinemaMap[entry[0]] = cinemaMap[entry[0]] || [];
-
-				cinemaMap[entry[0]].push(
-					...entry[1].map(e => [movie.eventId, e])
-				);
-			});
-		});
-
-		this.byCinema = cinemaMap;
+	* process (movie) {
+		if (_.has(movie, 'program')) return;
 	}
 
 	static * populate (movies, cinemas) {
-		const population = new ProgramProjection(movies, cinemas);
+		const projection = new ProgramProjection(movies, cinemas);
 
-		population.populateByCinema(movies);
-		population.populateByMovie();
+		for (let i in movies) {
+			const movie = movies[i];
 
-		return population;
+			yield* projection.process(movie);
+		}
+
+		return projection;
 	}
 }
 
@@ -681,7 +665,7 @@ class YorckScraper extends events {
 			Movie.fromLink(link, cinemas, {log: this.log})
 		);
 
-		//const programProjection = yield* ProgramProjection.populate(this.movies, cinemas);
+		const programProjection = yield* ProgramProjection.populate(this.movies, cinemas);
 
 		this._lastRun = new Date();
 

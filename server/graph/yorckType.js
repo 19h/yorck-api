@@ -77,7 +77,7 @@ class YorckMovieType extends BaseType {
             })
         });
 
-    const movieReview = new GraphQLObjectType({
+        const movieReview = new GraphQLObjectType({
             name: 'movieReview',
             description: 'A movie review',
             fields: () => ({
@@ -129,9 +129,31 @@ class YorckCinemaType extends BaseType {
     }
 
     get fields() {
+        const cinemaGeometry = new GraphQLObjectType({
+            name: 'cinemaGeometry',
+            description: 'A cinemas geometry',
+            fields: () => ({
+                lon: {
+                    type: GraphQLString
+                },
+                lat: {
+                    type: GraphQLString
+                }
+            })
+        });
+
         return () => ({
-            camera: {
-                type: new GraphQLList(GraphQLString)
+            id: {
+                type: GraphQLString
+            },
+            name: {
+                type: GraphQLString
+            },
+            geometry: {
+                type: cinemaGeometry
+            },
+            movies: {
+                type: GraphQLString
             }
         });
     }
@@ -157,9 +179,9 @@ class YorckType extends BaseType {
             movies: {
                 type: new GraphQLList(this.yorckMovieType.schema)
             },
-            //cinemas: {
-            //    type: new GraphQLList(this.yorckMovieType.schema)
-            //}
+            cinemas: {
+                type: new GraphQLList(this.yorckCinemaType.schema)
+            }
         });
     }
 }
