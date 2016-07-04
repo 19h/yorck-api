@@ -4,6 +4,8 @@ const _ = require('lodash');
 
 const constants = require('../constants');
 
+const tzShift = (new Date()).getTimezoneOffset() * 1000;
+
 const RFOO = movies => ({
     cmx () {
         /* accumulate movies */
@@ -23,7 +25,7 @@ const RFOO = movies => ({
                 };
 
                 const timestamps = movie.program[cinemaId].map(([showtime]) =>
-                    +(new Date(showtime))
+                    tzShift + +(new Date(showtime))
                 );
 
                 showtimes[movie.eventId] = showtimes[movie.eventId] || [];
