@@ -1,11 +1,5 @@
 'use strict';
 
-require('pmx').init({
-	http: true,
-	network: true,
-	ports: true
-});
-
 require('../fm');
 
 const async = require('bluebird').coroutine;
