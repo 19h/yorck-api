@@ -51,8 +51,6 @@ const RFOO = movies => ({
     },
 
     meta (showtimes) {
-        console.log(showtimes)
-
         const _m = movies.map(movie => ({
             eventId: movie.eventId,
 

@@ -13,6 +13,8 @@ const _ = require('lodash');
 const jsdom = require('jsdom');
 const jquery = fs.readFileSync(__dirname + '/../misc/jquery.js');
 
+const constants = require('../constants');
+
 const currentEpoch = () => {
 	const interval = 7200 * 1000;
 
@@ -451,10 +453,13 @@ class Movie {
 		const trailers = this.getAllBySelector(ctx.document.body, 'a.trailer-button');
 
 		if (trailers && trailers.length) {
-			const trailerMap = {};
+			const trailerMap = [];
 
 			trailers.forEach(trailer =>
-				trailerMap[trailer.firstChild.innerHTML] = trailer.getAttribute('href')
+				trailerMap.push({
+					name: trailer.firstChild.innerHTML,
+					link: trailer.getAttribute('href')
+				})
 			);
 
 			this.trailers = trailerMap;
@@ -568,6 +573,11 @@ Movie.fromLink = async(function* (link, cinemas, {log}) {
 class Cinemas {
 	constructor({log}) {
 		this.helpers = new YorckHelpers(log);
+
+		this.id = null;
+		this.name = null;
+
+		this.refList = null;
 	}
 
 	* getCinemas () {
@@ -592,10 +602,37 @@ class Cinemas {
 		return source;
 	}
 
+	integrateCinemaConstants () {
+		const refList = [];
+
+		this.name.forEach(id => {
+			const refCell = {};
+
+			const {lat, lon, name} = _.get(constants.locationRelation, id, {});
+			const geometry = {lat, lon};
+
+			_.assign(
+				refCell,
+
+				/* precise coordinates */
+				{geometry},
+
+				/* entity information */
+				{ id, name }
+			);
+
+			refList.push(refCell);
+		});
+
+		this.refList = refList;
+	}
+
 	static * init ({log}) {
 		const cinemas = new Cinemas({log});
 
 		yield* cinemas.getCinemas();
+
+		cinemas.integrateCinemaConstants();
 
 		return cinemas;
 	}
@@ -653,7 +690,7 @@ class YorckScraper extends events {
 	}
 
 	* run () {
-		const cinemas = yield* Cinemas.init({
+		this.cinemas = yield* Cinemas.init({
 			log: this.log
 		});
 
@@ -662,14 +699,14 @@ class YorckScraper extends events {
 		this.log.debug(`Resolving ${movieLinks.length} movies..`);
 
 		this.movies = yield Promise.map(movieLinks, link =>
-			Movie.fromLink(link, cinemas, {log: this.log})
+			Movie.fromLink(link, this.cinemas, {log: this.log})
 		);
 
-		const programProjection = yield* ProgramProjection.populate(this.movies, cinemas);
+		const programProjection = yield* ProgramProjection.populate(this.movies, this.cinemas);
 
 		this._lastRun = new Date();
 
-		this.lemit('update');
+		this.lemit('update', this);
 	}
 
 	lemit (event, ...data) {
@@ -731,6 +768,8 @@ class YorckScraper extends events {
 		log.info(`Bootstrapping..`);
 
 		const scraper = new YorckScraper({log});
+
+		//scraper.on('update', x=>console.log(x))
 
 		yield* scraper.boot();
 		yield* scraper.loop();

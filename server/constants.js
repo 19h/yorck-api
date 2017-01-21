@@ -83,6 +83,11 @@ const locationRelation = {
         'lat': 52.452881,
         'lon': 13.286455,
         'name': 'Capitol Dahlem'
+    },
+    '54eefd0b683138488b190000': {
+        'lat': 52.5090875,
+        'lon': 13.3661181,
+        'name': 'Sommerkino Kulturforum'
     }
 };
 

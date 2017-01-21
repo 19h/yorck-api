@@ -1,29 +1,40 @@
-const expressGraphql = require('express-graphql');
+'use strict';
 
-const Promise = require('bluebird');
-const async   = Promise.coroutine;
+const {
+    graphqlExpress,
+    graphiqlExpress
+} = require('graphql-server-express');
 
-const _ = require('lodash');
+const bodyParser = require('body-parser');
 
 const querySchema = require('../graph');
 
-const markRevision = (req, res, next) => {
-    res.set('X-Yorck-Revision', 'legacy');
-    next();
-};
+module.exports = function* ({app, yorck: kernel}) {
+    const yorck = yield kernel;
 
-module.exports = function* ({app, yorck}) {
-    const kernel = yield yorck;
+    const baseQuerySchema = new querySchema({kernel});
 
-    const initializedQuerySchema = querySchema({kernel});
+    app.get('/graph', graphiqlExpress({
+        endpointURL: '/graph',
+        query:
+`{
+  substances {
+    name
 
-    app.use('/graph', expressGraphql(
-        request =>
-            ({
-                schema: initializedQuerySchema,
-                rootValue: {},
-                graphiql: true
-            })
-        )
+    effects {
+      name
+    }
+  }
+}`,
+    }));
+
+    app.post('/graph', bodyParser.json(), (req, res, next) =>
+        graphqlExpress({
+            schema: baseQuerySchema.schema,
+            rootValue: yorck,
+            context: {
+                yorck
+            }
+        })(req, res, next)
     );
 };
